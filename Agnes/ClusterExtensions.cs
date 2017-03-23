@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/03/10
+//    Last updated: 2017/03/14
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -22,7 +22,7 @@ namespace Agnes
         #region Public Methods
 
         public static Cluster<TInstance> GetIntersection<TInstance>(this IEnumerable<Cluster<TInstance>> clusters)
-            where TInstance : IEquatable<TInstance>
+            where TInstance : IComparable<TInstance>
         {
             var clusterList = clusters as IList<Cluster<TInstance>> ?? clusters?.ToList();
             if (clusterList == null || clusterList.Count == 0) return null;
@@ -35,7 +35,7 @@ namespace Agnes
         }
 
         public static Cluster<TInstance> GetUnion<TInstance>(this IEnumerable<Cluster<TInstance>> clusters)
-            where TInstance : IEquatable<TInstance>
+            where TInstance : IComparable<TInstance>
         {
             var clusterList = clusters as IList<Cluster<TInstance>> ?? clusters?.ToList();
             if (clusterList == null || clusterList.Count == 0) return null;

@@ -15,7 +15,7 @@ using System;
 
 namespace Agnes
 {
-    public interface IDissimilarityMetric<TInstance> where TInstance : IEquatable<TInstance>
+    public interface IDissimilarityMetric<TInstance> where TInstance : IComparable<TInstance>
     {
         #region Public Methods
 

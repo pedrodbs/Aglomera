@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/03/10
+//    Last updated: 2017/03/14
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -21,7 +21,7 @@ namespace Agnes.Linkage
     /// </summary>
     /// <typeparam name="TInstance">The type of instace considered.</typeparam>
     public class CompleteLinkageClustering<TInstance> : ILinkageCriterion<TInstance>
-        where TInstance : IEquatable<TInstance>
+        where TInstance : IComparable<TInstance>
     {
         #region Fields
 

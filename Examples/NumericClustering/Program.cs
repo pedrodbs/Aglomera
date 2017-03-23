@@ -20,10 +20,12 @@ using Agnes;
 using Agnes.D3;
 using Agnes.Linkage;
 
-namespace SmallExample
+namespace NumericClustering
 {
     internal class Program
     {
+        private const string DATASET_FILE = "test.csv";
+
         #region Private & Protected Methods
 
         private static string EnumerableToString<TInstance>(IEnumerable<TInstance> collection)
@@ -40,16 +42,9 @@ namespace SmallExample
 
         private static void Main(string[] args)
         {
-            var instances = new HashSet<DataPoint>
-                            {
-                                new DataPoint("1", new[] {2.0d, 2.0d}),
-                                new DataPoint("2", new[] {5.5d, 4.0d}),
-                                new DataPoint("3", new[] {5.0d, 5.0d}),
-                                new DataPoint("4", new[] {1.5d, 2.5d}),
-                                new DataPoint("5", new[] {1.0d, 1.0d}),
-                                new DataPoint("6", new[] {7.0d, 5.0d}),
-                                new DataPoint("7", new[] {5.75d, 6.5d})
-                            };
+            var dataSetFile = args.Length > 0 ? args[0] : DATASET_FILE;
+            var parser = new CsvParser();
+            var instances = parser.Load(Path.GetFullPath(dataSetFile));
 
             var metric = new DataPoint(null, null);
             var linkages = new Dictionary<ILinkageCriterion<DataPoint>, string>
@@ -74,9 +69,9 @@ namespace SmallExample
             Console.WriteLine("_____________________________________________");
             Console.WriteLine($"Clusters found for linkage criterion '{name}':");
             foreach (var cluster in clusters)
-                Console.WriteLine($" - {cluster.Key:0.000}\t{EnumerableToString(cluster.Value)}");
+                Console.WriteLine($" - {cluster.Value:0.000}\t{EnumerableToString(cluster.Key)}");
 
-            clusters.ToList().SaveD3File(Path.GetFullPath($"{name}.json"));
+            clusters.SaveD3File(Path.GetFullPath($"{name}.json"));
         }
 
         #endregion

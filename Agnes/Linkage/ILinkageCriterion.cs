@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: AgnesClusteringTest
-//    Last updated: 2017/03/10
+//    Project: Agnes
+//    Last updated: 2017/03/14
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -15,7 +15,7 @@ using System;
 
 namespace Agnes.Linkage
 {
-    public interface ILinkageCriterion<TInstance> where TInstance : IEquatable<TInstance>
+    public interface ILinkageCriterion<TInstance> where TInstance : IComparable<TInstance>
     {
         #region Public Methods
 

@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes.D3
-//    Last updated: 2017/03/10
+//    Last updated: 2017/03/14
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -17,7 +17,7 @@ using Newtonsoft.Json;
 
 namespace Agnes.D3
 {
-    public class D3Cluster<TInstance> : IEquatable<D3Cluster<TInstance>> where TInstance : IEquatable<TInstance>
+    public class D3Cluster<TInstance> : IEquatable<D3Cluster<TInstance>> where TInstance : IComparable<TInstance>
     {
         #region Fields
 

@@ -15,7 +15,7 @@ using System;
 using System.Linq;
 using Agnes;
 
-namespace SmallExample
+namespace NumericClustering
 {
     public struct DataPoint : IEquatable<DataPoint>, IDissimilarityMetric<DataPoint>, IComparable<DataPoint>
     {

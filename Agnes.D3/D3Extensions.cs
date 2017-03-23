@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes.D3
-//    Last updated: 2017/03/10
+//    Last updated: 2017/03/16
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -23,18 +23,19 @@ namespace Agnes.D3
         #region Public Methods
 
         public static void SaveD3File<TInstance>(
-            this IList<KeyValuePair<double, IEnumerable<Cluster<TInstance>>>> clusters, string filePath, bool printNames = true)
-            where TInstance : IEquatable<TInstance>
+            this IList<KeyValuePair<IEnumerable<Cluster<TInstance>>, double>> clusters, string filePath,
+            bool printNames = true)
+            where TInstance : IComparable<TInstance>
         {
             // creates a new d3 cluster for each initial cluster in the list
-            var d3Clusters = GetD3Clusters(clusters[0].Key, clusters[0].Value, printNames);
+            var d3Clusters = GetD3Clusters(clusters[0].Value, clusters[0].Key, printNames);
 
             // iterates over the clusters and creates d3 cluster hierarchy
             for (var i = 1; i < clusters.Count; i++)
-                d3Clusters = GetD3Clusters(clusters[i].Key, clusters[i].Value, d3Clusters, printNames);
+                d3Clusters = GetD3Clusters(clusters[i].Value, clusters[i].Key, d3Clusters, printNames);
 
             // gets/creates the root node
-            var rootD3Cluster = (d3Clusters.Count == 1)
+            var rootD3Cluster = d3Clusters.Count == 1
                 ? d3Clusters.Values.First()
                 : new D3Cluster<TInstance>(d3Clusters.Keys.GetUnion(), 1);
 
@@ -48,18 +49,18 @@ namespace Agnes.D3
 
         private static IDictionary<Cluster<TInstance>, D3Cluster<TInstance>> GetD3Clusters<TInstance>(
             double dissimilarity, IEnumerable<Cluster<TInstance>> clusters, bool printNames)
-            where TInstance : IEquatable<TInstance>
+            where TInstance : IComparable<TInstance>
         {
             return clusters.ToDictionary(
                 cluster => cluster,
-                cluster =>
-                    new D3Cluster<TInstance>(cluster, dissimilarity) {Name = printNames ? cluster.ToString() : string.Empty});
+                cluster => new D3Cluster<TInstance>(cluster, dissimilarity)
+                               {Name = printNames ? cluster.ToString() : string.Empty});
         }
 
         private static IDictionary<Cluster<TInstance>, D3Cluster<TInstance>> GetD3Clusters<TInstance>(
             double dissimilarity, IEnumerable<Cluster<TInstance>> clusters,
             IDictionary<Cluster<TInstance>, D3Cluster<TInstance>> prevD3Clusters, bool printNames)
-            where TInstance : IEquatable<TInstance>
+            where TInstance : IComparable<TInstance>
         {
             // for each cluster
             var newD3Clusters = new Dictionary<Cluster<TInstance>, D3Cluster<TInstance>>();

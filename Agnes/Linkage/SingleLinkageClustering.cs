@@ -21,7 +21,7 @@ namespace Agnes.Linkage
     /// </summary>
     /// <typeparam name="TInstance">The type of instace considered.</typeparam>
     public class SingleLinkageClustering<TInstance> : ILinkageCriterion<TInstance>
-        where TInstance : IEquatable<TInstance>
+        where TInstance : IComparable<TInstance>
     {
         #region Fields
 

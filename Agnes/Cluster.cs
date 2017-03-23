@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/03/10
+//    Last updated: 2017/03/14
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -18,8 +18,9 @@ using System.Text;
 
 namespace Agnes
 {
-    public class Cluster<TInstance> : IEnumerable<TInstance>, IDisposable, IEquatable<Cluster<TInstance>>
-        where TInstance : IEquatable<TInstance>
+    public class Cluster<TInstance> : IEnumerable<TInstance>, IDisposable, IEquatable<Cluster<TInstance>>,
+        IComparable<Cluster<TInstance>>
+        where TInstance : IComparable<TInstance>
     {
         #region Static Fields & Constants
 
@@ -202,6 +203,14 @@ namespace Agnes
         public void Dispose()
         {
             this.Dispose(true);
+        }
+
+        public int CompareTo(Cluster<TInstance> other)
+        {
+            // compares by count first, then by string representation of the elements
+            if (other == null) return -1;
+            var countCompare = this._cluster.Count.CompareTo(other._cluster.Count);
+            return countCompare == 0 ? string.CompareOrdinal(this.ToString(), other.ToString()) : countCompare;
         }
 
         #endregion
