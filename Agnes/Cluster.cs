@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/03/14
+//    Last updated: 2017/04/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -14,12 +14,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Agnes
 {
-    public class Cluster<TInstance> : IEnumerable<TInstance>, IDisposable, IEquatable<Cluster<TInstance>>,
-        IComparable<Cluster<TInstance>>
+    public class Cluster<TInstance> :
+        IEnumerable<TInstance>, IEquatable<Cluster<TInstance>>, IComparable<Cluster<TInstance>>
         where TInstance : IComparable<TInstance>
     {
         #region Static Fields & Constants
@@ -30,51 +31,53 @@ namespace Agnes
 
         #region Fields
 
+        private readonly TInstance[] _cluster;
+
         private readonly int _hashCode;
-        private SortedSet<TInstance> _cluster;
 
         #endregion
 
         #region Properties & Indexers
 
-        public IComparer<TInstance> Comparer
-        {
-            get { return this._cluster.Comparer; }
-            set
-            {
-                if (!this._cluster.Comparer.Equals(value))
-                    this._cluster = new SortedSet<TInstance>(this._cluster, value);
-            }
-        }
+        public uint Count => (uint) this._cluster.Length;
 
-        public uint Count => (uint) this._cluster.Count;
+        public double Dissimilarity { get; }
+
+        public Cluster<TInstance> Parent1 { get; }
+
+        public Cluster<TInstance> Parent2 { get; }
 
         #endregion
 
         #region Constructors
 
-        public Cluster(TInstance instance) : this(new List<TInstance> {instance}, Comparer<TInstance>.Default)
+        public Cluster(Cluster<TInstance> parent1, Cluster<TInstance> parent2, double dissimilarity)
+        {
+            this.Parent1 = parent1;
+            this.Parent2 = parent2;
+            this.Dissimilarity = dissimilarity;
+            this._cluster = new TInstance[parent1._cluster.Length + parent2._cluster.Length];
+            parent1._cluster.CopyTo(this._cluster, 0);
+            parent2._cluster.CopyTo(this._cluster, parent1._cluster.Length);
+        }
+
+        public Cluster(TInstance instance, double dissimilarity = 0) : this(new[] {instance}, dissimilarity)
         {
         }
 
-        public Cluster(TInstance instance, IComparer<TInstance> instanceComparer)
-            : this(new List<TInstance> {instance}, instanceComparer)
+        public Cluster(IEnumerable<TInstance> instances, double dissimilarity = 0)
         {
-        }
-
-        public Cluster(IEnumerable<TInstance> instances) : this(instances, Comparer<TInstance>.Default)
-        {
-        }
-
-        public Cluster(IEnumerable<TInstance> instances, IComparer<TInstance> instanceComparer)
-        {
-            this._cluster = new SortedSet<TInstance>(instances, instanceComparer ?? Comparer<TInstance>.Default);
+            this.Dissimilarity = dissimilarity;
+            this._cluster = instances as TInstance[] ?? instances.ToArray();
             this._hashCode = this.ProduceHashCode();
         }
 
         public Cluster(Cluster<TInstance> cluster)
         {
-            this._cluster = new SortedSet<TInstance>(cluster, cluster.Comparer);
+            this._cluster = cluster._cluster.ToArray();
+            this.Parent1 = cluster.Parent1;
+            this.Parent2 = cluster.Parent2;
+            this.Dissimilarity = cluster.Dissimilarity;
         }
 
         #endregion
@@ -95,7 +98,7 @@ namespace Agnes
             var sb = new StringBuilder("(");
             foreach (var instance in this._cluster)
                 sb.Append($"{instance},");
-            if (this._cluster.Count > 0) sb.Remove(sb.Length - 1, 1);
+            if (this._cluster.Length > 0) sb.Remove(sb.Length - 1, 1);
             sb.Append(")");
             return sb.ToString();
         }
@@ -103,11 +106,6 @@ namespace Agnes
         #endregion
 
         #region Public Methods
-
-        public void Clear()
-        {
-            this._cluster.Clear();
-        }
 
         public Cluster<TInstance> Clone()
         {
@@ -119,53 +117,23 @@ namespace Agnes
             return this._cluster.Contains(item);
         }
 
-        public Cluster<TInstance> IntersectWith(IEnumerable<TInstance> other)
+        public int CompareTo(Cluster<TInstance> other)
         {
-            var itemSet = this.Clone();
-            itemSet._cluster.IntersectWith(other);
-            return itemSet;
-        }
-
-        public bool IsProperSubsetOf(IEnumerable<TInstance> other)
-        {
-            return this._cluster.IsProperSubsetOf(other);
-        }
-
-        public bool IsProperSupersetOf(IEnumerable<TInstance> other)
-        {
-            return this._cluster.IsProperSupersetOf(other);
-        }
-
-        public bool IsSubsetOf(IEnumerable<TInstance> other)
-        {
-            return this._cluster.IsSubsetOf(other);
-        }
-
-        public bool IsSupersetOf(IEnumerable<TInstance> other)
-        {
-            return this._cluster.IsSupersetOf(other);
-        }
-
-        public bool Overlaps(IEnumerable<TInstance> other)
-        {
-            return this._cluster.Overlaps(other);
-        }
-
-        public Cluster<TInstance> UnionWith(IEnumerable<TInstance> other)
-        {
-            var cluster = this.Clone();
-            cluster._cluster.UnionWith(other);
-            return cluster;
+            // compares by count first, then by string representation of the elements
+            if (other == null) return -1;
+            var countCompare = this._cluster.Length.CompareTo(other._cluster.Length);
+            return countCompare == 0 ? string.CompareOrdinal(this.ToString(), other.ToString()) : countCompare;
         }
 
         public IEnumerator<TInstance> GetEnumerator()
         {
-            return this._cluster.GetEnumerator();
+            return ((IEnumerable<TInstance>) this._cluster).GetEnumerator();
         }
 
         public bool Equals(Cluster<TInstance> other)
         {
-            return !ReferenceEquals(null, other) && (ReferenceEquals(this, other) || this._cluster.SetEquals(other));
+            return !ReferenceEquals(null, other) &&
+                   (ReferenceEquals(this, other) || new HashSet<TInstance>(this._cluster).SetEquals(other));
         }
 
         #endregion
@@ -185,32 +153,6 @@ namespace Agnes
         IEnumerator IEnumerable.GetEnumerator()
         {
             return this.GetEnumerator();
-        }
-
-        #endregion
-
-        #region IDisposable Support
-
-        private bool _disposed;
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (this._disposed) return;
-            if (disposing) this.Clear();
-            this._disposed = true;
-        }
-
-        public void Dispose()
-        {
-            this.Dispose(true);
-        }
-
-        public int CompareTo(Cluster<TInstance> other)
-        {
-            // compares by count first, then by string representation of the elements
-            if (other == null) return -1;
-            var countCompare = this._cluster.Count.CompareTo(other._cluster.Count);
-            return countCompare == 0 ? string.CompareOrdinal(this.ToString(), other.ToString()) : countCompare;
         }
 
         #endregion

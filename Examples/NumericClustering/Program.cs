@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: SmallExample
-//    Last updated: 2017/03/10
+//    Project: NumericClustering
+//    Last updated: 2017/04/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -14,31 +14,23 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using Agnes;
 using Agnes.D3;
 using Agnes.Linkage;
+using Newtonsoft.Json;
 
 namespace NumericClustering
 {
     internal class Program
     {
-        private const string DATASET_FILE = "test.csv";
+        #region Static Fields & Constants
+
+        //private const string DATASET_FILE = "../../../../datasets/test.csv";
+        private const string DATASET_FILE = "../../../../datasets/seeds.csv";
+
+        #endregion
 
         #region Private & Protected Methods
-
-        private static string EnumerableToString<TInstance>(IEnumerable<TInstance> collection)
-            where TInstance : IEquatable<TInstance>
-        {
-            var sb = new StringBuilder("{");
-            var list = collection as IList<TInstance> ?? collection.ToList();
-            foreach (var item in list)
-                sb.Append($"{item}, ");
-            if (list.Count > 0) sb.Remove(sb.Length - 2, 2);
-            sb.Append("}");
-            return sb.ToString();
-        }
 
         private static void Main(string[] args)
         {
@@ -63,15 +55,15 @@ namespace NumericClustering
 
         private static void PrintClusters(ISet<DataPoint> instances, ILinkageCriterion<DataPoint> linkage, string name)
         {
-            var clusteringAlg = new ClusteringAlgorithm<DataPoint>(instances, linkage);
-            var clusters = clusteringAlg.GetClusters();
+            var clusteringAlg = new ClusteringAlgorithm<DataPoint>(linkage);
+            var clustering = clusteringAlg.GetClustering(instances);
 
             Console.WriteLine("_____________________________________________");
             Console.WriteLine($"Clusters found for linkage criterion '{name}':");
-            foreach (var cluster in clusters)
-                Console.WriteLine($" - {cluster.Value:0.000}\t{EnumerableToString(cluster.Key)}");
+            foreach (var clusterSet in clustering)
+                Console.WriteLine($" - {clusterSet}");
 
-            clusters.SaveD3File(Path.GetFullPath($"{name}.json"));
+            clustering.SaveD3DendrogramFile(Path.GetFullPath($"{name}.json"), formatting: Formatting.Indented);
         }
 
         #endregion

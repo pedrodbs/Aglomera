@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/03/14
+//    Last updated: 2017/04/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -13,6 +13,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Agnes.Linkage;
 
 namespace Agnes
@@ -29,12 +30,9 @@ namespace Agnes
     {
         #region Fields
 
-        private readonly ISet<TInstance> _instances;
-
         private readonly ILinkageCriterion<TInstance> _linkageCriterion;
         private Cluster<TInstance>[] _clusters;
         private int _curClusterCount;
-
         private double[][] _dissimilarities;
 
         #endregion
@@ -45,11 +43,9 @@ namespace Agnes
         ///     Creates a new instance of <see cref="ClusteringAlgorithm{TInstance}" /> with the given set of instances and linkage
         ///     criterion.
         /// </summary>
-        /// <param name="instances">The instances to be clustered by the algorithm.</param>
         /// <param name="linkageCriterion">The criterion used to measure dissimilarities within and between clusters.</param>
-        public ClusteringAlgorithm(ISet<TInstance> instances, ILinkageCriterion<TInstance> linkageCriterion)
+        public ClusteringAlgorithm(ILinkageCriterion<TInstance> linkageCriterion)
         {
-            this._instances = instances;
             this._linkageCriterion = linkageCriterion;
         }
 
@@ -60,31 +56,52 @@ namespace Agnes
         /// <summary>
         ///     Clusters the set of <see cref="TInstance" /> given to the algorithm.
         /// </summary>
+        /// <param name="instances">The instances to be clustered by the algorithm.</param>
         /// <returns>
-        ///     A list of <see cref="KeyValuePair{TKey,TValue}" /> elements where the keys are sets of
-        ///     <see cref="Cluster{TInstance}" /> found in each step of the algorithm and each value is the dissimilarity/distance
-        ///     at which the corresponding set of clusters was created.
+        ///     A <see cref="ClusteringResult{TInstance}" /> containing all the <see cref="ClusterSet{TInstance}" /> found in each
+        ///     step of the algorithm and the corresponding the dissimilarity/distance at which they were found.
         /// </returns>
-        public IList<KeyValuePair<IEnumerable<Cluster<TInstance>>, double>> GetClusters()
+        public ClusteringResult<TInstance> GetClustering(ISet<TInstance> instances)
+        {
+            // initial setting: every instance in its own cluster
+            var currentClusters = instances.Select(instance => new Cluster<TInstance>(instance));
+
+            // executes clustering algorithm
+            var clustering = this.GetClustering(currentClusters);
+
+            return clustering;
+        }
+
+        /// <summary>
+        ///     Runs the clustering algorithm over the set of given <see cref="Cluster{TInstance}" />.
+        /// </summary>
+        /// <param name="clusters">The initial clusters provided to the algorithm.</param>
+        /// <returns>
+        ///     A <see cref="ClusteringResult{TInstance}" /> containing all the <see cref="ClusterSet{TInstance}" /> found in each
+        ///     step of the algorithm and the corresponding the dissimilarity/distance at which they were found.
+        /// </returns>
+        public ClusteringResult<TInstance> GetClustering(IEnumerable<Cluster<TInstance>> clusters)
         {
             // initializes elements
-            this._clusters = new Cluster<TInstance>[this._instances.Count * 2 - 1];
-            this._dissimilarities = new double[this._instances.Count * 2 - 1][];
+            var currentClusters = clusters.ToArray();
+            this._clusters = new Cluster<TInstance>[currentClusters.Length * 2 - 1];
+            this._dissimilarities = new double[currentClusters.Length * 2 - 1][];
             this._curClusterCount = 0;
 
-            // initial setting: every instance in its own cluster
-            var currentClusters = new HashSet<Cluster<TInstance>>();
-            foreach (var instance in this._instances)
+            // calculates initial dissimilarities
+            foreach (var cluster in currentClusters)
             {
-                currentClusters.Add(
-                    this._clusters[this._curClusterCount] = new Cluster<TInstance>(instance));
+                this._clusters[this._curClusterCount] = cluster;
                 this.UpdateDissimilarities();
                 this._curClusterCount++;
             }
 
-            var clusters = new List<KeyValuePair<IEnumerable<Cluster<TInstance>>, double>>
-                               {new KeyValuePair<IEnumerable<Cluster<TInstance>>, double>(currentClusters, 0)};
-            for (var i = 1; i < this._instances.Count; i++)
+            var clustering = new ClusteringResult<TInstance>(currentClusters.Length)
+                             {
+                                 [0] = new ClusterSet<TInstance>(currentClusters)
+                             };
+            var numSteps = currentClusters.Length;
+            for (var i = 1; i < numSteps; i++)
             {
                 // gets minimal dissimilarity between a pair of existing clusters
                 int clusterIdx1, clusterIdx2;
@@ -93,27 +110,30 @@ namespace Agnes
                 // gets a copy of previous clusters, removes new cluster elements
                 var cluster1 = this._clusters[clusterIdx1];
                 var cluster2 = this._clusters[clusterIdx2];
-                currentClusters = new HashSet<Cluster<TInstance>>(currentClusters);
-                currentClusters.Remove(cluster1);
-                currentClusters.Remove(cluster2);
+                var newClusters = new Cluster<TInstance>[currentClusters.Length - 1];
+                var idx = 0;
+                foreach (var cluster in currentClusters)
+                    if (!cluster.Equals(cluster1) && !cluster.Equals(cluster2))
+                        newClusters[idx++] = cluster;
                 this._clusters[clusterIdx1] = null;
                 this._clusters[clusterIdx2] = null;
 
-                // creates a new cluster from the union of closest clusters
-                var newCluster = cluster1.UnionWith(cluster2);
+                // creates a new cluster from the union of closest clusters (save reference to parents)
+                var newCluster = new Cluster<TInstance>(cluster1, cluster2, minDissimilarity);
 
                 // adds cluster to list and calculates distance to all others
-                currentClusters.Add(this._clusters[this._curClusterCount] = newCluster);
+                newClusters[idx] = this._clusters[this._curClusterCount] = newCluster;
                 this.UpdateDissimilarities();
                 this._curClusterCount++;
 
                 // updates global list of clusters
-                clusters.Add(new KeyValuePair<IEnumerable<Cluster<TInstance>>, double>(currentClusters, minDissimilarity));
+                currentClusters = newClusters;
+                clustering[i] = new ClusterSet<TInstance>(currentClusters, minDissimilarity);
             }
 
             this._clusters = null;
             this._dissimilarities = null;
-            return clusters;
+            return clustering;
         }
 
         #endregion
