@@ -42,7 +42,7 @@ namespace Agnes
         /// <summary>
         ///     The minimum dissimilarity/distance at which the clusters were found.
         /// </summary>
-        public double Distance { get; }
+        public double Dissimilarity { get; }
 
         /// <summary>
         ///     Gets the cluster at the give index.
@@ -57,11 +57,11 @@ namespace Agnes
         ///     Creates a new <see cref="ClusterSet{TInstance}" /> with the given clusters and distance.
         /// </summary>
         /// <param name="clusters">The cset of clusters.</param>
-        /// <param name="distance">The dissimilarity/distance at which the clusters were found.</param>
-        public ClusterSet(Cluster<TInstance>[] clusters, double distance = 0)
+        /// <param name="dissimilarity">The dissimilarity/distance at which the clusters were found.</param>
+        public ClusterSet(Cluster<TInstance>[] clusters, double dissimilarity = 0)
         {
             this._clusters = clusters;
-            this.Distance = distance;
+            this.Dissimilarity = dissimilarity;
         }
 
         #endregion
@@ -70,7 +70,7 @@ namespace Agnes
 
         public override string ToString()
         {
-            var sb = new StringBuilder($"{this.Distance:0.000}\t{{");
+            var sb = new StringBuilder($"{this.Dissimilarity:0.000}\t{{");
             foreach (var cluster in this)
                 sb.Append($"{cluster}, ");
             if (this.Count > 0) sb.Remove(sb.Length - 2, 2);

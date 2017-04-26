@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/04/06
+//    Last updated: 2017/04/10
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -59,6 +59,7 @@ namespace Agnes
             this._cluster = new TInstance[parent1._cluster.Length + parent2._cluster.Length];
             parent1._cluster.CopyTo(this._cluster, 0);
             parent2._cluster.CopyTo(this._cluster, parent1._cluster.Length);
+            this._hashCode = this.ProduceHashCode();
         }
 
         public Cluster(TInstance instance, double dissimilarity = 0) : this(new[] {instance}, dissimilarity)
@@ -78,6 +79,7 @@ namespace Agnes
             this.Parent1 = cluster.Parent1;
             this.Parent2 = cluster.Parent2;
             this.Dissimilarity = cluster.Dissimilarity;
+            this._hashCode = cluster._hashCode;
         }
 
         #endregion
@@ -133,7 +135,11 @@ namespace Agnes
         public bool Equals(Cluster<TInstance> other)
         {
             return !ReferenceEquals(null, other) &&
-                   (ReferenceEquals(this, other) || new HashSet<TInstance>(this._cluster).SetEquals(other));
+                   (ReferenceEquals(this, other) ||
+                    this._hashCode == other._hashCode &&
+                    this.Dissimilarity.Equals(other.Dissimilarity) &&
+                    (Equals(this.Parent1, other.Parent1) && Equals(this.Parent2, other.Parent2) ||
+                     new HashSet<TInstance>(this._cluster).SetEquals(other)));
         }
 
         #endregion
@@ -142,11 +148,25 @@ namespace Agnes
 
         private int ProduceHashCode()
         {
+            //unchecked
+            //{
+            //    var hash = 0;
+            //    foreach (var instance in this) hash += instance.GetHashCode();
+            //    return 31 * hash + this.Count.GetHashCode();
+            //}
             unchecked
             {
-                var hash = 0;
-                foreach (var instance in this) hash += instance.GetHashCode();
-                return 31 * hash + this.Count.GetHashCode();
+                var hashCode = this.Dissimilarity.GetHashCode();
+                if (this.Parent1 != null)
+                {
+                    hashCode = (hashCode * 397) ^ (this.Parent1.GetHashCode());
+                    hashCode = (hashCode * 397) ^ (this.Parent2.GetHashCode());
+                }
+                else
+                {
+                    foreach (var instance in this) hashCode += (hashCode * 397) ^ instance.GetHashCode();
+                }
+                return hashCode;
             }
         }
 
