@@ -97,9 +97,9 @@ namespace Agnes
             }
 
             var clustering = new ClusteringResult<TInstance>(currentClusters.Length)
-                             {
-                                 [0] = new ClusterSet<TInstance>(currentClusters)
-                             };
+            {
+                [0] = new ClusterSet<TInstance>(currentClusters)
+            };
             var numSteps = currentClusters.Length;
             for (var i = 1; i < numSteps; i++)
             {
@@ -155,7 +155,7 @@ namespace Agnes
 
                     // check dissimilarity and register indexes if minimal
                     var dissimilarity = this._dissimilarities[i][j];
-                    if (dissimilarity >= minDissimilarity) continue;
+                    if (minDissimilarity < dissimilarity) continue;
                     minDissimilarity = dissimilarity;
                     clusterIdx1 = i;
                     clusterIdx2 = j;

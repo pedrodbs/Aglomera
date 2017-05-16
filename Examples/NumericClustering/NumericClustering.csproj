@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="CsvParser.cs" />
     <Compile Include="DataPoint.cs" />
+    <Compile Include="PerformanceMeasure.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -148,12 +148,6 @@ namespace Agnes
 
         private int ProduceHashCode()
         {
-            //unchecked
-            //{
-            //    var hash = 0;
-            //    foreach (var instance in this) hash += instance.GetHashCode();
-            //    return 31 * hash + this.Count.GetHashCode();
-            //}
             unchecked
             {
                 var hashCode = this.Dissimilarity.GetHashCode();

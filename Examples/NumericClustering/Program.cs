@@ -55,11 +55,15 @@ namespace NumericClustering
 
         private static void PrintClusters(ISet<DataPoint> instances, ILinkageCriterion<DataPoint> linkage, string name)
         {
+            var perfMeasure = new PerformanceMeasure();
+            perfMeasure.Start();
             var clusteringAlg = new ClusteringAlgorithm<DataPoint>(linkage);
             var clustering = clusteringAlg.GetClustering(instances);
+            perfMeasure.Stop();
 
             Console.WriteLine("_____________________________________________");
-            Console.WriteLine($"Clusters found for linkage criterion '{name}':");
+            Console.WriteLine(name);
+            Console.WriteLine(perfMeasure);
             foreach (var clusterSet in clustering)
                 Console.WriteLine($" - {clusterSet}");
 
