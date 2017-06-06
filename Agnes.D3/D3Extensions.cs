@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes.D3
-//    Last updated: 2017/04/06
+//    Last updated: 2017/06/05
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -13,6 +13,7 @@
 
 using System;
 using System.IO;
+using System.Text;
 using Newtonsoft.Json;
 
 namespace Agnes.D3
@@ -26,7 +27,8 @@ namespace Agnes.D3
             bool printNames = true, Formatting formatting = Formatting.None)
             where TInstance : IComparable<TInstance>
         {
-            using (var sw = new StreamWriter(filePath))
+            using (var fs = File.OpenWrite(filePath))
+            using (var sw = new StreamWriter(fs, Encoding.UTF8))
             {
                 var writer = new JsonTextWriter(sw) {Formatting = formatting};
                 WriteJson(clustering.SingleCluster, writer, printNames);
