@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/03/10
+//    Last updated: 2017/07/20
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -19,7 +19,7 @@ namespace Agnes.Linkage
     /// <summary>
     ///     Implements the minimum or single-linkage clustering method.
     /// </summary>
-    /// <typeparam name="TInstance">The type of instace considered.</typeparam>
+    /// <typeparam name="TInstance">The type of instance considered.</typeparam>
     public class SingleLinkageClustering<TInstance> : ILinkageCriterion<TInstance>
         where TInstance : IComparable<TInstance>
     {

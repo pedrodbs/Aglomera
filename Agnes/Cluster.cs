@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/04/10
+//    Last updated: 2017/07/26
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -19,12 +19,19 @@ using System.Text;
 
 namespace Agnes
 {
+    /// <summary>
+    ///     Represents a set of <see cref="TInstance" /> elements arranged in a hierarchical form.
+    /// </summary>
+    /// <typeparam name="TInstance">The type of instance considered.</typeparam>
     public class Cluster<TInstance> :
         IEnumerable<TInstance>, IEquatable<Cluster<TInstance>>, IComparable<Cluster<TInstance>>
         where TInstance : IComparable<TInstance>
     {
         #region Static Fields & Constants
 
+        /// <summary>
+        ///     Gets an empty cluster.
+        /// </summary>
         public static readonly Cluster<TInstance> EmptySet = new Cluster<TInstance>(new List<TInstance>());
 
         #endregion
@@ -39,18 +46,38 @@ namespace Agnes
 
         #region Properties & Indexers
 
-        public uint Count => (uint) this._cluster.Length;
+        /// <summary>
+        ///     Gets the number of elements in this cluster.
+        /// </summary>
+        public int Count => this._cluster.Length;
 
+        /// <summary>
+        ///     Gets the dissimilarity / distance at which this cluster was found by the clustering algorithm.
+        /// </summary>
         public double Dissimilarity { get; }
 
+        /// <summary>
+        ///     Gets this cluster's first parent, if the cluster was formed by joining two existing clusters. Otherwise returns
+        ///     <c>null</c>.
+        /// </summary>
         public Cluster<TInstance> Parent1 { get; }
 
+        /// <summary>
+        ///     Gets this cluster's second parent, if the cluster was formed by joining two existing clusters. Otherwise returns
+        ///     <c>null</c>.
+        /// </summary>
         public Cluster<TInstance> Parent2 { get; }
 
         #endregion
 
         #region Constructors
 
+        /// <summary>
+        ///     Creates a new <see cref="Cluster{TInstance}" /> by joining the two given clusters.
+        /// </summary>
+        /// <param name="parent1">The first parent of the new cluster.</param>
+        /// <param name="parent2">The second parent of the new cluster.</param>
+        /// <param name="dissimilarity">The dissimilarity/distance at which the new cluster was found.</param>
         public Cluster(Cluster<TInstance> parent1, Cluster<TInstance> parent2, double dissimilarity)
         {
             this.Parent1 = parent1;
@@ -62,10 +89,20 @@ namespace Agnes
             this._hashCode = this.ProduceHashCode();
         }
 
+        /// <summary>
+        ///     Creates a new <see cref="Cluster{TInstance}" /> with a single <see cref="TInstance" /> element.
+        /// </summary>
+        /// <param name="instance">The single element in the new cluster.</param>
+        /// <param name="dissimilarity">The dissimilarity/distance at which the new cluster was found.</param>
         public Cluster(TInstance instance, double dissimilarity = 0) : this(new[] {instance}, dissimilarity)
         {
         }
 
+        /// <summary>
+        ///     Creates a new <see cref="Cluster{TInstance}" /> with the given <see cref="TInstance" /> elements.
+        /// </summary>
+        /// <param name="instances">The elements in the new cluster.</param>
+        /// <param name="dissimilarity">The dissimilarity/distance at which the new cluster was found.</param>
         public Cluster(IEnumerable<TInstance> instances, double dissimilarity = 0)
         {
             this.Dissimilarity = dissimilarity;
@@ -73,6 +110,10 @@ namespace Agnes
             this._hashCode = this.ProduceHashCode();
         }
 
+        /// <summary>
+        ///     Creates a new <see cref="Cluster{TInstance}" /> which is an exact copy of the given cluster.
+        /// </summary>
+        /// <param name="cluster">The cluster to be copied into the new cluster.</param>
         public Cluster(Cluster<TInstance> cluster)
         {
             this._cluster = cluster._cluster.ToArray();
@@ -109,11 +150,20 @@ namespace Agnes
 
         #region Public Methods
 
+        /// <summary>
+        ///     Creates a new <see cref="Cluster{TInstance}" /> which is an exact copy of this cluster.
+        /// </summary>
+        /// <returns>A new <see cref="Cluster{TInstance}" /> which is an exact copy of this cluster.</returns>
         public Cluster<TInstance> Clone()
         {
             return new Cluster<TInstance>(this);
         }
 
+        /// <summary>
+        ///     Checks whether this cluster contains the given item.
+        /// </summary>
+        /// <param name="item">The item whose presence in the cluster we want to check.</param>
+        /// <returns><c>true</c> if the cluster contains the given item, <c>false</c> otherwise.</returns>
         public bool Contains(TInstance item)
         {
             return this._cluster.Contains(item);
@@ -153,8 +203,8 @@ namespace Agnes
                 var hashCode = this.Dissimilarity.GetHashCode();
                 if (this.Parent1 != null)
                 {
-                    hashCode = (hashCode * 397) ^ (this.Parent1.GetHashCode());
-                    hashCode = (hashCode * 397) ^ (this.Parent2.GetHashCode());
+                    hashCode = (hashCode * 397) ^ this.Parent1.GetHashCode();
+                    hashCode = (hashCode * 397) ^ this.Parent2.GetHashCode();
                 }
                 else
                 {

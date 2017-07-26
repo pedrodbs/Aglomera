@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/04/06
+//    Last updated: 2017/07/26
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -22,7 +22,7 @@ namespace Agnes
     ///     Represents a set of <see cref="Cluster{TInstance}" /> elements that were found during the execution of the
     ///     clustering algorithm separated at some minimum distance.
     /// </summary>
-    /// <typeparam name="TInstance"></typeparam>
+    /// <typeparam name="TInstance">The type of instance considered.</typeparam>
     public class ClusterSet<TInstance> : IEnumerable<Cluster<TInstance>>
         where TInstance : IComparable<TInstance>
     {
@@ -56,7 +56,7 @@ namespace Agnes
         /// <summary>
         ///     Creates a new <see cref="ClusterSet{TInstance}" /> with the given clusters and distance.
         /// </summary>
-        /// <param name="clusters">The cset of clusters.</param>
+        /// <param name="clusters">The set of clusters.</param>
         /// <param name="dissimilarity">The dissimilarity/distance at which the clusters were found.</param>
         public ClusterSet(Cluster<TInstance>[] clusters, double dissimilarity = 0)
         {

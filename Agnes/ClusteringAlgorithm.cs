@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/04/06
+//    Last updated: 2017/07/26
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -21,7 +21,7 @@ namespace Agnes
     /// <summary>
     ///     Implements the agglomerative nesting clustering algorithm (program AGNES) in [1].
     /// </summary>
-    /// <typeparam name="TInstance">The type of instace considered.</typeparam>
+    /// <typeparam name="TInstance">The type of instance considered.</typeparam>
     /// <remarks>
     ///     [1] Kaufman, L., & Rousseeuw, P. J. (1990). Agglomerative nesting (program AGNES). Finding Groups in Data: An
     ///     Introduction to Cluster Analysis, 199-252.
@@ -97,9 +97,9 @@ namespace Agnes
             }
 
             var clustering = new ClusteringResult<TInstance>(currentClusters.Length)
-            {
-                [0] = new ClusterSet<TInstance>(currentClusters)
-            };
+                             {
+                                 [0] = new ClusterSet<TInstance>(currentClusters)
+                             };
             var numSteps = currentClusters.Length;
             for (var i = 1; i < numSteps; i++)
             {

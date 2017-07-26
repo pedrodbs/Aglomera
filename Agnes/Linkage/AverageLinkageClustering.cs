@@ -19,7 +19,7 @@ namespace Agnes.Linkage
     /// <summary>
     ///     Implements the unweighted pair-group average method or UPGMA.
     /// </summary>
-    /// <typeparam name="TInstance">The type of instace considered.</typeparam>
+    /// <typeparam name="TInstance">The type of instance considered.</typeparam>
     public class AverageLinkageClustering<TInstance> : ILinkageCriterion<TInstance>
         where TInstance : IComparable<TInstance>
     {

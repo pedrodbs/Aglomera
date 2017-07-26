@@ -19,7 +19,7 @@ namespace Agnes.Linkage
     /// <summary>
     ///     Implements the maximum or complete-linkage clustering method.
     /// </summary>
-    /// <typeparam name="TInstance">The type of instace considered.</typeparam>
+    /// <typeparam name="TInstance">The type of instance considered.</typeparam>
     public class CompleteLinkageClustering<TInstance> : ILinkageCriterion<TInstance>
         where TInstance : IComparable<TInstance>
     {
