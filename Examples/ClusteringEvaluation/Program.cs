@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: ClusteringEvaluation
-//    Last updated: 2017/07/26
+//    Project: Agnes.Examples.ClusteringEvaluation
+//    Last updated: 2017/07/27
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -15,11 +15,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Agnes;
 using Agnes.Evaluation;
 using Agnes.Linkage;
 
-namespace ClusteringEvaluation
+namespace Agnes.Examples.ClusteringEvaluation
 {
     internal class Program
     {

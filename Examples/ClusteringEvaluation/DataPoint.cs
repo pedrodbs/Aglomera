@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: SmallExample
-//    Last updated: 2017/03/10
+//    Project: Agnes.Examples.ClusteringEvaluation
+//    Last updated: 2017/07/27
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -13,9 +13,8 @@
 
 using System;
 using System.Linq;
-using Agnes;
 
-namespace ClusteringEvaluation
+namespace Agnes.Examples.ClusteringEvaluation
 {
     public struct DataPoint : IEquatable<DataPoint>, IDissimilarityMetric<DataPoint>, IComparable<DataPoint>
     {
@@ -46,10 +45,7 @@ namespace ClusteringEvaluation
 
         public override int GetHashCode()
         {
-            unchecked
-            {
-                return this.Value.Aggregate(17, (current, d) => current * 23 + d.GetHashCode());
-            }
+            return this.ID.GetHashCode();
         }
 
         public override string ToString()

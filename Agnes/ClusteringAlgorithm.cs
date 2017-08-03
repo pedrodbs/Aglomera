@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/07/26
+//    Last updated: 2017/07/29
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -104,8 +104,7 @@ namespace Agnes
             for (var i = 1; i < numSteps; i++)
             {
                 // gets minimal dissimilarity between a pair of existing clusters
-                int clusterIdx1, clusterIdx2;
-                var minDissimilarity = this.GetMinDissimilarity(out clusterIdx1, out clusterIdx2);
+                var minDissimilarity = this.GetMinDissimilarity(out int clusterIdx1, out int clusterIdx2);
 
                 // gets a copy of previous clusters, removes new cluster elements
                 var cluster1 = this._clusters[clusterIdx1];

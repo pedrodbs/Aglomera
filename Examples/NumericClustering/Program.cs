@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: NumericClustering
-//    Last updated: 2017/04/06
+//    Project: Agnes.Examples.NumericClustering
+//    Last updated: 2017/07/27
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -14,12 +14,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Agnes;
 using Agnes.D3;
 using Agnes.Linkage;
 using Newtonsoft.Json;
 
-namespace NumericClustering
+namespace Agnes.Examples.NumericClustering
 {
     internal class Program
     {

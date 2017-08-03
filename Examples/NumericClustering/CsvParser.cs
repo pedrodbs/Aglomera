@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: SmallExample
-//    Last updated: 2017/03/13
+//    Project: Agnes.Examples.NumericClustering
+//    Last updated: 2017/07/27
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -16,7 +16,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace NumericClustering
+namespace Agnes.Examples.NumericClustering
 {
     public class CsvParser
     {

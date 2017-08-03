@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/07/26
+//    Last updated: 2017/07/27
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -24,10 +24,11 @@ namespace Agnes.Evaluation
         /// <param name="n">The number of elements in the set.</param>
         /// <param name="k">The number of elements to choose from the set (combination size).</param>
         /// <returns>The number of possible combinations (without repetition).</returns>
+        /// <remarks>See <a href="http://www.mathwords.com/c/combination_formula.htm" />.</remarks>
         public static long GetCombinations(long n, long k)
         {
             if (n == k) return 1;
-            return GetProduct(n - k + 1, n) / GetFactorial(k);
+            return GetPermutations(n, k) / GetFactorial(k);
         }
 
         /// <summary>
@@ -44,17 +45,18 @@ namespace Agnes.Evaluation
         }
 
         /// <summary>
-        ///     Returns the product of a sequence or partial sequence, according to the given start and end parameters.
+        ///     Returns the number of possible permutations of k elements from a set of n (without repetition).
         /// </summary>
-        /// <param name="start">The starting number of the sequence.</param>
-        /// <param name="end">The end number of the sequence.</param>
+        /// <param name="n">The number of elements in the set.</param>
+        /// <param name="k">The number of elements to choose from the set (permutation size).</param>
         /// <returns></returns>
-        public static long GetProduct(long start, long end)
+        /// <remarks>See <a href="http://www.mathwords.com/p/permutation_formula.htm" />.</remarks>
+        public static long GetPermutations(long n, long k)
         {
-            long mult = 1;
-            for (var i = start; i <= end; i++)
-                mult *= i;
-            return mult;
+            long permutations = 1;
+            for (var i = n - k + 1; i <= n; i++)
+                permutations *= i;
+            return permutations;
         }
 
         #endregion
