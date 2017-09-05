@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/07/26
+//    Last updated: 2017/08/30
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -41,32 +41,6 @@ namespace Agnes
         private readonly TInstance[] _cluster;
 
         private readonly int _hashCode;
-
-        #endregion
-
-        #region Properties & Indexers
-
-        /// <summary>
-        ///     Gets the number of elements in this cluster.
-        /// </summary>
-        public int Count => this._cluster.Length;
-
-        /// <summary>
-        ///     Gets the dissimilarity / distance at which this cluster was found by the clustering algorithm.
-        /// </summary>
-        public double Dissimilarity { get; }
-
-        /// <summary>
-        ///     Gets this cluster's first parent, if the cluster was formed by joining two existing clusters. Otherwise returns
-        ///     <c>null</c>.
-        /// </summary>
-        public Cluster<TInstance> Parent1 { get; }
-
-        /// <summary>
-        ///     Gets this cluster's second parent, if the cluster was formed by joining two existing clusters. Otherwise returns
-        ///     <c>null</c>.
-        /// </summary>
-        public Cluster<TInstance> Parent2 { get; }
 
         #endregion
 
@@ -122,6 +96,32 @@ namespace Agnes
             this.Dissimilarity = cluster.Dissimilarity;
             this._hashCode = cluster._hashCode;
         }
+
+        #endregion
+
+        #region Properties & Indexers
+
+        /// <summary>
+        ///     Gets the number of elements in this cluster.
+        /// </summary>
+        public int Count => this._cluster.Length;
+
+        /// <summary>
+        ///     Gets the dissimilarity / distance at which this cluster was found by the clustering algorithm.
+        /// </summary>
+        public double Dissimilarity { get; }
+
+        /// <summary>
+        ///     Gets this cluster's first parent, if the cluster was formed by joining two existing clusters. Otherwise returns
+        ///     <c>null</c>.
+        /// </summary>
+        public Cluster<TInstance> Parent1 { get; }
+
+        /// <summary>
+        ///     Gets this cluster's second parent, if the cluster was formed by joining two existing clusters. Otherwise returns
+        ///     <c>null</c>.
+        /// </summary>
+        public Cluster<TInstance> Parent2 { get; }
 
         #endregion
 
@@ -188,7 +188,8 @@ namespace Agnes
                    (ReferenceEquals(this, other) ||
                     this._hashCode == other._hashCode &&
                     this.Dissimilarity.Equals(other.Dissimilarity) &&
-                    (Equals(this.Parent1, other.Parent1) && Equals(this.Parent2, other.Parent2) ||
+                    (this.Parent1 != null && this.Parent2 != null &&
+                     Equals(this.Parent1, other.Parent1) && Equals(this.Parent2, other.Parent2) ||
                      new HashSet<TInstance>(this._cluster).SetEquals(other)));
         }
 
