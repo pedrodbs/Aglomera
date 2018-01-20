@@ -4,14 +4,13 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/07/29
+//    Last updated: 2018/01/18
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
 // ------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Agnes.Linkage;
@@ -26,7 +25,7 @@ namespace Agnes
     ///     [1] Kaufman, L., & Rousseeuw, P. J. (1990). Agglomerative nesting (program AGNES). Finding Groups in Data: An
     ///     Introduction to Cluster Analysis, 199-252.
     /// </remarks>
-    public class ClusteringAlgorithm<TInstance> where TInstance : IComparable<TInstance>
+    public class ClusteringAlgorithm<TInstance>
     {
         #region Fields
 
@@ -104,7 +103,7 @@ namespace Agnes
             for (var i = 1; i < numSteps; i++)
             {
                 // gets minimal dissimilarity between a pair of existing clusters
-                var minDissimilarity = this.GetMinDissimilarity(out int clusterIdx1, out int clusterIdx2);
+                var minDissimilarity = this.GetMinDissimilarity(out var clusterIdx1, out var clusterIdx2);
 
                 // gets a copy of previous clusters, removes new cluster elements
                 var cluster1 = this._clusters[clusterIdx1];
@@ -154,7 +153,7 @@ namespace Agnes
 
                     // check dissimilarity and register indexes if minimal
                     var dissimilarity = this._dissimilarities[i][j];
-                    if (minDissimilarity < dissimilarity) continue;
+                    if (minDissimilarity <= dissimilarity) continue;
                     minDissimilarity = dissimilarity;
                     clusterIdx1 = i;
                     clusterIdx2 = j;

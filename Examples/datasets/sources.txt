@@ -1,0 +1,5 @@
+Wifi-localization
+
+File: 		wifi_localization.csv
+Source URL: https://archive.ics.uci.edu/ml/datasets/Wireless+Indoor+Localization
+Comments:	Transformed each instance class (room 1 to 4) into a label consisting of a character (A to D) plus a sequential number identifier. Shuffled all instances.

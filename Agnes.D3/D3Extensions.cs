@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes.D3
-//    Last updated: 2017/06/05
+//    Last updated: 2018/01/19
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -27,7 +27,7 @@ namespace Agnes.D3
             bool printNames = true, Formatting formatting = Formatting.None)
             where TInstance : IComparable<TInstance>
         {
-            using (var fs = File.OpenWrite(filePath))
+            using (var fs = File.Create(filePath))
             using (var sw = new StreamWriter(fs, Encoding.UTF8))
             {
                 var writer = new JsonTextWriter(sw) {Formatting = formatting};

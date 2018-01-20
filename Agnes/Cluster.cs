@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/08/30
+//    Last updated: 2018/01/18
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -25,7 +25,6 @@ namespace Agnes
     /// <typeparam name="TInstance">The type of instance considered.</typeparam>
     public class Cluster<TInstance> :
         IEnumerable<TInstance>, IEquatable<Cluster<TInstance>>, IComparable<Cluster<TInstance>>
-        where TInstance : IComparable<TInstance>
     {
         #region Static Fields & Constants
 
@@ -129,7 +128,7 @@ namespace Agnes
 
         public override bool Equals(object obj)
         {
-            return !ReferenceEquals(null, obj) &&
+            return !(obj is null) &&
                    (ReferenceEquals(this, obj) ||
                     obj.GetType() == this.GetType() && this.Equals((Cluster<TInstance>) obj));
         }
@@ -164,10 +163,7 @@ namespace Agnes
         /// </summary>
         /// <param name="item">The item whose presence in the cluster we want to check.</param>
         /// <returns><c>true</c> if the cluster contains the given item, <c>false</c> otherwise.</returns>
-        public bool Contains(TInstance item)
-        {
-            return this._cluster.Contains(item);
-        }
+        public bool Contains(TInstance item) => this._cluster.Contains(item);
 
         public int CompareTo(Cluster<TInstance> other)
         {
@@ -177,14 +173,11 @@ namespace Agnes
             return countCompare == 0 ? string.CompareOrdinal(this.ToString(), other.ToString()) : countCompare;
         }
 
-        public IEnumerator<TInstance> GetEnumerator()
-        {
-            return ((IEnumerable<TInstance>) this._cluster).GetEnumerator();
-        }
+        public IEnumerator<TInstance> GetEnumerator() => ((IEnumerable<TInstance>) this._cluster).GetEnumerator();
 
         public bool Equals(Cluster<TInstance> other)
         {
-            return !ReferenceEquals(null, other) &&
+            return !(other is null) &&
                    (ReferenceEquals(this, other) ||
                     this._hashCode == other._hashCode &&
                     this.Dissimilarity.Equals(other.Dissimilarity) &&

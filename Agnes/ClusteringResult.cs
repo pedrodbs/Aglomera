@@ -4,16 +4,18 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2017/07/26
+//    Last updated: 2018/01/19
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
 // ------------------------------------------
 
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
 
 namespace Agnes
 {
@@ -23,11 +25,23 @@ namespace Agnes
     /// </summary>
     /// <typeparam name="TInstance">The type of instance considered.</typeparam>
     public class ClusteringResult<TInstance> : IEnumerable<ClusterSet<TInstance>>
-        where TInstance : IComparable<TInstance>
     {
         #region Fields
 
         private readonly ClusterSet<TInstance>[] _clusterSets;
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        ///     Creates a new <see cref="ClusteringResult{TInstance}" /> of the given size.
+        /// </summary>
+        /// <param name="size">The maximum number of <see cref="ClusterSet{TInstance}" /> to be added by the algorithm.</param>
+        public ClusteringResult(int size)
+        {
+            this._clusterSets = new ClusterSet<TInstance>[size];
+        }
 
         #endregion
 
@@ -57,20 +71,25 @@ namespace Agnes
 
         #endregion
 
-        #region Constructors
+        #region Public Methods
 
         /// <summary>
-        ///     Creates a new <see cref="ClusteringResult{TInstance}" /> of the given size.
+        ///     Saves the <see cref="ClusterSet{TInstance}" /> objects stored in this <see cref="ClusteringResult{TInstance}" /> in
+        ///     a comma-separated values (CSV) file.
         /// </summary>
-        /// <param name="size">The maximum number of <see cref="ClusterSet{TInstance}" /> to be added by the algorithm.</param>
-        public ClusteringResult(int size)
+        /// <param name="filePath">The path to the file in which to save the clustering results.</param>
+        /// <param name="sepChar">The character used to separate the fields in the CSV file.</param>
+        public void SaveToCsv(string filePath, char sepChar = ',')
         {
-            this._clusterSets = new ClusterSet<TInstance>[size];
+            using (var sw = new StreamWriter(filePath, false, Encoding.UTF8))
+            {
+                sw.WriteLine($"Dissimilarity{sepChar}Num. clusters{sepChar}Cluster-set");
+                foreach (var clusterSet in this.Reverse())
+                    sw.WriteLine($"{clusterSet.Dissimilarity}{sepChar}{clusterSet.Count}{sepChar}" +
+                                 $"{clusterSet.ToString(false).Replace(sepChar, ';')}");
+                sw.Close();
+            }
         }
-
-        #endregion
-
-        #region Public Methods
 
         public IEnumerator<ClusterSet<TInstance>> GetEnumerator()
         {
