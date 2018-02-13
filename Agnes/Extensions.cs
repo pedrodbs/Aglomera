@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2018/01/19
+//    Last updated: 2018/01/21
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -14,6 +14,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Agnes.Evaluation.External;
 using Agnes.Evaluation.Internal;
 
 namespace Agnes
@@ -28,7 +29,7 @@ namespace Agnes
         /// <summary>
         ///     Evaluates all given <see cref="ClusterSet{TInstance}" />s according to the given
         ///     <see cref="IInternalEvaluationCriterion{TInstance}" />. The maximum number of clusters allowed in a cluster-set for
-        ///     it to be evaluated corresponds to sqrt(N), where N is the total number of instances clustered.
+        ///     it to be evaluated corresponds to sqrt(N/2), where N is the total number of instances clustered.
         /// </summary>
         /// <param name="clustering">The cluster-sets to be evaluated.</param>
         /// <param name="criterion">The criterion used to evaluate the cluster-sets.</param>
@@ -36,7 +37,7 @@ namespace Agnes
         /// <typeparam name="TInstance">The type of instance considered.</typeparam>
         public static ICollection<ClusterSetEvaluation<TInstance>> EvaluateClustering<TInstance>(
             this ClusteringResult<TInstance> clustering, IInternalEvaluationCriterion<TInstance> criterion) =>
-            EvaluateClustering(clustering, criterion, (uint) Math.Sqrt(clustering.Count));
+            EvaluateClustering(clustering, criterion, (uint) Math.Sqrt(clustering.Count / 2d));
 
         /// <summary>
         ///     Evaluates all given <see cref="ClusterSet{TInstance}" />s according to the given
@@ -52,10 +53,69 @@ namespace Agnes
             uint maxClusters)
         {
             var evals = new List<ClusterSetEvaluation<TInstance>>();
+
+            // checks only one cluster allowed
+            if (maxClusters == 1)
+            {
+                evals.Add(new ClusterSetEvaluation<TInstance>(clustering[0], double.NaN));
+                return evals;
+            }
+
+            // evaluates all cluster-sets
             foreach (var clusterSet in clustering.Reverse())
             {
                 if (clusterSet.Count < 2 || clusterSet.Count > maxClusters) continue;
                 var eval = criterion.Evaluate(clusterSet);
+                evals.Add(new ClusterSetEvaluation<TInstance>(clusterSet, eval));
+            }
+            return evals;
+        }
+
+        /// <summary>
+        ///     Evaluates all given <see cref="ClusterSet{TInstance}" />s according to the given
+        ///     <see cref="IExternalEvaluationCriterion{TInstance, TClass}" />. The maximum number of clusters allowed in a
+        ///     cluster-set for it to be evaluated corresponds to sqrt(N/2), where N is the total number of instances clustered.
+        /// </summary>
+        /// <param name="clustering">The cluster-sets to be evaluated.</param>
+        /// <param name="criterion">The criterion used to evaluate the cluster-sets.</param>
+        /// <param name="instanceClasses">The instances' classes.</param>
+        /// <returns>A list containing the evaluations for each cluster-set.</returns>
+        /// <typeparam name="TInstance">The type of instance considered.</typeparam>
+        /// <typeparam name="TClass">The type of class considered.</typeparam>
+        public static ICollection<ClusterSetEvaluation<TInstance>> EvaluateClustering<TInstance, TClass>(
+            this ClusteringResult<TInstance> clustering, IExternalEvaluationCriterion<TInstance, TClass> criterion,
+            IDictionary<TInstance, TClass> instanceClasses) =>
+            EvaluateClustering(clustering, criterion, instanceClasses, (uint) Math.Sqrt(clustering.Count / 2d));
+
+        /// <summary>
+        ///     Evaluates all given <see cref="ClusterSet{TInstance}" />s according to the given
+        ///     <see cref="IExternalEvaluationCriterion{TInstance, TClass}" />.
+        /// </summary>
+        /// <param name="clustering">The cluster-sets to be evaluated.</param>
+        /// <param name="criterion">The criterion used to evaluate the cluster-sets.</param>
+        /// <param name="instanceClasses">The instances' classes.</param>
+        /// <param name="maxClusters">The maximum number of clusters allowed for a cluster-set for it to be evaluated.</param>
+        /// <returns>A list containing the evaluations for each cluster-set.</returns>
+        /// <typeparam name="TInstance">The type of instance considered.</typeparam>
+        /// <typeparam name="TClass">The type of class considered.</typeparam>
+        public static ICollection<ClusterSetEvaluation<TInstance>> EvaluateClustering<TInstance, TClass>(
+            this ClusteringResult<TInstance> clustering, IExternalEvaluationCriterion<TInstance, TClass> criterion,
+            IDictionary<TInstance, TClass> instanceClasses, uint maxClusters)
+        {
+            var evals = new List<ClusterSetEvaluation<TInstance>>();
+
+            // checks only one cluster allowed
+            if (maxClusters == 1)
+            {
+                evals.Add(new ClusterSetEvaluation<TInstance>(clustering[0], double.NaN));
+                return evals;
+            }
+
+            // evaluates all cluster-sets
+            foreach (var clusterSet in clustering.Reverse())
+            {
+                if (clusterSet.Count < 2 || clusterSet.Count > maxClusters) continue;
+                var eval = criterion.Evaluate(clusterSet, instanceClasses);
                 evals.Add(new ClusterSetEvaluation<TInstance>(clusterSet, eval));
             }
             return evals;

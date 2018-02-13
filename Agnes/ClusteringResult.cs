@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Agnes
-//    Last updated: 2018/01/19
+//    Last updated: 2018/01/21
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -83,10 +83,15 @@ namespace Agnes
         {
             using (var sw = new StreamWriter(filePath, false, Encoding.UTF8))
             {
-                sw.WriteLine($"Dissimilarity{sepChar}Num. clusters{sepChar}Cluster-set");
+                sw.WriteLine($"Num. clusters{sepChar}Dissimilarity{sepChar}Cluster{sepChar}Instance");
                 foreach (var clusterSet in this.Reverse())
-                    sw.WriteLine($"{clusterSet.Dissimilarity}{sepChar}{clusterSet.Count}{sepChar}" +
-                                 $"{clusterSet.ToString(false).Replace(sepChar, ';')}");
+                    for (var i = 0; i < clusterSet.Count; i++)
+                    {
+                        var cluster = clusterSet[i];
+                        foreach (var instance in cluster)
+                            sw.WriteLine(
+                                $"{clusterSet.Count}{sepChar}{clusterSet.Dissimilarity}{sepChar}{i}{sepChar}{instance}");
+                    }
                 sw.Close();
             }
         }
