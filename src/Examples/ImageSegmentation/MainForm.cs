@@ -14,8 +14,8 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Grupo;
-using Grupo.Linkage;
+using Aglomera;
+using Aglomera.Linkage;
 
 namespace ImageSegmentation
 {
