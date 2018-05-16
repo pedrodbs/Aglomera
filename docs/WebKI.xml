@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AgglomerativeClusteringAlgorithm(Of TInstance) class">
+    <HelpKINode Title="AgglomerativeClusteringAlgorithm(TInstance) Class" Url="html/T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_AgglomerativeClusteringAlgorithm_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AgglomerativeClusteringAlgorithm(Of TInstance).AgglomerativeClusteringAlgorithm constructor" Url="html/M_Aglomera_AgglomerativeClusteringAlgorithm_1__ctor.htm" />
+  <HelpKINode Title="AgglomerativeClusteringAlgorithm(Of TInstance).GetClustering method" Url="html/Overload_Aglomera_AgglomerativeClusteringAlgorithm_1_GetClustering.htm" />
+  <HelpKINode Title="AgglomerativeClusteringAlgorithm(Of TInstance).LinkageCriterion property" Url="html/P_Aglomera_AgglomerativeClusteringAlgorithm_1_LinkageCriterion.htm" />
+  <HelpKINode Title="AgglomerativeClusteringAlgorithm&lt;TInstance&gt; class">
+    <HelpKINode Title="AgglomerativeClusteringAlgorithm(TInstance) Class" Url="html/T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_AgglomerativeClusteringAlgorithm_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AgglomerativeClusteringAlgorithm&lt;TInstance&gt;.AgglomerativeClusteringAlgorithm constructor" Url="html/M_Aglomera_AgglomerativeClusteringAlgorithm_1__ctor.htm" />
+  <HelpKINode Title="AgglomerativeClusteringAlgorithm&lt;TInstance&gt;.GetClustering method" Url="html/Overload_Aglomera_AgglomerativeClusteringAlgorithm_1_GetClustering.htm" />
+  <HelpKINode Title="AgglomerativeClusteringAlgorithm&lt;TInstance&gt;.LinkageCriterion property" Url="html/P_Aglomera_AgglomerativeClusteringAlgorithm_1_LinkageCriterion.htm" />
+  <HelpKINode Title="Aglomera namespace" Url="html/N_Aglomera.htm" />
+  <HelpKINode Title="Aglomera.AgglomerativeClusteringAlgorithm(Of TInstance) class" Url="html/T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm" />
+  <HelpKINode Title="Aglomera.AgglomerativeClusteringAlgorithm&lt;TInstance&gt; class" Url="html/T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm" />
+  <HelpKINode Title="Aglomera.CachedDissimilarityMetric(Of TInstance) class" Url="html/T_Aglomera_CachedDissimilarityMetric_1.htm" />
+  <HelpKINode Title="Aglomera.CachedDissimilarityMetric&lt;TInstance&gt; class" Url="html/T_Aglomera_CachedDissimilarityMetric_1.htm" />
+  <HelpKINode Title="Aglomera.CentroidFunction(Of TInstance) delegate" Url="html/T_Aglomera_CentroidFunction_1.htm" />
+  <HelpKINode Title="Aglomera.CentroidFunction&lt;TInstance&gt; delegate" Url="html/T_Aglomera_CentroidFunction_1.htm" />
+  <HelpKINode Title="Aglomera.Cluster(Of TInstance) class" Url="html/T_Aglomera_Cluster_1.htm" />
+  <HelpKINode Title="Aglomera.Cluster&lt;TInstance&gt; class" Url="html/T_Aglomera_Cluster_1.htm" />
+  <HelpKINode Title="Aglomera.ClusteringResult(Of TInstance) class" Url="html/T_Aglomera_ClusteringResult_1.htm" />
+  <HelpKINode Title="Aglomera.ClusteringResult&lt;TInstance&gt; class" Url="html/T_Aglomera_ClusteringResult_1.htm" />
+  <HelpKINode Title="Aglomera.ClusterSet(Of TInstance) class" Url="html/T_Aglomera_ClusterSet_1.htm" />
+  <HelpKINode Title="Aglomera.ClusterSet&lt;TInstance&gt; class" Url="html/T_Aglomera_ClusterSet_1.htm" />
+  <HelpKINode Title="Aglomera.ClusterSetEvaluation(Of TInstance) structure" Url="html/T_Aglomera_ClusterSetEvaluation_1.htm" />
+  <HelpKINode Title="Aglomera.ClusterSetEvaluation&lt;TInstance&gt; structure" Url="html/T_Aglomera_ClusterSetEvaluation_1.htm" />
+  <HelpKINode Title="Aglomera.Combinatorics class" Url="html/T_Aglomera_Combinatorics.htm" />
+  <HelpKINode Title="Aglomera.D3 namespace" Url="html/N_Aglomera_D3.htm" />
+  <HelpKINode Title="Aglomera.D3.D3Extensions class" Url="html/T_Aglomera_D3_D3Extensions.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External namespace" Url="html/N_Aglomera_Evaluation_External.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.CombinedExternalCriterion(Of TInstance, TClass) class" Url="html/T_Aglomera_Evaluation_External_CombinedExternalCriterion_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.CombinedExternalCriterion&lt;TInstance, TClass&gt; class" Url="html/T_Aglomera_Evaluation_External_CombinedExternalCriterion_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.FMeasure(Of TInstance, TClass) class" Url="html/T_Aglomera_Evaluation_External_FMeasure_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.FMeasure&lt;TInstance, TClass&gt; class" Url="html/T_Aglomera_Evaluation_External_FMeasure_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.IExternalEvaluationCriterion(Of TInstance, TClass) interface" Url="html/T_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.IExternalEvaluationCriterion&lt;TInstance, TClass&gt; interface" Url="html/T_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.NormalizedMutualInformation(Of TInstance, TClass) class" Url="html/T_Aglomera_Evaluation_External_NormalizedMutualInformation_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.NormalizedMutualInformation&lt;TInstance, TClass&gt; class" Url="html/T_Aglomera_Evaluation_External_NormalizedMutualInformation_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.Precision(Of TInstance, TClass) class" Url="html/T_Aglomera_Evaluation_External_Precision_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.Precision&lt;TInstance, TClass&gt; class" Url="html/T_Aglomera_Evaluation_External_Precision_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.Purity(Of TInstance, TClass) class" Url="html/T_Aglomera_Evaluation_External_Purity_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.Purity&lt;TInstance, TClass&gt; class" Url="html/T_Aglomera_Evaluation_External_Purity_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.RandIndex(Of TInstance, TClass) class" Url="html/T_Aglomera_Evaluation_External_RandIndex_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.RandIndex&lt;TInstance, TClass&gt; class" Url="html/T_Aglomera_Evaluation_External_RandIndex_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.Recall(Of TInstance, TClass) class" Url="html/T_Aglomera_Evaluation_External_Recall_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.External.Recall&lt;TInstance, TClass&gt; class" Url="html/T_Aglomera_Evaluation_External_Recall_2.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal namespace" Url="html/N_Aglomera_Evaluation_Internal.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.CalinskiHarabaszIndex(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.CalinskiHarabaszIndex&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.CombinedInternalCriterion(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.CombinedInternalCriterion&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.DaviesBouldinIndex(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.DaviesBouldinIndex&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.DunnIndex(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_DunnIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.DunnIndex&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_DunnIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.IIndex(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_IIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.IIndex&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_IIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.IInternalEvaluationCriterion(Of TInstance) interface" Url="html/T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.IInternalEvaluationCriterion&lt;TInstance&gt; interface" Url="html/T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.ModifiedGammaStatistic(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.ModifiedGammaStatistic&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.RootMeanSquareStdDev(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.RootMeanSquareStdDev&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.RSquared(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_RSquared_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.RSquared&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_RSquared_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.SilhouetteCoefficient(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.SilhouetteCoefficient&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.WithinBetweenRatio(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.WithinBetweenRatio&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.XieBeniIndex(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.XieBeniIndex&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.XuIndex(Of TInstance) class" Url="html/T_Aglomera_Evaluation_Internal_XuIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Evaluation.Internal.XuIndex&lt;TInstance&gt; class" Url="html/T_Aglomera_Evaluation_Internal_XuIndex_1.htm" />
+  <HelpKINode Title="Aglomera.Extensions class" Url="html/T_Aglomera_Extensions.htm" />
+  <HelpKINode Title="Aglomera.IClusteringAlgorithm(Of TInstance) interface" Url="html/T_Aglomera_IClusteringAlgorithm_1.htm" />
+  <HelpKINode Title="Aglomera.IClusteringAlgorithm&lt;TInstance&gt; interface" Url="html/T_Aglomera_IClusteringAlgorithm_1.htm" />
+  <HelpKINode Title="Aglomera.IDissimilarityMetric(Of TInstance) interface" Url="html/T_Aglomera_IDissimilarityMetric_1.htm" />
+  <HelpKINode Title="Aglomera.IDissimilarityMetric&lt;TInstance&gt; interface" Url="html/T_Aglomera_IDissimilarityMetric_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage namespace" Url="html/N_Aglomera_Linkage.htm" />
+  <HelpKINode Title="Aglomera.Linkage.AverageLinkage(Of TInstance) class" Url="html/T_Aglomera_Linkage_AverageLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.AverageLinkage&lt;TInstance&gt; class" Url="html/T_Aglomera_Linkage_AverageLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.CentroidLinkage(Of TInstance) class" Url="html/T_Aglomera_Linkage_CentroidLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.CentroidLinkage&lt;TInstance&gt; class" Url="html/T_Aglomera_Linkage_CentroidLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.CompleteLinkage(Of TInstance) class" Url="html/T_Aglomera_Linkage_CompleteLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.CompleteLinkage&lt;TInstance&gt; class" Url="html/T_Aglomera_Linkage_CompleteLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.ILinkageCriterion(Of TInstance) interface" Url="html/T_Aglomera_Linkage_ILinkageCriterion_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.ILinkageCriterion&lt;TInstance&gt; interface" Url="html/T_Aglomera_Linkage_ILinkageCriterion_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.MinimumEnergyLinkage(Of TInstance) class" Url="html/T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.MinimumEnergyLinkage&lt;TInstance&gt; class" Url="html/T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.SingleLinkage(Of TInstance) class" Url="html/T_Aglomera_Linkage_SingleLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.SingleLinkage&lt;TInstance&gt; class" Url="html/T_Aglomera_Linkage_SingleLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.WardsMinimumVarianceLinkage(Of TInstance) class" Url="html/T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm" />
+  <HelpKINode Title="Aglomera.Linkage.WardsMinimumVarianceLinkage&lt;TInstance&gt; class" Url="html/T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm" />
+  <HelpKINode Title="AverageLinkage(Of TInstance) class">
+    <HelpKINode Title="AverageLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_AverageLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_AverageLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_AverageLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_AverageLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AverageLinkage(Of TInstance).AverageLinkage constructor" Url="html/M_Aglomera_Linkage_AverageLinkage_1__ctor.htm" />
+  <HelpKINode Title="AverageLinkage(Of TInstance).Calculate method" Url="html/M_Aglomera_Linkage_AverageLinkage_1_Calculate.htm" />
+  <HelpKINode Title="AverageLinkage(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Linkage_AverageLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="AverageLinkage&lt;TInstance&gt; class">
+    <HelpKINode Title="AverageLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_AverageLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_AverageLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_AverageLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_AverageLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AverageLinkage&lt;TInstance&gt;.AverageLinkage constructor" Url="html/M_Aglomera_Linkage_AverageLinkage_1__ctor.htm" />
+  <HelpKINode Title="AverageLinkage&lt;TInstance&gt;.Calculate method" Url="html/M_Aglomera_Linkage_AverageLinkage_1_Calculate.htm" />
+  <HelpKINode Title="AverageLinkage&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Linkage_AverageLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="CachedDissimilarityMetric(Of TInstance) class">
+    <HelpKINode Title="CachedDissimilarityMetric(TInstance) Class" Url="html/T_Aglomera_CachedDissimilarityMetric_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_CachedDissimilarityMetric_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_CachedDissimilarityMetric_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CachedDissimilarityMetric(Of TInstance).CachedDissimilarityMetric constructor" Url="html/M_Aglomera_CachedDissimilarityMetric_1__ctor.htm" />
+  <HelpKINode Title="CachedDissimilarityMetric(Of TInstance).Calculate method" Url="html/M_Aglomera_CachedDissimilarityMetric_1_Calculate.htm" />
+  <HelpKINode Title="CachedDissimilarityMetric(Of TInstance).Dispose method" Url="html/M_Aglomera_CachedDissimilarityMetric_1_Dispose.htm" />
+  <HelpKINode Title="CachedDissimilarityMetric&lt;TInstance&gt; class">
+    <HelpKINode Title="CachedDissimilarityMetric(TInstance) Class" Url="html/T_Aglomera_CachedDissimilarityMetric_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_CachedDissimilarityMetric_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_CachedDissimilarityMetric_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CachedDissimilarityMetric&lt;TInstance&gt;.CachedDissimilarityMetric constructor" Url="html/M_Aglomera_CachedDissimilarityMetric_1__ctor.htm" />
+  <HelpKINode Title="CachedDissimilarityMetric&lt;TInstance&gt;.Calculate method" Url="html/M_Aglomera_CachedDissimilarityMetric_1_Calculate.htm" />
+  <HelpKINode Title="CachedDissimilarityMetric&lt;TInstance&gt;.Dispose method" Url="html/M_Aglomera_CachedDissimilarityMetric_1_Dispose.htm" />
+  <HelpKINode Title="Calculate method">
+    <HelpKINode Title="AverageLinkage(TInstance).Calculate Method " Url="html/M_Aglomera_Linkage_AverageLinkage_1_Calculate.htm" />
+    <HelpKINode Title="CachedDissimilarityMetric(TInstance).Calculate Method " Url="html/M_Aglomera_CachedDissimilarityMetric_1_Calculate.htm" />
+    <HelpKINode Title="CentroidLinkage(TInstance).Calculate Method " Url="html/M_Aglomera_Linkage_CentroidLinkage_1_Calculate.htm" />
+    <HelpKINode Title="CompleteLinkage(TInstance).Calculate Method " Url="html/M_Aglomera_Linkage_CompleteLinkage_1_Calculate.htm" />
+    <HelpKINode Title="IDissimilarityMetric(TInstance).Calculate Method " Url="html/M_Aglomera_IDissimilarityMetric_1_Calculate.htm" />
+    <HelpKINode Title="ILinkageCriterion(TInstance).Calculate Method " Url="html/M_Aglomera_Linkage_ILinkageCriterion_1_Calculate.htm" />
+    <HelpKINode Title="MinimumEnergyLinkage(TInstance).Calculate Method " Url="html/M_Aglomera_Linkage_MinimumEnergyLinkage_1_Calculate.htm" />
+    <HelpKINode Title="SingleLinkage(TInstance).Calculate Method " Url="html/M_Aglomera_Linkage_SingleLinkage_1_Calculate.htm" />
+    <HelpKINode Title="WardsMinimumVarianceLinkage(TInstance).Calculate Method " Url="html/M_Aglomera_Linkage_WardsMinimumVarianceLinkage_1_Calculate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CalinskiHarabaszIndex(Of TInstance) class">
+    <HelpKINode Title="CalinskiHarabaszIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CalinskiHarabaszIndex(Of TInstance).CalinskiHarabaszIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1__ctor.htm" />
+  <HelpKINode Title="CalinskiHarabaszIndex(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="CalinskiHarabaszIndex(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1_Evaluate.htm" />
+  <HelpKINode Title="CalinskiHarabaszIndex&lt;TInstance&gt; class">
+    <HelpKINode Title="CalinskiHarabaszIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CalinskiHarabaszIndex&lt;TInstance&gt;.CalinskiHarabaszIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1__ctor.htm" />
+  <HelpKINode Title="CalinskiHarabaszIndex&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="CalinskiHarabaszIndex&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1_Evaluate.htm" />
+  <HelpKINode Title="CentroidFunction(Of TInstance) delegate" Url="html/T_Aglomera_CentroidFunction_1.htm" />
+  <HelpKINode Title="CentroidFunction&lt;TInstance&gt; delegate" Url="html/T_Aglomera_CentroidFunction_1.htm" />
+  <HelpKINode Title="CentroidLinkage(Of TInstance) class">
+    <HelpKINode Title="CentroidLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_CentroidLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_CentroidLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_CentroidLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_CentroidLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CentroidLinkage(Of TInstance).Calculate method" Url="html/M_Aglomera_Linkage_CentroidLinkage_1_Calculate.htm" />
+  <HelpKINode Title="CentroidLinkage(Of TInstance).CentroidLinkage constructor" Url="html/M_Aglomera_Linkage_CentroidLinkage_1__ctor.htm" />
+  <HelpKINode Title="CentroidLinkage(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Linkage_CentroidLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="CentroidLinkage&lt;TInstance&gt; class">
+    <HelpKINode Title="CentroidLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_CentroidLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_CentroidLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_CentroidLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_CentroidLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CentroidLinkage&lt;TInstance&gt;.Calculate method" Url="html/M_Aglomera_Linkage_CentroidLinkage_1_Calculate.htm" />
+  <HelpKINode Title="CentroidLinkage&lt;TInstance&gt;.CentroidLinkage constructor" Url="html/M_Aglomera_Linkage_CentroidLinkage_1__ctor.htm" />
+  <HelpKINode Title="CentroidLinkage&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Linkage_CentroidLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="Clone method" Url="html/M_Aglomera_Cluster_1_Clone.htm" />
+  <HelpKINode Title="Cluster(Of TInstance) class">
+    <HelpKINode Title="Cluster(TInstance) Class" Url="html/T_Aglomera_Cluster_1.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Aglomera_Cluster_1__ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Aglomera_Cluster_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Cluster_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Cluster_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Cluster(Of TInstance).Clone method" Url="html/M_Aglomera_Cluster_1_Clone.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).Cluster constructor" Url="html/Overload_Aglomera_Cluster_1__ctor.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).CompareTo method" Url="html/M_Aglomera_Cluster_1_CompareTo.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).Contains method" Url="html/M_Aglomera_Cluster_1_Contains.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).Count property" Url="html/P_Aglomera_Cluster_1_Count.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).Dissimilarity property" Url="html/P_Aglomera_Cluster_1_Dissimilarity.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).Empty field" Url="html/F_Aglomera_Cluster_1_Empty.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).Equals method" Url="html/Overload_Aglomera_Cluster_1_Equals.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).GetEnumerator method" Url="html/M_Aglomera_Cluster_1_GetEnumerator.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).GetHashCode method" Url="html/M_Aglomera_Cluster_1_GetHashCode.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).Parent1 property" Url="html/P_Aglomera_Cluster_1_Parent1.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).Parent2 property" Url="html/P_Aglomera_Cluster_1_Parent2.htm" />
+  <HelpKINode Title="Cluster(Of TInstance).ToString method" Url="html/M_Aglomera_Cluster_1_ToString.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt; class">
+    <HelpKINode Title="Cluster(TInstance) Class" Url="html/T_Aglomera_Cluster_1.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Aglomera_Cluster_1__ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Aglomera_Cluster_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Cluster_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Cluster_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.Clone method" Url="html/M_Aglomera_Cluster_1_Clone.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.Cluster constructor" Url="html/Overload_Aglomera_Cluster_1__ctor.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.CompareTo method" Url="html/M_Aglomera_Cluster_1_CompareTo.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.Contains method" Url="html/M_Aglomera_Cluster_1_Contains.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.Count property" Url="html/P_Aglomera_Cluster_1_Count.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.Dissimilarity property" Url="html/P_Aglomera_Cluster_1_Dissimilarity.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.Empty field" Url="html/F_Aglomera_Cluster_1_Empty.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.Equals method" Url="html/Overload_Aglomera_Cluster_1_Equals.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.GetEnumerator method" Url="html/M_Aglomera_Cluster_1_GetEnumerator.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.GetHashCode method" Url="html/M_Aglomera_Cluster_1_GetHashCode.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.Parent1 property" Url="html/P_Aglomera_Cluster_1_Parent1.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.Parent2 property" Url="html/P_Aglomera_Cluster_1_Parent2.htm" />
+  <HelpKINode Title="Cluster&lt;TInstance&gt;.ToString method" Url="html/M_Aglomera_Cluster_1_ToString.htm" />
+  <HelpKINode Title="ClusteringResult(Of TInstance) class">
+    <HelpKINode Title="ClusteringResult(TInstance) Class" Url="html/T_Aglomera_ClusteringResult_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_ClusteringResult_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_ClusteringResult_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_ClusteringResult_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ClusteringResult(Of TInstance).ClusteringResult constructor" Url="html/M_Aglomera_ClusteringResult_1__ctor.htm" />
+  <HelpKINode Title="ClusteringResult(Of TInstance).Count property" Url="html/P_Aglomera_ClusteringResult_1_Count.htm" />
+  <HelpKINode Title="ClusteringResult(Of TInstance).GetEnumerator method" Url="html/M_Aglomera_ClusteringResult_1_GetEnumerator.htm" />
+  <HelpKINode Title="ClusteringResult(Of TInstance).Item property" Url="html/P_Aglomera_ClusteringResult_1_Item.htm" />
+  <HelpKINode Title="ClusteringResult(Of TInstance).SaveToCsv method" Url="html/M_Aglomera_ClusteringResult_1_SaveToCsv.htm" />
+  <HelpKINode Title="ClusteringResult(Of TInstance).SingleCluster property" Url="html/P_Aglomera_ClusteringResult_1_SingleCluster.htm" />
+  <HelpKINode Title="ClusteringResult&lt;TInstance&gt; class">
+    <HelpKINode Title="ClusteringResult(TInstance) Class" Url="html/T_Aglomera_ClusteringResult_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_ClusteringResult_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_ClusteringResult_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_ClusteringResult_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ClusteringResult&lt;TInstance&gt;.ClusteringResult constructor" Url="html/M_Aglomera_ClusteringResult_1__ctor.htm" />
+  <HelpKINode Title="ClusteringResult&lt;TInstance&gt;.Count property" Url="html/P_Aglomera_ClusteringResult_1_Count.htm" />
+  <HelpKINode Title="ClusteringResult&lt;TInstance&gt;.GetEnumerator method" Url="html/M_Aglomera_ClusteringResult_1_GetEnumerator.htm" />
+  <HelpKINode Title="ClusteringResult&lt;TInstance&gt;.Item property" Url="html/P_Aglomera_ClusteringResult_1_Item.htm" />
+  <HelpKINode Title="ClusteringResult&lt;TInstance&gt;.SaveToCsv method" Url="html/M_Aglomera_ClusteringResult_1_SaveToCsv.htm" />
+  <HelpKINode Title="ClusteringResult&lt;TInstance&gt;.SingleCluster property" Url="html/P_Aglomera_ClusteringResult_1_SingleCluster.htm" />
+  <HelpKINode Title="ClusterSet property" Url="html/P_Aglomera_ClusterSetEvaluation_1_ClusterSet.htm" />
+  <HelpKINode Title="ClusterSet(Of TInstance) class">
+    <HelpKINode Title="ClusterSet(TInstance) Class" Url="html/T_Aglomera_ClusterSet_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_ClusterSet_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_ClusterSet_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_ClusterSet_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ClusterSet(Of TInstance).ClusterSet constructor" Url="html/M_Aglomera_ClusterSet_1__ctor.htm" />
+  <HelpKINode Title="ClusterSet(Of TInstance).Count property" Url="html/P_Aglomera_ClusterSet_1_Count.htm" />
+  <HelpKINode Title="ClusterSet(Of TInstance).Dissimilarity property" Url="html/P_Aglomera_ClusterSet_1_Dissimilarity.htm" />
+  <HelpKINode Title="ClusterSet(Of TInstance).GetEnumerator method" Url="html/M_Aglomera_ClusterSet_1_GetEnumerator.htm" />
+  <HelpKINode Title="ClusterSet(Of TInstance).Item property" Url="html/P_Aglomera_ClusterSet_1_Item.htm" />
+  <HelpKINode Title="ClusterSet(Of TInstance).ToString method" Url="html/Overload_Aglomera_ClusterSet_1_ToString.htm" />
+  <HelpKINode Title="ClusterSet&lt;TInstance&gt; class">
+    <HelpKINode Title="ClusterSet(TInstance) Class" Url="html/T_Aglomera_ClusterSet_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_ClusterSet_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_ClusterSet_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_ClusterSet_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ClusterSet&lt;TInstance&gt;.ClusterSet constructor" Url="html/M_Aglomera_ClusterSet_1__ctor.htm" />
+  <HelpKINode Title="ClusterSet&lt;TInstance&gt;.Count property" Url="html/P_Aglomera_ClusterSet_1_Count.htm" />
+  <HelpKINode Title="ClusterSet&lt;TInstance&gt;.Dissimilarity property" Url="html/P_Aglomera_ClusterSet_1_Dissimilarity.htm" />
+  <HelpKINode Title="ClusterSet&lt;TInstance&gt;.GetEnumerator method" Url="html/M_Aglomera_ClusterSet_1_GetEnumerator.htm" />
+  <HelpKINode Title="ClusterSet&lt;TInstance&gt;.Item property" Url="html/P_Aglomera_ClusterSet_1_Item.htm" />
+  <HelpKINode Title="ClusterSet&lt;TInstance&gt;.ToString method" Url="html/Overload_Aglomera_ClusterSet_1_ToString.htm" />
+  <HelpKINode Title="ClusterSetEvaluation(Of TInstance) structure">
+    <HelpKINode Title="ClusterSetEvaluation(TInstance) Structure" Url="html/T_Aglomera_ClusterSetEvaluation_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_ClusterSetEvaluation_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_ClusterSetEvaluation_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_ClusterSetEvaluation_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ClusterSetEvaluation(Of TInstance).ClusterSet property" Url="html/P_Aglomera_ClusterSetEvaluation_1_ClusterSet.htm" />
+  <HelpKINode Title="ClusterSetEvaluation(Of TInstance).ClusterSetEvaluation constructor" Url="html/M_Aglomera_ClusterSetEvaluation_1__ctor.htm" />
+  <HelpKINode Title="ClusterSetEvaluation(Of TInstance).EvaluationValue property" Url="html/P_Aglomera_ClusterSetEvaluation_1_EvaluationValue.htm" />
+  <HelpKINode Title="ClusterSetEvaluation(Of TInstance).ToString method" Url="html/M_Aglomera_ClusterSetEvaluation_1_ToString.htm" />
+  <HelpKINode Title="ClusterSetEvaluation&lt;TInstance&gt; structure">
+    <HelpKINode Title="ClusterSetEvaluation(TInstance) Structure" Url="html/T_Aglomera_ClusterSetEvaluation_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_ClusterSetEvaluation_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_ClusterSetEvaluation_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_ClusterSetEvaluation_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ClusterSetEvaluation&lt;TInstance&gt;.ClusterSet property" Url="html/P_Aglomera_ClusterSetEvaluation_1_ClusterSet.htm" />
+  <HelpKINode Title="ClusterSetEvaluation&lt;TInstance&gt;.ClusterSetEvaluation constructor" Url="html/M_Aglomera_ClusterSetEvaluation_1__ctor.htm" />
+  <HelpKINode Title="ClusterSetEvaluation&lt;TInstance&gt;.EvaluationValue property" Url="html/P_Aglomera_ClusterSetEvaluation_1_EvaluationValue.htm" />
+  <HelpKINode Title="ClusterSetEvaluation&lt;TInstance&gt;.ToString method" Url="html/M_Aglomera_ClusterSetEvaluation_1_ToString.htm" />
+  <HelpKINode Title="Combinatorics class">
+    <HelpKINode Title="Combinatorics Class" Url="html/T_Aglomera_Combinatorics.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Combinatorics.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Combinatorics.GetCombinations method" Url="html/M_Aglomera_Combinatorics_GetCombinations.htm" />
+  <HelpKINode Title="Combinatorics.GetFactorial method" Url="html/M_Aglomera_Combinatorics_GetFactorial.htm" />
+  <HelpKINode Title="Combinatorics.GetPermutations method" Url="html/M_Aglomera_Combinatorics_GetPermutations.htm" />
+  <HelpKINode Title="CombinedExternalCriterion(Of TInstance, TClass) class">
+    <HelpKINode Title="CombinedExternalCriterion(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_CombinedExternalCriterion_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_CombinedExternalCriterion_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_CombinedExternalCriterion_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CombinedExternalCriterion(Of TInstance, TClass).CombinedExternalCriterion constructor" Url="html/M_Aglomera_Evaluation_External_CombinedExternalCriterion_2__ctor.htm" />
+  <HelpKINode Title="CombinedExternalCriterion(Of TInstance, TClass).Evaluate method" Url="html/M_Aglomera_Evaluation_External_CombinedExternalCriterion_2_Evaluate.htm" />
+  <HelpKINode Title="CombinedExternalCriterion&lt;TInstance, TClass&gt; class">
+    <HelpKINode Title="CombinedExternalCriterion(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_CombinedExternalCriterion_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_CombinedExternalCriterion_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_CombinedExternalCriterion_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CombinedExternalCriterion&lt;TInstance, TClass&gt;.CombinedExternalCriterion constructor" Url="html/M_Aglomera_Evaluation_External_CombinedExternalCriterion_2__ctor.htm" />
+  <HelpKINode Title="CombinedExternalCriterion&lt;TInstance, TClass&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_External_CombinedExternalCriterion_2_Evaluate.htm" />
+  <HelpKINode Title="CombinedInternalCriterion(Of TInstance) class">
+    <HelpKINode Title="CombinedInternalCriterion(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CombinedInternalCriterion(Of TInstance).CombinedInternalCriterion constructor" Url="html/M_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1__ctor.htm" />
+  <HelpKINode Title="CombinedInternalCriterion(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="CombinedInternalCriterion(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1_Evaluate.htm" />
+  <HelpKINode Title="CombinedInternalCriterion&lt;TInstance&gt; class">
+    <HelpKINode Title="CombinedInternalCriterion(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CombinedInternalCriterion&lt;TInstance&gt;.CombinedInternalCriterion constructor" Url="html/M_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1__ctor.htm" />
+  <HelpKINode Title="CombinedInternalCriterion&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="CombinedInternalCriterion&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1_Evaluate.htm" />
+  <HelpKINode Title="CompareTo method" Url="html/M_Aglomera_Cluster_1_CompareTo.htm" />
+  <HelpKINode Title="CompleteLinkage(Of TInstance) class">
+    <HelpKINode Title="CompleteLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_CompleteLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_CompleteLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_CompleteLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_CompleteLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CompleteLinkage(Of TInstance).Calculate method" Url="html/M_Aglomera_Linkage_CompleteLinkage_1_Calculate.htm" />
+  <HelpKINode Title="CompleteLinkage(Of TInstance).CompleteLinkage constructor" Url="html/M_Aglomera_Linkage_CompleteLinkage_1__ctor.htm" />
+  <HelpKINode Title="CompleteLinkage(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Linkage_CompleteLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="CompleteLinkage&lt;TInstance&gt; class">
+    <HelpKINode Title="CompleteLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_CompleteLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_CompleteLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_CompleteLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_CompleteLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CompleteLinkage&lt;TInstance&gt;.Calculate method" Url="html/M_Aglomera_Linkage_CompleteLinkage_1_Calculate.htm" />
+  <HelpKINode Title="CompleteLinkage&lt;TInstance&gt;.CompleteLinkage constructor" Url="html/M_Aglomera_Linkage_CompleteLinkage_1__ctor.htm" />
+  <HelpKINode Title="CompleteLinkage&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Linkage_CompleteLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="Contains method" Url="html/M_Aglomera_Cluster_1_Contains.htm" />
+  <HelpKINode Title="Count property">
+    <HelpKINode Title="Cluster(TInstance).Count Property " Url="html/P_Aglomera_Cluster_1_Count.htm" />
+    <HelpKINode Title="ClusteringResult(TInstance).Count Property " Url="html/P_Aglomera_ClusteringResult_1_Count.htm" />
+    <HelpKINode Title="ClusterSet(TInstance).Count Property " Url="html/P_Aglomera_ClusterSet_1_Count.htm" />
+  </HelpKINode>
+  <HelpKINode Title="D3Extensions class">
+    <HelpKINode Title="D3Extensions Class" Url="html/T_Aglomera_D3_D3Extensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_D3_D3Extensions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="D3Extensions.SaveD3DendrogramFile(Of TInstance) method" Url="html/M_Aglomera_D3_D3Extensions_SaveD3DendrogramFile__1.htm" />
+  <HelpKINode Title="D3Extensions.SaveD3DendrogramFile&lt;TInstance&gt; method" Url="html/M_Aglomera_D3_D3Extensions_SaveD3DendrogramFile__1.htm" />
+  <HelpKINode Title="DaviesBouldinIndex(Of TInstance) class">
+    <HelpKINode Title="DaviesBouldinIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DaviesBouldinIndex(Of TInstance).DaviesBouldinIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1__ctor.htm" />
+  <HelpKINode Title="DaviesBouldinIndex(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="DaviesBouldinIndex(Of TInstance).DistanceExponent property" Url="html/P_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_DistanceExponent.htm" />
+  <HelpKINode Title="DaviesBouldinIndex(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_Evaluate.htm" />
+  <HelpKINode Title="DaviesBouldinIndex&lt;TInstance&gt; class">
+    <HelpKINode Title="DaviesBouldinIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DaviesBouldinIndex&lt;TInstance&gt;.DaviesBouldinIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1__ctor.htm" />
+  <HelpKINode Title="DaviesBouldinIndex&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="DaviesBouldinIndex&lt;TInstance&gt;.DistanceExponent property" Url="html/P_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_DistanceExponent.htm" />
+  <HelpKINode Title="DaviesBouldinIndex&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_Evaluate.htm" />
+  <HelpKINode Title="Dispose method" Url="html/M_Aglomera_CachedDissimilarityMetric_1_Dispose.htm" />
+  <HelpKINode Title="Dissimilarity property">
+    <HelpKINode Title="Cluster(TInstance).Dissimilarity Property " Url="html/P_Aglomera_Cluster_1_Dissimilarity.htm" />
+    <HelpKINode Title="ClusterSet(TInstance).Dissimilarity Property " Url="html/P_Aglomera_ClusterSet_1_Dissimilarity.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DissimilarityMetric property">
+    <HelpKINode Title="AverageLinkage(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_AverageLinkage_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="CalinskiHarabaszIndex(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="CentroidLinkage(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_CentroidLinkage_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="CombinedInternalCriterion(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="CompleteLinkage(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_CompleteLinkage_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="DaviesBouldinIndex(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="DunnIndex(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_DunnIndex_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="IIndex(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_IIndex_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="IInternalEvaluationCriterion(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="ILinkageCriterion(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_ILinkageCriterion_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="MinimumEnergyLinkage(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_MinimumEnergyLinkage_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="ModifiedGammaStatistic(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="RootMeanSquareStdDev(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="RSquared(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_RSquared_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="SilhouetteCoefficient(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="SingleLinkage(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_SingleLinkage_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="WardsMinimumVarianceLinkage(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_WardsMinimumVarianceLinkage_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="WithinBetweenRatio(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_WithinBetweenRatio_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="XieBeniIndex(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_XieBeniIndex_1_DissimilarityMetric.htm" />
+    <HelpKINode Title="XuIndex(TInstance).DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_XuIndex_1_DissimilarityMetric.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DistanceExponent property">
+    <HelpKINode Title="DaviesBouldinIndex(TInstance).DistanceExponent Property " Url="html/P_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_DistanceExponent.htm" />
+    <HelpKINode Title="MinimumEnergyLinkage(TInstance).DistanceExponent Property " Url="html/P_Aglomera_Linkage_MinimumEnergyLinkage_1_DistanceExponent.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DunnIndex(Of TInstance) class">
+    <HelpKINode Title="DunnIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_DunnIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_DunnIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_DunnIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_DunnIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DunnIndex(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_DunnIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="DunnIndex(Of TInstance).DunnIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_DunnIndex_1__ctor.htm" />
+  <HelpKINode Title="DunnIndex(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_DunnIndex_1_Evaluate.htm" />
+  <HelpKINode Title="DunnIndex&lt;TInstance&gt; class">
+    <HelpKINode Title="DunnIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_DunnIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_DunnIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_DunnIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_DunnIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DunnIndex&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_DunnIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="DunnIndex&lt;TInstance&gt;.DunnIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_DunnIndex_1__ctor.htm" />
+  <HelpKINode Title="DunnIndex&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_DunnIndex_1_Evaluate.htm" />
+  <HelpKINode Title="Empty field" Url="html/F_Aglomera_Cluster_1_Empty.htm" />
+  <HelpKINode Title="Equals method" Url="html/Overload_Aglomera_Cluster_1_Equals.htm" />
+  <HelpKINode Title="Evaluate method">
+    <HelpKINode Title="CalinskiHarabaszIndex(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1_Evaluate.htm" />
+    <HelpKINode Title="CombinedExternalCriterion(TInstance, TClass).Evaluate Method " Url="html/M_Aglomera_Evaluation_External_CombinedExternalCriterion_2_Evaluate.htm" />
+    <HelpKINode Title="CombinedInternalCriterion(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1_Evaluate.htm" />
+    <HelpKINode Title="DaviesBouldinIndex(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_Evaluate.htm" />
+    <HelpKINode Title="DunnIndex(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_DunnIndex_1_Evaluate.htm" />
+    <HelpKINode Title="FMeasure(TInstance, TClass).Evaluate Method " Url="html/M_Aglomera_Evaluation_External_FMeasure_2_Evaluate.htm" />
+    <HelpKINode Title="IExternalEvaluationCriterion(TInstance, TClass).Evaluate Method " Url="html/M_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2_Evaluate.htm" />
+    <HelpKINode Title="IIndex(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_IIndex_1_Evaluate.htm" />
+    <HelpKINode Title="IInternalEvaluationCriterion(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1_Evaluate.htm" />
+    <HelpKINode Title="ModifiedGammaStatistic(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1_Evaluate.htm" />
+    <HelpKINode Title="NormalizedMutualInformation(TInstance, TClass).Evaluate Method " Url="html/M_Aglomera_Evaluation_External_NormalizedMutualInformation_2_Evaluate.htm" />
+    <HelpKINode Title="Precision(TInstance, TClass).Evaluate Method " Url="html/M_Aglomera_Evaluation_External_Precision_2_Evaluate.htm" />
+    <HelpKINode Title="Purity(TInstance, TClass).Evaluate Method " Url="html/M_Aglomera_Evaluation_External_Purity_2_Evaluate.htm" />
+    <HelpKINode Title="RandIndex(TInstance, TClass).Evaluate Method " Url="html/M_Aglomera_Evaluation_External_RandIndex_2_Evaluate.htm" />
+    <HelpKINode Title="Recall(TInstance, TClass).Evaluate Method " Url="html/M_Aglomera_Evaluation_External_Recall_2_Evaluate.htm" />
+    <HelpKINode Title="RootMeanSquareStdDev(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1_Evaluate.htm" />
+    <HelpKINode Title="RSquared(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_RSquared_1_Evaluate.htm" />
+    <HelpKINode Title="SilhouetteCoefficient(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_Evaluate.htm" />
+    <HelpKINode Title="WithinBetweenRatio(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_WithinBetweenRatio_1_Evaluate.htm" />
+    <HelpKINode Title="XieBeniIndex(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_XieBeniIndex_1_Evaluate.htm" />
+    <HelpKINode Title="XuIndex(TInstance).Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_XuIndex_1_Evaluate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EvaluateClustering method" Url="html/Overload_Aglomera_Extensions_EvaluateClustering.htm" />
+  <HelpKINode Title="EvaluateEach method" Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_EvaluateEach.htm" />
+  <HelpKINode Title="EvaluationValue property" Url="html/P_Aglomera_ClusterSetEvaluation_1_EvaluationValue.htm" />
+  <HelpKINode Title="Extensions class">
+    <HelpKINode Title="Extensions Class" Url="html/T_Aglomera_Extensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Extensions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Extensions.EvaluateClustering method" Url="html/Overload_Aglomera_Extensions_EvaluateClustering.htm" />
+  <HelpKINode Title="Extensions.GetMedoid(Of TInstance) method" Url="html/M_Aglomera_Extensions_GetMedoid__1.htm" />
+  <HelpKINode Title="Extensions.GetMedoid&lt;TInstance&gt; method" Url="html/M_Aglomera_Extensions_GetMedoid__1.htm" />
+  <HelpKINode Title="FMeasure(Of TInstance, TClass) class">
+    <HelpKINode Title="FMeasure(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_FMeasure_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_FMeasure_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_FMeasure_2.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_External_FMeasure_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FMeasure(Of TInstance, TClass).Evaluate method" Url="html/M_Aglomera_Evaluation_External_FMeasure_2_Evaluate.htm" />
+  <HelpKINode Title="FMeasure(Of TInstance, TClass).FMeasure constructor" Url="html/M_Aglomera_Evaluation_External_FMeasure_2__ctor.htm" />
+  <HelpKINode Title="FMeasure(Of TInstance, TClass).RecallWeight property" Url="html/P_Aglomera_Evaluation_External_FMeasure_2_RecallWeight.htm" />
+  <HelpKINode Title="FMeasure&lt;TInstance, TClass&gt; class">
+    <HelpKINode Title="FMeasure(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_FMeasure_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_FMeasure_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_FMeasure_2.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_External_FMeasure_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FMeasure&lt;TInstance, TClass&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_External_FMeasure_2_Evaluate.htm" />
+  <HelpKINode Title="FMeasure&lt;TInstance, TClass&gt;.FMeasure constructor" Url="html/M_Aglomera_Evaluation_External_FMeasure_2__ctor.htm" />
+  <HelpKINode Title="FMeasure&lt;TInstance, TClass&gt;.RecallWeight property" Url="html/P_Aglomera_Evaluation_External_FMeasure_2_RecallWeight.htm" />
+  <HelpKINode Title="GetClustering method">
+    <HelpKINode Title="AgglomerativeClusteringAlgorithm(TInstance).GetClustering Method " Url="html/Overload_Aglomera_AgglomerativeClusteringAlgorithm_1_GetClustering.htm" />
+    <HelpKINode Title="IClusteringAlgorithm(TInstance).GetClustering Method " Url="html/Overload_Aglomera_IClusteringAlgorithm_1_GetClustering.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetCombinations method" Url="html/M_Aglomera_Combinatorics_GetCombinations.htm" />
+  <HelpKINode Title="GetEnumerator method">
+    <HelpKINode Title="Cluster(TInstance).GetEnumerator Method " Url="html/M_Aglomera_Cluster_1_GetEnumerator.htm" />
+    <HelpKINode Title="ClusteringResult(TInstance).GetEnumerator Method " Url="html/M_Aglomera_ClusteringResult_1_GetEnumerator.htm" />
+    <HelpKINode Title="ClusterSet(TInstance).GetEnumerator Method " Url="html/M_Aglomera_ClusterSet_1_GetEnumerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetFactorial method" Url="html/M_Aglomera_Combinatorics_GetFactorial.htm" />
+  <HelpKINode Title="GetHashCode method" Url="html/M_Aglomera_Cluster_1_GetHashCode.htm" />
+  <HelpKINode Title="GetMedoid(Of TInstance) method" Url="html/M_Aglomera_Extensions_GetMedoid__1.htm" />
+  <HelpKINode Title="GetMedoid&lt;TInstance&gt; method" Url="html/M_Aglomera_Extensions_GetMedoid__1.htm" />
+  <HelpKINode Title="GetPermutations method" Url="html/M_Aglomera_Combinatorics_GetPermutations.htm" />
+  <HelpKINode Title="IClusteringAlgorithm(Of TInstance) interface">
+    <HelpKINode Title="IClusteringAlgorithm(TInstance) Interface" Url="html/T_Aglomera_IClusteringAlgorithm_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_IClusteringAlgorithm_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_IClusteringAlgorithm_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IClusteringAlgorithm(Of TInstance).GetClustering method" Url="html/Overload_Aglomera_IClusteringAlgorithm_1_GetClustering.htm" />
+  <HelpKINode Title="IClusteringAlgorithm(Of TInstance).LinkageCriterion property" Url="html/P_Aglomera_IClusteringAlgorithm_1_LinkageCriterion.htm" />
+  <HelpKINode Title="IClusteringAlgorithm&lt;TInstance&gt; interface">
+    <HelpKINode Title="IClusteringAlgorithm(TInstance) Interface" Url="html/T_Aglomera_IClusteringAlgorithm_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_IClusteringAlgorithm_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_IClusteringAlgorithm_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IClusteringAlgorithm&lt;TInstance&gt;.GetClustering method" Url="html/Overload_Aglomera_IClusteringAlgorithm_1_GetClustering.htm" />
+  <HelpKINode Title="IClusteringAlgorithm&lt;TInstance&gt;.LinkageCriterion property" Url="html/P_Aglomera_IClusteringAlgorithm_1_LinkageCriterion.htm" />
+  <HelpKINode Title="IDissimilarityMetric(Of TInstance) interface">
+    <HelpKINode Title="IDissimilarityMetric(TInstance) Interface" Url="html/T_Aglomera_IDissimilarityMetric_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_IDissimilarityMetric_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDissimilarityMetric(Of TInstance).Calculate method" Url="html/M_Aglomera_IDissimilarityMetric_1_Calculate.htm" />
+  <HelpKINode Title="IDissimilarityMetric&lt;TInstance&gt; interface">
+    <HelpKINode Title="IDissimilarityMetric(TInstance) Interface" Url="html/T_Aglomera_IDissimilarityMetric_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_IDissimilarityMetric_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDissimilarityMetric&lt;TInstance&gt;.Calculate method" Url="html/M_Aglomera_IDissimilarityMetric_1_Calculate.htm" />
+  <HelpKINode Title="IExternalEvaluationCriterion(Of TInstance, TClass) interface">
+    <HelpKINode Title="IExternalEvaluationCriterion(TInstance, TClass) Interface" Url="html/T_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IExternalEvaluationCriterion(Of TInstance, TClass).Evaluate method" Url="html/M_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2_Evaluate.htm" />
+  <HelpKINode Title="IExternalEvaluationCriterion&lt;TInstance, TClass&gt; interface">
+    <HelpKINode Title="IExternalEvaluationCriterion(TInstance, TClass) Interface" Url="html/T_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IExternalEvaluationCriterion&lt;TInstance, TClass&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2_Evaluate.htm" />
+  <HelpKINode Title="IIndex(Of TInstance) class">
+    <HelpKINode Title="IIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_IIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_IIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_IIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_IIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IIndex(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_IIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="IIndex(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_IIndex_1_Evaluate.htm" />
+  <HelpKINode Title="IIndex(Of TInstance).IIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_IIndex_1__ctor.htm" />
+  <HelpKINode Title="IIndex&lt;TInstance&gt; class">
+    <HelpKINode Title="IIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_IIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_IIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_IIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_IIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IIndex&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_IIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="IIndex&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_IIndex_1_Evaluate.htm" />
+  <HelpKINode Title="IIndex&lt;TInstance&gt;.IIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_IIndex_1__ctor.htm" />
+  <HelpKINode Title="IInternalEvaluationCriterion(Of TInstance) interface">
+    <HelpKINode Title="IInternalEvaluationCriterion(TInstance) Interface" Url="html/T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IInternalEvaluationCriterion(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="IInternalEvaluationCriterion(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1_Evaluate.htm" />
+  <HelpKINode Title="IInternalEvaluationCriterion&lt;TInstance&gt; interface">
+    <HelpKINode Title="IInternalEvaluationCriterion(TInstance) Interface" Url="html/T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IInternalEvaluationCriterion&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="IInternalEvaluationCriterion&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1_Evaluate.htm" />
+  <HelpKINode Title="ILinkageCriterion(Of TInstance) interface">
+    <HelpKINode Title="ILinkageCriterion(TInstance) Interface" Url="html/T_Aglomera_Linkage_ILinkageCriterion_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_ILinkageCriterion_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_ILinkageCriterion_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ILinkageCriterion(Of TInstance).Calculate method" Url="html/M_Aglomera_Linkage_ILinkageCriterion_1_Calculate.htm" />
+  <HelpKINode Title="ILinkageCriterion(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Linkage_ILinkageCriterion_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="ILinkageCriterion&lt;TInstance&gt; interface">
+    <HelpKINode Title="ILinkageCriterion(TInstance) Interface" Url="html/T_Aglomera_Linkage_ILinkageCriterion_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_ILinkageCriterion_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_ILinkageCriterion_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ILinkageCriterion&lt;TInstance&gt;.Calculate method" Url="html/M_Aglomera_Linkage_ILinkageCriterion_1_Calculate.htm" />
+  <HelpKINode Title="ILinkageCriterion&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Linkage_ILinkageCriterion_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="Item property">
+    <HelpKINode Title="ClusteringResult(TInstance).Item Property " Url="html/P_Aglomera_ClusteringResult_1_Item.htm" />
+    <HelpKINode Title="ClusterSet(TInstance).Item Property " Url="html/P_Aglomera_ClusterSet_1_Item.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LinkageCriterion property">
+    <HelpKINode Title="AgglomerativeClusteringAlgorithm(TInstance).LinkageCriterion Property " Url="html/P_Aglomera_AgglomerativeClusteringAlgorithm_1_LinkageCriterion.htm" />
+    <HelpKINode Title="IClusteringAlgorithm(TInstance).LinkageCriterion Property " Url="html/P_Aglomera_IClusteringAlgorithm_1_LinkageCriterion.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MinimumEnergyLinkage(Of TInstance) class">
+    <HelpKINode Title="MinimumEnergyLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_MinimumEnergyLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MinimumEnergyLinkage(Of TInstance).Calculate method" Url="html/M_Aglomera_Linkage_MinimumEnergyLinkage_1_Calculate.htm" />
+  <HelpKINode Title="MinimumEnergyLinkage(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Linkage_MinimumEnergyLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="MinimumEnergyLinkage(Of TInstance).DistanceExponent property" Url="html/P_Aglomera_Linkage_MinimumEnergyLinkage_1_DistanceExponent.htm" />
+  <HelpKINode Title="MinimumEnergyLinkage(Of TInstance).MinimumEnergyLinkage constructor" Url="html/M_Aglomera_Linkage_MinimumEnergyLinkage_1__ctor.htm" />
+  <HelpKINode Title="MinimumEnergyLinkage&lt;TInstance&gt; class">
+    <HelpKINode Title="MinimumEnergyLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_MinimumEnergyLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MinimumEnergyLinkage&lt;TInstance&gt;.Calculate method" Url="html/M_Aglomera_Linkage_MinimumEnergyLinkage_1_Calculate.htm" />
+  <HelpKINode Title="MinimumEnergyLinkage&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Linkage_MinimumEnergyLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="MinimumEnergyLinkage&lt;TInstance&gt;.DistanceExponent property" Url="html/P_Aglomera_Linkage_MinimumEnergyLinkage_1_DistanceExponent.htm" />
+  <HelpKINode Title="MinimumEnergyLinkage&lt;TInstance&gt;.MinimumEnergyLinkage constructor" Url="html/M_Aglomera_Linkage_MinimumEnergyLinkage_1__ctor.htm" />
+  <HelpKINode Title="ModifiedGammaStatistic(Of TInstance) class">
+    <HelpKINode Title="ModifiedGammaStatistic(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModifiedGammaStatistic(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="ModifiedGammaStatistic(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1_Evaluate.htm" />
+  <HelpKINode Title="ModifiedGammaStatistic(Of TInstance).ModifiedGammaStatistic constructor" Url="html/M_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1__ctor.htm" />
+  <HelpKINode Title="ModifiedGammaStatistic&lt;TInstance&gt; class">
+    <HelpKINode Title="ModifiedGammaStatistic(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModifiedGammaStatistic&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="ModifiedGammaStatistic&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1_Evaluate.htm" />
+  <HelpKINode Title="ModifiedGammaStatistic&lt;TInstance&gt;.ModifiedGammaStatistic constructor" Url="html/M_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1__ctor.htm" />
+  <HelpKINode Title="NormalizedMutualInformation(Of TInstance, TClass) class">
+    <HelpKINode Title="NormalizedMutualInformation(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_NormalizedMutualInformation_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_NormalizedMutualInformation_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_NormalizedMutualInformation_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NormalizedMutualInformation(Of TInstance, TClass).Evaluate method" Url="html/M_Aglomera_Evaluation_External_NormalizedMutualInformation_2_Evaluate.htm" />
+  <HelpKINode Title="NormalizedMutualInformation(Of TInstance, TClass).NormalizedMutualInformation constructor" Url="html/M_Aglomera_Evaluation_External_NormalizedMutualInformation_2__ctor.htm" />
+  <HelpKINode Title="NormalizedMutualInformation&lt;TInstance, TClass&gt; class">
+    <HelpKINode Title="NormalizedMutualInformation(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_NormalizedMutualInformation_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_NormalizedMutualInformation_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_NormalizedMutualInformation_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NormalizedMutualInformation&lt;TInstance, TClass&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_External_NormalizedMutualInformation_2_Evaluate.htm" />
+  <HelpKINode Title="NormalizedMutualInformation&lt;TInstance, TClass&gt;.NormalizedMutualInformation constructor" Url="html/M_Aglomera_Evaluation_External_NormalizedMutualInformation_2__ctor.htm" />
+  <HelpKINode Title="Parent1 property" Url="html/P_Aglomera_Cluster_1_Parent1.htm" />
+  <HelpKINode Title="Parent2 property" Url="html/P_Aglomera_Cluster_1_Parent2.htm" />
+  <HelpKINode Title="Precision(Of TInstance, TClass) class">
+    <HelpKINode Title="Precision(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_Precision_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_Precision_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_Precision_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Precision(Of TInstance, TClass).Evaluate method" Url="html/M_Aglomera_Evaluation_External_Precision_2_Evaluate.htm" />
+  <HelpKINode Title="Precision(Of TInstance, TClass).Precision constructor" Url="html/M_Aglomera_Evaluation_External_Precision_2__ctor.htm" />
+  <HelpKINode Title="Precision&lt;TInstance, TClass&gt; class">
+    <HelpKINode Title="Precision(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_Precision_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_Precision_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_Precision_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Precision&lt;TInstance, TClass&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_External_Precision_2_Evaluate.htm" />
+  <HelpKINode Title="Precision&lt;TInstance, TClass&gt;.Precision constructor" Url="html/M_Aglomera_Evaluation_External_Precision_2__ctor.htm" />
+  <HelpKINode Title="Purity(Of TInstance, TClass) class">
+    <HelpKINode Title="Purity(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_Purity_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_Purity_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_Purity_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Purity(Of TInstance, TClass).Evaluate method" Url="html/M_Aglomera_Evaluation_External_Purity_2_Evaluate.htm" />
+  <HelpKINode Title="Purity(Of TInstance, TClass).Purity constructor" Url="html/M_Aglomera_Evaluation_External_Purity_2__ctor.htm" />
+  <HelpKINode Title="Purity&lt;TInstance, TClass&gt; class">
+    <HelpKINode Title="Purity(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_Purity_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_Purity_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_Purity_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Purity&lt;TInstance, TClass&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_External_Purity_2_Evaluate.htm" />
+  <HelpKINode Title="Purity&lt;TInstance, TClass&gt;.Purity constructor" Url="html/M_Aglomera_Evaluation_External_Purity_2__ctor.htm" />
+  <HelpKINode Title="RandIndex(Of TInstance, TClass) class">
+    <HelpKINode Title="RandIndex(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_RandIndex_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_RandIndex_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_RandIndex_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RandIndex(Of TInstance, TClass).Evaluate method" Url="html/M_Aglomera_Evaluation_External_RandIndex_2_Evaluate.htm" />
+  <HelpKINode Title="RandIndex(Of TInstance, TClass).RandIndex constructor" Url="html/M_Aglomera_Evaluation_External_RandIndex_2__ctor.htm" />
+  <HelpKINode Title="RandIndex&lt;TInstance, TClass&gt; class">
+    <HelpKINode Title="RandIndex(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_RandIndex_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_RandIndex_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_RandIndex_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RandIndex&lt;TInstance, TClass&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_External_RandIndex_2_Evaluate.htm" />
+  <HelpKINode Title="RandIndex&lt;TInstance, TClass&gt;.RandIndex constructor" Url="html/M_Aglomera_Evaluation_External_RandIndex_2__ctor.htm" />
+  <HelpKINode Title="Recall(Of TInstance, TClass) class">
+    <HelpKINode Title="Recall(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_Recall_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_Recall_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_Recall_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Recall(Of TInstance, TClass).Evaluate method" Url="html/M_Aglomera_Evaluation_External_Recall_2_Evaluate.htm" />
+  <HelpKINode Title="Recall(Of TInstance, TClass).Recall constructor" Url="html/M_Aglomera_Evaluation_External_Recall_2__ctor.htm" />
+  <HelpKINode Title="Recall&lt;TInstance, TClass&gt; class">
+    <HelpKINode Title="Recall(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_Recall_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_External_Recall_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_External_Recall_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Recall&lt;TInstance, TClass&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_External_Recall_2_Evaluate.htm" />
+  <HelpKINode Title="Recall&lt;TInstance, TClass&gt;.Recall constructor" Url="html/M_Aglomera_Evaluation_External_Recall_2__ctor.htm" />
+  <HelpKINode Title="RecallWeight property" Url="html/P_Aglomera_Evaluation_External_FMeasure_2_RecallWeight.htm" />
+  <HelpKINode Title="RootMeanSquareStdDev(Of TInstance) class">
+    <HelpKINode Title="RootMeanSquareStdDev(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RootMeanSquareStdDev(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="RootMeanSquareStdDev(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1_Evaluate.htm" />
+  <HelpKINode Title="RootMeanSquareStdDev(Of TInstance).RootMeanSquareStdDev constructor" Url="html/M_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1__ctor.htm" />
+  <HelpKINode Title="RootMeanSquareStdDev&lt;TInstance&gt; class">
+    <HelpKINode Title="RootMeanSquareStdDev(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RootMeanSquareStdDev&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="RootMeanSquareStdDev&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1_Evaluate.htm" />
+  <HelpKINode Title="RootMeanSquareStdDev&lt;TInstance&gt;.RootMeanSquareStdDev constructor" Url="html/M_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1__ctor.htm" />
+  <HelpKINode Title="RSquared(Of TInstance) class">
+    <HelpKINode Title="RSquared(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_RSquared_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_RSquared_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_RSquared_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_RSquared_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RSquared(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_RSquared_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="RSquared(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_RSquared_1_Evaluate.htm" />
+  <HelpKINode Title="RSquared(Of TInstance).RSquared constructor" Url="html/M_Aglomera_Evaluation_Internal_RSquared_1__ctor.htm" />
+  <HelpKINode Title="RSquared&lt;TInstance&gt; class">
+    <HelpKINode Title="RSquared(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_RSquared_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_RSquared_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_RSquared_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_RSquared_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RSquared&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_RSquared_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="RSquared&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_RSquared_1_Evaluate.htm" />
+  <HelpKINode Title="RSquared&lt;TInstance&gt;.RSquared constructor" Url="html/M_Aglomera_Evaluation_Internal_RSquared_1__ctor.htm" />
+  <HelpKINode Title="SaveD3DendrogramFile(Of TInstance) method" Url="html/M_Aglomera_D3_D3Extensions_SaveD3DendrogramFile__1.htm" />
+  <HelpKINode Title="SaveD3DendrogramFile&lt;TInstance&gt; method" Url="html/M_Aglomera_D3_D3Extensions_SaveD3DendrogramFile__1.htm" />
+  <HelpKINode Title="SaveToCsv method" Url="html/M_Aglomera_ClusteringResult_1_SaveToCsv.htm" />
+  <HelpKINode Title="SilhouetteCoefficient(Of TInstance) class">
+    <HelpKINode Title="SilhouetteCoefficient(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SilhouetteCoefficient(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="SilhouetteCoefficient(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_Evaluate.htm" />
+  <HelpKINode Title="SilhouetteCoefficient(Of TInstance).EvaluateEach method" Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_EvaluateEach.htm" />
+  <HelpKINode Title="SilhouetteCoefficient(Of TInstance).SilhouetteCoefficient constructor" Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1__ctor.htm" />
+  <HelpKINode Title="SilhouetteCoefficient&lt;TInstance&gt; class">
+    <HelpKINode Title="SilhouetteCoefficient(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SilhouetteCoefficient&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="SilhouetteCoefficient&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_Evaluate.htm" />
+  <HelpKINode Title="SilhouetteCoefficient&lt;TInstance&gt;.EvaluateEach method" Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_EvaluateEach.htm" />
+  <HelpKINode Title="SilhouetteCoefficient&lt;TInstance&gt;.SilhouetteCoefficient constructor" Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1__ctor.htm" />
+  <HelpKINode Title="SingleCluster property" Url="html/P_Aglomera_ClusteringResult_1_SingleCluster.htm" />
+  <HelpKINode Title="SingleLinkage(Of TInstance) class">
+    <HelpKINode Title="SingleLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_SingleLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_SingleLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_SingleLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_SingleLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SingleLinkage(Of TInstance).Calculate method" Url="html/M_Aglomera_Linkage_SingleLinkage_1_Calculate.htm" />
+  <HelpKINode Title="SingleLinkage(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Linkage_SingleLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="SingleLinkage(Of TInstance).SingleLinkage constructor" Url="html/M_Aglomera_Linkage_SingleLinkage_1__ctor.htm" />
+  <HelpKINode Title="SingleLinkage&lt;TInstance&gt; class">
+    <HelpKINode Title="SingleLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_SingleLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_SingleLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_SingleLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_SingleLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SingleLinkage&lt;TInstance&gt;.Calculate method" Url="html/M_Aglomera_Linkage_SingleLinkage_1_Calculate.htm" />
+  <HelpKINode Title="SingleLinkage&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Linkage_SingleLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="SingleLinkage&lt;TInstance&gt;.SingleLinkage constructor" Url="html/M_Aglomera_Linkage_SingleLinkage_1__ctor.htm" />
+  <HelpKINode Title="ToString method">
+    <HelpKINode Title="Cluster(TInstance).ToString Method " Url="html/M_Aglomera_Cluster_1_ToString.htm" />
+    <HelpKINode Title="ClusterSet(TInstance).ToString Method " Url="html/Overload_Aglomera_ClusterSet_1_ToString.htm" />
+    <HelpKINode Title="ClusterSetEvaluation(TInstance).ToString Method " Url="html/M_Aglomera_ClusterSetEvaluation_1_ToString.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WardsMinimumVarianceLinkage(Of TInstance) class">
+    <HelpKINode Title="WardsMinimumVarianceLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_WardsMinimumVarianceLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WardsMinimumVarianceLinkage(Of TInstance).Calculate method" Url="html/M_Aglomera_Linkage_WardsMinimumVarianceLinkage_1_Calculate.htm" />
+  <HelpKINode Title="WardsMinimumVarianceLinkage(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Linkage_WardsMinimumVarianceLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="WardsMinimumVarianceLinkage(Of TInstance).WardsMinimumVarianceLinkage constructor" Url="html/M_Aglomera_Linkage_WardsMinimumVarianceLinkage_1__ctor.htm" />
+  <HelpKINode Title="WardsMinimumVarianceLinkage&lt;TInstance&gt; class">
+    <HelpKINode Title="WardsMinimumVarianceLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Linkage_WardsMinimumVarianceLinkage_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WardsMinimumVarianceLinkage&lt;TInstance&gt;.Calculate method" Url="html/M_Aglomera_Linkage_WardsMinimumVarianceLinkage_1_Calculate.htm" />
+  <HelpKINode Title="WardsMinimumVarianceLinkage&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Linkage_WardsMinimumVarianceLinkage_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="WardsMinimumVarianceLinkage&lt;TInstance&gt;.WardsMinimumVarianceLinkage constructor" Url="html/M_Aglomera_Linkage_WardsMinimumVarianceLinkage_1__ctor.htm" />
+  <HelpKINode Title="Welcome" Url="html/b6f2b623-5f2d-453d-b5ed-d3b9e713cb41.htm" />
+  <HelpKINode Title="WithinBetweenRatio(Of TInstance) class">
+    <HelpKINode Title="WithinBetweenRatio(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_WithinBetweenRatio_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WithinBetweenRatio(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_WithinBetweenRatio_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="WithinBetweenRatio(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_WithinBetweenRatio_1_Evaluate.htm" />
+  <HelpKINode Title="WithinBetweenRatio(Of TInstance).WithinBetweenRatio constructor" Url="html/M_Aglomera_Evaluation_Internal_WithinBetweenRatio_1__ctor.htm" />
+  <HelpKINode Title="WithinBetweenRatio&lt;TInstance&gt; class">
+    <HelpKINode Title="WithinBetweenRatio(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_WithinBetweenRatio_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WithinBetweenRatio&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_WithinBetweenRatio_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="WithinBetweenRatio&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_WithinBetweenRatio_1_Evaluate.htm" />
+  <HelpKINode Title="WithinBetweenRatio&lt;TInstance&gt;.WithinBetweenRatio constructor" Url="html/M_Aglomera_Evaluation_Internal_WithinBetweenRatio_1__ctor.htm" />
+  <HelpKINode Title="XieBeniIndex(Of TInstance) class">
+    <HelpKINode Title="XieBeniIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_XieBeniIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XieBeniIndex(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_XieBeniIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="XieBeniIndex(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_XieBeniIndex_1_Evaluate.htm" />
+  <HelpKINode Title="XieBeniIndex(Of TInstance).XieBeniIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_XieBeniIndex_1__ctor.htm" />
+  <HelpKINode Title="XieBeniIndex&lt;TInstance&gt; class">
+    <HelpKINode Title="XieBeniIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_XieBeniIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XieBeniIndex&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_XieBeniIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="XieBeniIndex&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_XieBeniIndex_1_Evaluate.htm" />
+  <HelpKINode Title="XieBeniIndex&lt;TInstance&gt;.XieBeniIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_XieBeniIndex_1__ctor.htm" />
+  <HelpKINode Title="XuIndex(Of TInstance) class">
+    <HelpKINode Title="XuIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_XuIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_XuIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_XuIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_XuIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XuIndex(Of TInstance).DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_XuIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="XuIndex(Of TInstance).Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_XuIndex_1_Evaluate.htm" />
+  <HelpKINode Title="XuIndex(Of TInstance).XuIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_XuIndex_1__ctor.htm" />
+  <HelpKINode Title="XuIndex&lt;TInstance&gt; class">
+    <HelpKINode Title="XuIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_XuIndex_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Aglomera_Evaluation_Internal_XuIndex_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_XuIndex_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_XuIndex_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XuIndex&lt;TInstance&gt;.DissimilarityMetric property" Url="html/P_Aglomera_Evaluation_Internal_XuIndex_1_DissimilarityMetric.htm" />
+  <HelpKINode Title="XuIndex&lt;TInstance&gt;.Evaluate method" Url="html/M_Aglomera_Evaluation_Internal_XuIndex_1_Evaluate.htm" />
+  <HelpKINode Title="XuIndex&lt;TInstance&gt;.XuIndex constructor" Url="html/M_Aglomera_Evaluation_Internal_XuIndex_1__ctor.htm" />
+</HelpKI>

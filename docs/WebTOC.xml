@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Title="Aglomera.NET" Url="html/b6f2b623-5f2d-453d-b5ed-d3b9e713cb41.htm" />
+  <HelpTOCNode Id="87bdfee6-1284-4ade-be6f-0f018f426d0c" Title="Aglomera" Url="html/N_Aglomera.htm">
+    <HelpTOCNode Id="efacd24d-34dd-4966-9776-95c235ad9a3b" Title="AgglomerativeClusteringAlgorithm(TInstance) Class" Url="html/T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm">
+      <HelpTOCNode Title="AgglomerativeClusteringAlgorithm(TInstance) Constructor " Url="html/M_Aglomera_AgglomerativeClusteringAlgorithm_1__ctor.htm" />
+      <HelpTOCNode Id="d51c3fe2-3092-48f7-a0f7-f70e757580e7" Title="AgglomerativeClusteringAlgorithm(TInstance) Properties" Url="html/Properties_T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm">
+        <HelpTOCNode Title="LinkageCriterion Property " Url="html/P_Aglomera_AgglomerativeClusteringAlgorithm_1_LinkageCriterion.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="45c9e9a2-a1b8-40d8-81e6-f1158212290b" Title="AgglomerativeClusteringAlgorithm(TInstance) Methods" Url="html/Methods_T_Aglomera_AgglomerativeClusteringAlgorithm_1.htm">
+        <HelpTOCNode Id="bcf0c6bd-c731-4b45-bed8-6d2aae8d5a76" Title="GetClustering Method " Url="html/Overload_Aglomera_AgglomerativeClusteringAlgorithm_1_GetClustering.htm">
+          <HelpTOCNode Title="GetClustering Method (ISet(TInstance))" Url="html/M_Aglomera_AgglomerativeClusteringAlgorithm_1_GetClustering_2.htm" />
+          <HelpTOCNode Title="GetClustering Method (ClusterSet(TInstance))" Url="html/M_Aglomera_AgglomerativeClusteringAlgorithm_1_GetClustering.htm" />
+          <HelpTOCNode Title="GetClustering Method (IEnumerable(Cluster(TInstance)), Double)" Url="html/M_Aglomera_AgglomerativeClusteringAlgorithm_1_GetClustering_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b860e229-4e6d-4393-a68f-779e6dd4c415" Title="CachedDissimilarityMetric(TInstance) Class" Url="html/T_Aglomera_CachedDissimilarityMetric_1.htm">
+      <HelpTOCNode Title="CachedDissimilarityMetric(TInstance) Constructor " Url="html/M_Aglomera_CachedDissimilarityMetric_1__ctor.htm" />
+      <HelpTOCNode Id="b41e305c-5938-4732-ad21-1b016c22ca53" Title="CachedDissimilarityMetric(TInstance) Methods" Url="html/Methods_T_Aglomera_CachedDissimilarityMetric_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Aglomera_CachedDissimilarityMetric_1_Calculate.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Aglomera_CachedDissimilarityMetric_1_Dispose.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="CentroidFunction(TInstance) Delegate" Url="html/T_Aglomera_CentroidFunction_1.htm" />
+    <HelpTOCNode Id="ab0e2527-7299-4888-aa3c-2f95ad3f244d" Title="Cluster(TInstance) Class" Url="html/T_Aglomera_Cluster_1.htm">
+      <HelpTOCNode Id="f638fafa-ad00-46aa-945f-d726b9010b1a" Title="Cluster(TInstance) Constructor " Url="html/Overload_Aglomera_Cluster_1__ctor.htm">
+        <HelpTOCNode Title="Cluster(TInstance) Constructor (Cluster(TInstance))" Url="html/M_Aglomera_Cluster_1__ctor.htm" />
+        <HelpTOCNode Title="Cluster(TInstance) Constructor (IEnumerable(TInstance), Double)" Url="html/M_Aglomera_Cluster_1__ctor_2.htm" />
+        <HelpTOCNode Title="Cluster(TInstance) Constructor (TInstance, Double)" Url="html/M_Aglomera_Cluster_1__ctor_3.htm" />
+        <HelpTOCNode Title="Cluster(TInstance) Constructor (Cluster(TInstance), Cluster(TInstance), Double)" Url="html/M_Aglomera_Cluster_1__ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ccd40dd1-7a16-4911-a860-6746c0bc2d80" Title="Cluster(TInstance) Properties" Url="html/Properties_T_Aglomera_Cluster_1.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P_Aglomera_Cluster_1_Count.htm" />
+        <HelpTOCNode Title="Dissimilarity Property " Url="html/P_Aglomera_Cluster_1_Dissimilarity.htm" />
+        <HelpTOCNode Title="Parent1 Property " Url="html/P_Aglomera_Cluster_1_Parent1.htm" />
+        <HelpTOCNode Title="Parent2 Property " Url="html/P_Aglomera_Cluster_1_Parent2.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="85739b92-9698-4e78-8bd4-05a753edeeff" Title="Cluster(TInstance) Methods" Url="html/Methods_T_Aglomera_Cluster_1.htm">
+        <HelpTOCNode Title="Clone Method " Url="html/M_Aglomera_Cluster_1_Clone.htm" />
+        <HelpTOCNode Title="CompareTo Method " Url="html/M_Aglomera_Cluster_1_CompareTo.htm" />
+        <HelpTOCNode Title="Contains Method " Url="html/M_Aglomera_Cluster_1_Contains.htm" />
+        <HelpTOCNode Id="15b5ce75-cfc1-4bd4-ae8c-e35a4425eab1" Title="Equals Method " Url="html/Overload_Aglomera_Cluster_1_Equals.htm">
+          <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Aglomera_Cluster_1_Equals_1.htm" />
+          <HelpTOCNode Title="Equals Method (Cluster(TInstance))" Url="html/M_Aglomera_Cluster_1_Equals.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetEnumerator Method " Url="html/M_Aglomera_Cluster_1_GetEnumerator.htm" />
+        <HelpTOCNode Title="GetHashCode Method " Url="html/M_Aglomera_Cluster_1_GetHashCode.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_Aglomera_Cluster_1_ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="04b04171-fa76-45ac-9965-64e11f2ccd9d" Title="Cluster(TInstance) Fields" Url="html/Fields_T_Aglomera_Cluster_1.htm">
+        <HelpTOCNode Title="Empty Field" Url="html/F_Aglomera_Cluster_1_Empty.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="046f49ba-40e2-479a-bf38-9e4b096a9e8c" Title="ClusteringResult(TInstance) Class" Url="html/T_Aglomera_ClusteringResult_1.htm">
+      <HelpTOCNode Title="ClusteringResult(TInstance) Constructor " Url="html/M_Aglomera_ClusteringResult_1__ctor.htm" />
+      <HelpTOCNode Id="303f7ba5-3e36-40d1-81ec-76c7f2ed608b" Title="ClusteringResult(TInstance) Properties" Url="html/Properties_T_Aglomera_ClusteringResult_1.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P_Aglomera_ClusteringResult_1_Count.htm" />
+        <HelpTOCNode Title="Item Property " Url="html/P_Aglomera_ClusteringResult_1_Item.htm" />
+        <HelpTOCNode Title="SingleCluster Property " Url="html/P_Aglomera_ClusteringResult_1_SingleCluster.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="26f9d96b-77bb-4cc6-b387-2178e5fcca7f" Title="ClusteringResult(TInstance) Methods" Url="html/Methods_T_Aglomera_ClusteringResult_1.htm">
+        <HelpTOCNode Title="GetEnumerator Method " Url="html/M_Aglomera_ClusteringResult_1_GetEnumerator.htm" />
+        <HelpTOCNode Title="SaveToCsv Method " Url="html/M_Aglomera_ClusteringResult_1_SaveToCsv.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="070cb86e-3bb3-4f3a-ab0b-516bf45e1610" Title="ClusterSet(TInstance) Class" Url="html/T_Aglomera_ClusterSet_1.htm">
+      <HelpTOCNode Title="ClusterSet(TInstance) Constructor " Url="html/M_Aglomera_ClusterSet_1__ctor.htm" />
+      <HelpTOCNode Id="547d1a71-48de-4f87-b169-a3a8478184b7" Title="ClusterSet(TInstance) Properties" Url="html/Properties_T_Aglomera_ClusterSet_1.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P_Aglomera_ClusterSet_1_Count.htm" />
+        <HelpTOCNode Title="Dissimilarity Property " Url="html/P_Aglomera_ClusterSet_1_Dissimilarity.htm" />
+        <HelpTOCNode Title="Item Property " Url="html/P_Aglomera_ClusterSet_1_Item.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c4eee08e-16ab-4cbd-bb37-953d3a19dde8" Title="ClusterSet(TInstance) Methods" Url="html/Methods_T_Aglomera_ClusterSet_1.htm">
+        <HelpTOCNode Title="GetEnumerator Method " Url="html/M_Aglomera_ClusterSet_1_GetEnumerator.htm" />
+        <HelpTOCNode Id="1bf37bbb-d135-442a-b008-0dd9e4682ec6" Title="ToString Method " Url="html/Overload_Aglomera_ClusterSet_1_ToString.htm">
+          <HelpTOCNode Title="ToString Method " Url="html/M_Aglomera_ClusterSet_1_ToString.htm" />
+          <HelpTOCNode Title="ToString Method (Boolean)" Url="html/M_Aglomera_ClusterSet_1_ToString_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="39f8373e-161f-48b2-b5c5-1d13f4d0b41f" Title="ClusterSetEvaluation(TInstance) Structure" Url="html/T_Aglomera_ClusterSetEvaluation_1.htm">
+      <HelpTOCNode Title="ClusterSetEvaluation(TInstance) Constructor " Url="html/M_Aglomera_ClusterSetEvaluation_1__ctor.htm" />
+      <HelpTOCNode Id="71976cad-910d-4037-96c1-f72e50d04a0c" Title="ClusterSetEvaluation(TInstance) Properties" Url="html/Properties_T_Aglomera_ClusterSetEvaluation_1.htm">
+        <HelpTOCNode Title="ClusterSet Property " Url="html/P_Aglomera_ClusterSetEvaluation_1_ClusterSet.htm" />
+        <HelpTOCNode Title="EvaluationValue Property " Url="html/P_Aglomera_ClusterSetEvaluation_1_EvaluationValue.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ea236075-7b58-4d00-9159-21bc46bfa61d" Title="ClusterSetEvaluation(TInstance) Methods" Url="html/Methods_T_Aglomera_ClusterSetEvaluation_1.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/M_Aglomera_ClusterSetEvaluation_1_ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="92d7d380-b730-475f-a7f0-a7e5a4dca731" Title="Combinatorics Class" Url="html/T_Aglomera_Combinatorics.htm">
+      <HelpTOCNode Id="0fce5bc8-dee5-4dd7-a0ba-b716075bb7bb" Title="Combinatorics Methods" Url="html/Methods_T_Aglomera_Combinatorics.htm">
+        <HelpTOCNode Title="GetCombinations Method " Url="html/M_Aglomera_Combinatorics_GetCombinations.htm" />
+        <HelpTOCNode Title="GetFactorial Method " Url="html/M_Aglomera_Combinatorics_GetFactorial.htm" />
+        <HelpTOCNode Title="GetPermutations Method " Url="html/M_Aglomera_Combinatorics_GetPermutations.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f040a8b7-939e-43a2-a19a-35383e73f22e" Title="Extensions Class" Url="html/T_Aglomera_Extensions.htm">
+      <HelpTOCNode Id="7ae7a399-5f80-48bd-85a4-e7f0639f87d2" Title="Extensions Methods" Url="html/Methods_T_Aglomera_Extensions.htm">
+        <HelpTOCNode Id="ad8ba9ed-6c2c-4afa-ba44-f963eebf3082" Title="EvaluateClustering Method " Url="html/Overload_Aglomera_Extensions_EvaluateClustering.htm">
+          <HelpTOCNode Title="EvaluateClustering(TInstance) Method (ClusteringResult(TInstance), IInternalEvaluationCriterion(TInstance))" Url="html/M_Aglomera_Extensions_EvaluateClustering__1.htm" />
+          <HelpTOCNode Title="EvaluateClustering(TInstance, TClass) Method (ClusteringResult(TInstance), IExternalEvaluationCriterion(TInstance, TClass), IDictionary(TInstance, TClass))" Url="html/M_Aglomera_Extensions_EvaluateClustering__2.htm" />
+          <HelpTOCNode Title="EvaluateClustering(TInstance) Method (ClusteringResult(TInstance), IInternalEvaluationCriterion(TInstance), UInt32)" Url="html/M_Aglomera_Extensions_EvaluateClustering__1_1.htm" />
+          <HelpTOCNode Title="EvaluateClustering(TInstance, TClass) Method (ClusteringResult(TInstance), IExternalEvaluationCriterion(TInstance, TClass), IDictionary(TInstance, TClass), UInt32)" Url="html/M_Aglomera_Extensions_EvaluateClustering__2_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetMedoid(TInstance) Method " Url="html/M_Aglomera_Extensions_GetMedoid__1.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2eb8f228-fafc-461b-85f5-dae9bf624400" Title="IClusteringAlgorithm(TInstance) Interface" Url="html/T_Aglomera_IClusteringAlgorithm_1.htm">
+      <HelpTOCNode Id="4312de82-211c-4558-af8b-c66aa43968ba" Title="IClusteringAlgorithm(TInstance) Properties" Url="html/Properties_T_Aglomera_IClusteringAlgorithm_1.htm">
+        <HelpTOCNode Title="LinkageCriterion Property " Url="html/P_Aglomera_IClusteringAlgorithm_1_LinkageCriterion.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="54013caa-c215-4c2f-9fdd-59bfd48334ac" Title="IClusteringAlgorithm(TInstance) Methods" Url="html/Methods_T_Aglomera_IClusteringAlgorithm_1.htm">
+        <HelpTOCNode Id="6feb4259-491f-4c27-ba72-1c2fa46551f7" Title="GetClustering Method " Url="html/Overload_Aglomera_IClusteringAlgorithm_1_GetClustering.htm">
+          <HelpTOCNode Title="GetClustering Method (ISet(TInstance))" Url="html/M_Aglomera_IClusteringAlgorithm_1_GetClustering_2.htm" />
+          <HelpTOCNode Title="GetClustering Method (ClusterSet(TInstance))" Url="html/M_Aglomera_IClusteringAlgorithm_1_GetClustering.htm" />
+          <HelpTOCNode Title="GetClustering Method (IEnumerable(Cluster(TInstance)), Double)" Url="html/M_Aglomera_IClusteringAlgorithm_1_GetClustering_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8be56961-83d2-4ed6-b5bd-87d675af9090" Title="IDissimilarityMetric(TInstance) Interface" Url="html/T_Aglomera_IDissimilarityMetric_1.htm">
+      <HelpTOCNode Id="b3d201b9-8fd0-4ef8-9ca0-6e8b3dc30494" Title="IDissimilarityMetric(TInstance) Methods" Url="html/Methods_T_Aglomera_IDissimilarityMetric_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Aglomera_IDissimilarityMetric_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="0cf51583-db8d-4e53-a7f4-56bcc33bea8c" Title="Aglomera.D3" Url="html/N_Aglomera_D3.htm">
+    <HelpTOCNode Id="5207469c-d00d-422b-9829-335de4e030c0" Title="D3Extensions Class" Url="html/T_Aglomera_D3_D3Extensions.htm">
+      <HelpTOCNode Id="d212bf71-cde3-47bf-9ce5-5d53fbca3f1d" Title="D3Extensions Methods" Url="html/Methods_T_Aglomera_D3_D3Extensions.htm">
+        <HelpTOCNode Title="SaveD3DendrogramFile(TInstance) Method " Url="html/M_Aglomera_D3_D3Extensions_SaveD3DendrogramFile__1.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="f58ce361-3094-4992-b9aa-285a0e00acf2" Title="Aglomera.Evaluation.External" Url="html/N_Aglomera_Evaluation_External.htm">
+    <HelpTOCNode Id="3ac38fb9-3d8e-4b6d-ac6e-500c2157fb6b" Title="CombinedExternalCriterion(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_CombinedExternalCriterion_2.htm">
+      <HelpTOCNode Title="CombinedExternalCriterion(TInstance, TClass) Constructor " Url="html/M_Aglomera_Evaluation_External_CombinedExternalCriterion_2__ctor.htm" />
+      <HelpTOCNode Id="abf082f3-92c4-4fcb-a5a7-f68acc8d22b5" Title="CombinedExternalCriterion(TInstance, TClass) Methods" Url="html/Methods_T_Aglomera_Evaluation_External_CombinedExternalCriterion_2.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_External_CombinedExternalCriterion_2_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="81b30af3-0924-4253-8842-d61ccd4d8c07" Title="FMeasure(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_FMeasure_2.htm">
+      <HelpTOCNode Title="FMeasure(TInstance, TClass) Constructor " Url="html/M_Aglomera_Evaluation_External_FMeasure_2__ctor.htm" />
+      <HelpTOCNode Id="09b83388-405d-45d8-9ae4-1aa188ea6d9e" Title="FMeasure(TInstance, TClass) Properties" Url="html/Properties_T_Aglomera_Evaluation_External_FMeasure_2.htm">
+        <HelpTOCNode Title="RecallWeight Property " Url="html/P_Aglomera_Evaluation_External_FMeasure_2_RecallWeight.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="57dbda1e-a3ad-435e-b39e-052070e1ccf2" Title="FMeasure(TInstance, TClass) Methods" Url="html/Methods_T_Aglomera_Evaluation_External_FMeasure_2.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_External_FMeasure_2_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d596fd2a-6eb9-43a5-8780-000ea64657d2" Title="IExternalEvaluationCriterion(TInstance, TClass) Interface" Url="html/T_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2.htm">
+      <HelpTOCNode Id="781887cd-5c6e-40e5-a5c1-8f712073136b" Title="IExternalEvaluationCriterion(TInstance, TClass) Methods" Url="html/Methods_T_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_External_IExternalEvaluationCriterion_2_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5fe9d171-f3b9-4aa1-9bf0-e17301e897b3" Title="NormalizedMutualInformation(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_NormalizedMutualInformation_2.htm">
+      <HelpTOCNode Title="NormalizedMutualInformation(TInstance, TClass) Constructor " Url="html/M_Aglomera_Evaluation_External_NormalizedMutualInformation_2__ctor.htm" />
+      <HelpTOCNode Id="d2da52e9-2b51-4491-99bc-466c7d2c5e6a" Title="NormalizedMutualInformation(TInstance, TClass) Methods" Url="html/Methods_T_Aglomera_Evaluation_External_NormalizedMutualInformation_2.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_External_NormalizedMutualInformation_2_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ff6b8394-23cb-43a4-951e-a31898fd4286" Title="Precision(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_Precision_2.htm">
+      <HelpTOCNode Title="Precision(TInstance, TClass) Constructor " Url="html/M_Aglomera_Evaluation_External_Precision_2__ctor.htm" />
+      <HelpTOCNode Id="b24ebc7f-1f10-4dff-808c-84c5d1df09e5" Title="Precision(TInstance, TClass) Methods" Url="html/Methods_T_Aglomera_Evaluation_External_Precision_2.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_External_Precision_2_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0a09ac12-bd04-42ad-9a92-bf8489cc28a5" Title="Purity(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_Purity_2.htm">
+      <HelpTOCNode Title="Purity(TInstance, TClass) Constructor " Url="html/M_Aglomera_Evaluation_External_Purity_2__ctor.htm" />
+      <HelpTOCNode Id="8cd6825a-2567-41da-9577-3fd432715045" Title="Purity(TInstance, TClass) Methods" Url="html/Methods_T_Aglomera_Evaluation_External_Purity_2.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_External_Purity_2_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="368bf8fa-0690-47ca-ba46-62eddbb648e0" Title="RandIndex(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_RandIndex_2.htm">
+      <HelpTOCNode Title="RandIndex(TInstance, TClass) Constructor " Url="html/M_Aglomera_Evaluation_External_RandIndex_2__ctor.htm" />
+      <HelpTOCNode Id="db6d0e40-94d9-43a6-b4ee-b5c604a1da75" Title="RandIndex(TInstance, TClass) Methods" Url="html/Methods_T_Aglomera_Evaluation_External_RandIndex_2.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_External_RandIndex_2_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0aae363f-fd65-487f-abb2-80f8dca9f10e" Title="Recall(TInstance, TClass) Class" Url="html/T_Aglomera_Evaluation_External_Recall_2.htm">
+      <HelpTOCNode Title="Recall(TInstance, TClass) Constructor " Url="html/M_Aglomera_Evaluation_External_Recall_2__ctor.htm" />
+      <HelpTOCNode Id="99a514b2-653e-457c-aa4b-d678cc79c204" Title="Recall(TInstance, TClass) Methods" Url="html/Methods_T_Aglomera_Evaluation_External_Recall_2.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_External_Recall_2_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="9ece8a7d-80d6-4728-80b6-5aba8c66aff2" Title="Aglomera.Evaluation.Internal" Url="html/N_Aglomera_Evaluation_Internal.htm">
+    <HelpTOCNode Id="b1d81080-b963-4f7f-ae0f-93e8a011bbcf" Title="CalinskiHarabaszIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm">
+      <HelpTOCNode Title="CalinskiHarabaszIndex(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1__ctor.htm" />
+      <HelpTOCNode Id="8e4eb25f-aded-4a18-813a-56f7aca72ac0" Title="CalinskiHarabaszIndex(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="6e8306e7-c8a0-4fb0-be7d-a2e03ff79fab" Title="CalinskiHarabaszIndex(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_CalinskiHarabaszIndex_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="79c301d5-d0f0-467b-a6ea-3f22805fa9e9" Title="CombinedInternalCriterion(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm">
+      <HelpTOCNode Title="CombinedInternalCriterion(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1__ctor.htm" />
+      <HelpTOCNode Id="3bef9c3b-0290-4b0d-9157-e27833d9ef38" Title="CombinedInternalCriterion(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0abf2414-e133-4287-9c04-ce72483e3fab" Title="CombinedInternalCriterion(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_CombinedInternalCriterion_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="63bc6b70-3821-43b4-9c0d-8f652d9cee26" Title="DaviesBouldinIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm">
+      <HelpTOCNode Title="DaviesBouldinIndex(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1__ctor.htm" />
+      <HelpTOCNode Id="62dfd499-b7f2-4742-8178-370ed23eb54b" Title="DaviesBouldinIndex(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_DissimilarityMetric.htm" />
+        <HelpTOCNode Title="DistanceExponent Property " Url="html/P_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_DistanceExponent.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="81910335-1a01-4af2-825e-95007c3cc8d3" Title="DaviesBouldinIndex(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_DaviesBouldinIndex_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f89fb1c9-2c3a-4270-b9c0-c747f94cd2ce" Title="DunnIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_DunnIndex_1.htm">
+      <HelpTOCNode Title="DunnIndex(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_DunnIndex_1__ctor.htm" />
+      <HelpTOCNode Id="c90f26e5-7097-4b09-a750-582f7b1e75f7" Title="DunnIndex(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_DunnIndex_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_DunnIndex_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="f397743c-5827-4e1c-bee4-70625a47f9a9" Title="DunnIndex(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_DunnIndex_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_DunnIndex_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="51255603-54b0-46f3-b099-12dc7bfe8bc3" Title="IIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_IIndex_1.htm">
+      <HelpTOCNode Title="IIndex(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_IIndex_1__ctor.htm" />
+      <HelpTOCNode Id="98e36479-ec71-4bfc-bd48-8b1b7e1ed9b7" Title="IIndex(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_IIndex_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_IIndex_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="6312702f-491e-4ec4-93fb-0353a6f9c59c" Title="IIndex(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_IIndex_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_IIndex_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="38a55547-f87f-48fc-82d4-73e6197492ba" Title="IInternalEvaluationCriterion(TInstance) Interface" Url="html/T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm">
+      <HelpTOCNode Id="7319e512-cb2b-4a44-b272-eab7ac3ace73" Title="IInternalEvaluationCriterion(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2df69b40-cff6-48ed-b470-e405e33db6a5" Title="IInternalEvaluationCriterion(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_IInternalEvaluationCriterion_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="288eb2e7-7a78-4b74-8f7d-a0013bb8e0ed" Title="ModifiedGammaStatistic(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm">
+      <HelpTOCNode Title="ModifiedGammaStatistic(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1__ctor.htm" />
+      <HelpTOCNode Id="50ca5b1b-71e0-4058-9e5b-833ca5b9b82f" Title="ModifiedGammaStatistic(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="de127cf0-e673-4f04-8320-f314543e139a" Title="ModifiedGammaStatistic(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_ModifiedGammaStatistic_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a98c4bd2-73a6-43e4-951a-9292eca7a870" Title="RootMeanSquareStdDev(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm">
+      <HelpTOCNode Title="RootMeanSquareStdDev(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1__ctor.htm" />
+      <HelpTOCNode Id="a689b5be-394b-4fb3-81ce-1f1d6a970304" Title="RootMeanSquareStdDev(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d5117d07-1f12-4799-8c8f-e8c087d1b256" Title="RootMeanSquareStdDev(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_RootMeanSquareStdDev_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d668141b-e0fd-46d6-894b-0b3371c4238b" Title="RSquared(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_RSquared_1.htm">
+      <HelpTOCNode Title="RSquared(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_RSquared_1__ctor.htm" />
+      <HelpTOCNode Id="687cab6e-3562-48bb-80c4-1aee1194da63" Title="RSquared(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_RSquared_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_RSquared_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="dee87d05-4630-4a09-90ed-3030395c33ba" Title="RSquared(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_RSquared_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_RSquared_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="1ec05e0f-6326-424e-af7c-150c241c11ee" Title="SilhouetteCoefficient(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm">
+      <HelpTOCNode Title="SilhouetteCoefficient(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1__ctor.htm" />
+      <HelpTOCNode Id="b14ff3d2-70e3-4ff5-9759-d5556e935018" Title="SilhouetteCoefficient(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0e5aa4ef-63c0-40b1-a7b5-ed054172abab" Title="SilhouetteCoefficient(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_Evaluate.htm" />
+        <HelpTOCNode Title="EvaluateEach Method " Url="html/M_Aglomera_Evaluation_Internal_SilhouetteCoefficient_1_EvaluateEach.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a2397850-54aa-4d28-b3ef-d5255a0e26d6" Title="WithinBetweenRatio(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm">
+      <HelpTOCNode Title="WithinBetweenRatio(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_WithinBetweenRatio_1__ctor.htm" />
+      <HelpTOCNode Id="c1966473-5ef5-40f6-8e93-277670842881" Title="WithinBetweenRatio(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_WithinBetweenRatio_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ff3620ce-a1bc-406f-b448-33e2c4f940dd" Title="WithinBetweenRatio(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_WithinBetweenRatio_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_WithinBetweenRatio_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e7e55ee1-8e24-40a7-8a32-8fa3e9ec0b33" Title="XieBeniIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm">
+      <HelpTOCNode Title="XieBeniIndex(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_XieBeniIndex_1__ctor.htm" />
+      <HelpTOCNode Id="a33bd90a-7473-412b-b83a-11d4b5bcea4d" Title="XieBeniIndex(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_XieBeniIndex_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c49ff71f-9eeb-4529-a563-662f9aa23f61" Title="XieBeniIndex(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_XieBeniIndex_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_XieBeniIndex_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="29f4a7e8-804a-4ae6-9bf1-60d98970a8d1" Title="XuIndex(TInstance) Class" Url="html/T_Aglomera_Evaluation_Internal_XuIndex_1.htm">
+      <HelpTOCNode Title="XuIndex(TInstance) Constructor " Url="html/M_Aglomera_Evaluation_Internal_XuIndex_1__ctor.htm" />
+      <HelpTOCNode Id="28ab0b33-f0f8-417e-a1e0-aad694c84bce" Title="XuIndex(TInstance) Properties" Url="html/Properties_T_Aglomera_Evaluation_Internal_XuIndex_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Evaluation_Internal_XuIndex_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c3872835-2129-4d2c-a54b-8ee58e38b55a" Title="XuIndex(TInstance) Methods" Url="html/Methods_T_Aglomera_Evaluation_Internal_XuIndex_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Aglomera_Evaluation_Internal_XuIndex_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="de53f2ba-0ee1-45be-8dbd-8bba868357d9" Title="Aglomera.Linkage" Url="html/N_Aglomera_Linkage.htm">
+    <HelpTOCNode Id="c0daec14-72fb-4b09-b143-34a17d716f5c" Title="AverageLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_AverageLinkage_1.htm">
+      <HelpTOCNode Title="AverageLinkage(TInstance) Constructor " Url="html/M_Aglomera_Linkage_AverageLinkage_1__ctor.htm" />
+      <HelpTOCNode Id="6972e95d-02eb-48d6-be48-fde2579a3d44" Title="AverageLinkage(TInstance) Properties" Url="html/Properties_T_Aglomera_Linkage_AverageLinkage_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_AverageLinkage_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="02022c9a-ef4c-4d49-bce6-8dfe39e4d39d" Title="AverageLinkage(TInstance) Methods" Url="html/Methods_T_Aglomera_Linkage_AverageLinkage_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Aglomera_Linkage_AverageLinkage_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="918a0bfc-93b6-4d43-b37f-ebef39a6116b" Title="CentroidLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_CentroidLinkage_1.htm">
+      <HelpTOCNode Title="CentroidLinkage(TInstance) Constructor " Url="html/M_Aglomera_Linkage_CentroidLinkage_1__ctor.htm" />
+      <HelpTOCNode Id="50aad2e0-ddf9-4225-ad90-286621c5a327" Title="CentroidLinkage(TInstance) Properties" Url="html/Properties_T_Aglomera_Linkage_CentroidLinkage_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_CentroidLinkage_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8d02cf49-22de-4614-87b1-2eb064032074" Title="CentroidLinkage(TInstance) Methods" Url="html/Methods_T_Aglomera_Linkage_CentroidLinkage_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Aglomera_Linkage_CentroidLinkage_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="36ddaccb-8b89-43db-a918-90592b0a1164" Title="CompleteLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_CompleteLinkage_1.htm">
+      <HelpTOCNode Title="CompleteLinkage(TInstance) Constructor " Url="html/M_Aglomera_Linkage_CompleteLinkage_1__ctor.htm" />
+      <HelpTOCNode Id="22cc7420-5b03-486e-b445-e262fb8c755d" Title="CompleteLinkage(TInstance) Properties" Url="html/Properties_T_Aglomera_Linkage_CompleteLinkage_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_CompleteLinkage_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="76f10a30-7ad8-419f-abff-09d208052a68" Title="CompleteLinkage(TInstance) Methods" Url="html/Methods_T_Aglomera_Linkage_CompleteLinkage_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Aglomera_Linkage_CompleteLinkage_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a368ac46-5d6e-404b-9d4c-a82622a31efb" Title="ILinkageCriterion(TInstance) Interface" Url="html/T_Aglomera_Linkage_ILinkageCriterion_1.htm">
+      <HelpTOCNode Id="d6e57da4-97b9-4ba2-91cb-5771c5fcd964" Title="ILinkageCriterion(TInstance) Properties" Url="html/Properties_T_Aglomera_Linkage_ILinkageCriterion_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_ILinkageCriterion_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8c7e254b-fd1d-4458-a904-4d7c6529b58d" Title="ILinkageCriterion(TInstance) Methods" Url="html/Methods_T_Aglomera_Linkage_ILinkageCriterion_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Aglomera_Linkage_ILinkageCriterion_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3c96bb8c-af2a-451a-906d-9d7288ffb2a5" Title="MinimumEnergyLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm">
+      <HelpTOCNode Title="MinimumEnergyLinkage(TInstance) Constructor " Url="html/M_Aglomera_Linkage_MinimumEnergyLinkage_1__ctor.htm" />
+      <HelpTOCNode Id="8be3ce2d-f43a-416c-a779-54560d5cd709" Title="MinimumEnergyLinkage(TInstance) Properties" Url="html/Properties_T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_MinimumEnergyLinkage_1_DissimilarityMetric.htm" />
+        <HelpTOCNode Title="DistanceExponent Property " Url="html/P_Aglomera_Linkage_MinimumEnergyLinkage_1_DistanceExponent.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="014c580b-ae6b-4f83-b157-40088453398e" Title="MinimumEnergyLinkage(TInstance) Methods" Url="html/Methods_T_Aglomera_Linkage_MinimumEnergyLinkage_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Aglomera_Linkage_MinimumEnergyLinkage_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3941ead9-944f-46da-89a7-c4cdb69dedd2" Title="SingleLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_SingleLinkage_1.htm">
+      <HelpTOCNode Title="SingleLinkage(TInstance) Constructor " Url="html/M_Aglomera_Linkage_SingleLinkage_1__ctor.htm" />
+      <HelpTOCNode Id="f150d0fb-d877-44af-af72-724cfd79b98e" Title="SingleLinkage(TInstance) Properties" Url="html/Properties_T_Aglomera_Linkage_SingleLinkage_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_SingleLinkage_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="34b01d41-45d5-4462-815c-ff9fe4092fd3" Title="SingleLinkage(TInstance) Methods" Url="html/Methods_T_Aglomera_Linkage_SingleLinkage_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Aglomera_Linkage_SingleLinkage_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cbf48d9a-7576-4367-a46b-055f6cf8a52c" Title="WardsMinimumVarianceLinkage(TInstance) Class" Url="html/T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm">
+      <HelpTOCNode Title="WardsMinimumVarianceLinkage(TInstance) Constructor " Url="html/M_Aglomera_Linkage_WardsMinimumVarianceLinkage_1__ctor.htm" />
+      <HelpTOCNode Id="5a212b21-5871-45b3-b667-85545e3ed94f" Title="WardsMinimumVarianceLinkage(TInstance) Properties" Url="html/Properties_T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm">
+        <HelpTOCNode Title="DissimilarityMetric Property " Url="html/P_Aglomera_Linkage_WardsMinimumVarianceLinkage_1_DissimilarityMetric.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e8fec4e6-1488-421b-8087-7873eafec180" Title="WardsMinimumVarianceLinkage(TInstance) Methods" Url="html/Methods_T_Aglomera_Linkage_WardsMinimumVarianceLinkage_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Aglomera_Linkage_WardsMinimumVarianceLinkage_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

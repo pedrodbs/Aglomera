@@ -1,11 +1,25 @@
 ﻿// ------------------------------------------
 // <copyright file="IIndex.cs" company="Pedro Sequeira">
-//     Some copyright
+// 
+//     Copyright (c) 2018 Pedro Sequeira
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+// documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//  
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+// Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+// WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+// OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+// 
 // </copyright>
 // <summary>
-//    Project: Grupo
-//    Last updated: 2018/01/18
-// 
+//    Project: Aglomera
+//    Last updated: 05/15/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -25,7 +39,7 @@ namespace Aglomera.Evaluation.Internal
     ///     References:
     ///     [1] -
     ///     <see href="https://doi.org/10.1109/TPAMI.2002.1114856">
-    ///         Maulik, U., & Bandyopadhyay, S. (2002). Performance evaluation of some clustering algorithms and validity
+    ///         Maulik, U., &amp; Bandyopadhyay, S. (2002). Performance evaluation of some clustering algorithms and validity
     ///         indices. IEEE Transactions on Pattern Analysis and Machine Intelligence, 24(12), 1650-1654.
     ///     </see>
     /// </remarks>
@@ -59,20 +73,14 @@ namespace Aglomera.Evaluation.Internal
 
         #region Properties & Indexers
 
-        /// <summary>
-        ///     Gets the metric used by this criterion to measure the dissimilarity / distance between cluster elements.
-        /// </summary>
+        /// <inheritdoc />
         public IDissimilarityMetric<TInstance> DissimilarityMetric { get; }
 
         #endregion
 
         #region Public Methods
 
-        /// <summary>
-        ///     Evaluates the given <see cref="ClusterSet{TInstance}" /> partition according to this evaluation criterion.
-        /// </summary>
-        /// <param name="clusterSet">The clustering partition.</param>
-        /// <returns>The evaluation of the given partition according to this criterion.</returns>
+        /// <inheritdoc />
         public double Evaluate(ClusterSet<TInstance> clusterSet)
         {
             // undefined if only one cluster
@@ -88,6 +96,7 @@ namespace Aglomera.Evaluation.Internal
                     : new Cluster<TInstance>(totalCluster, cluster, 0);
                 centroids.Add(this._centroidFunc(cluster));
             }
+
             var centroid = this._centroidFunc(totalCluster);
 
             var sumTotal = 0d;

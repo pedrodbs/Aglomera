@@ -94,7 +94,7 @@ namespace InternalClusteringEvaluation
             clusterPerf.Start();
             var metric = new DataPoint(); // Euclidean distance
             var linkage = new AverageLinkage<DataPoint>(metric);
-            var clusteringAlg = new ClusteringAlgorithm<DataPoint>(linkage);
+            var clusteringAlg = new AgglomerativeClusteringAlgorithm<DataPoint>(linkage);
             var clustering = clusteringAlg.GetClustering(dataPoints);
             clusterPerf.Stop();
 

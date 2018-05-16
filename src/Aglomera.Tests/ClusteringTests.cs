@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Aglomera.Tests
-//    Last updated: 04/27/2018
+//    Last updated: 05/15/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -40,7 +40,7 @@ namespace Aglomera.Tests
     {
         #region Static Fields & Constants
 
-        private static readonly ISet<DataPoint> DataPoints = new HashSet<DataPoint>(
+        internal static readonly ISet<DataPoint> DataPoints = new HashSet<DataPoint>(
             new[]
             {
                 new DataPoint("A1", new[] {2.0d, 2.0d}),
@@ -70,12 +70,31 @@ namespace Aglomera.Tests
         #region Public Methods
 
         [TestMethod]
+        public void CachedDissimilarityTest()
+        {
+            var dataPoints = DataPoints.ToList();
+            var cachedDissimilarity = new CachedDissimilarityMetric<DataPoint>(DistanceMetric, DataPoints);
+            for (var i = 0; i < dataPoints.Count; i++)
+            for (var j = i + 1; j < dataPoints.Count; j++)
+            {
+                var cachedDist = cachedDissimilarity.Calculate(dataPoints[i], dataPoints[j]);
+                var distance = DistanceMetric.Calculate(dataPoints[i], dataPoints[j]);
+                Console.WriteLine($"{dataPoints[i]} - {dataPoints[j]} = {cachedDist}");
+                Assert.AreEqual(cachedDist, distance, 1E-10,
+                    $"Distance {distance} and cached distance {cachedDist} between {dataPoints[i]} and {dataPoints[j]} should be the same.");
+            }
+
+            cachedDissimilarity.Dispose();
+        }
+
+        [TestMethod]
         public void ClusteringSizeTest()
         {
             foreach (var linkage in Linkages)
             {
                 Console.WriteLine("________________________");
-                var clusteringResult = new ClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
+                var clusteringResult =
+                    new AgglomerativeClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
                 Console.WriteLine(clusteringResult.Count);
                 Assert.AreEqual(clusteringResult.Count, DataPoints.Count,
                     "Clustering result should have as many cluster-sets as there are clusters.");
@@ -88,7 +107,8 @@ namespace Aglomera.Tests
             foreach (var linkage in Linkages)
             {
                 Console.WriteLine("________________________");
-                var clusteringResult = new ClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
+                var clusteringResult =
+                    new AgglomerativeClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
                 for (var i = 0; i < clusteringResult.Count; i++)
                 {
                     var clusterSet = clusteringResult[i];
@@ -113,7 +133,8 @@ namespace Aglomera.Tests
             foreach (var linkage in Linkages)
             {
                 Console.WriteLine("________________________");
-                var clusteringResult = new ClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
+                var clusteringResult =
+                    new AgglomerativeClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
                 var firstClusterSet = clusteringResult[0];
                 Console.WriteLine(firstClusterSet);
                 Assert.AreEqual(firstClusterSet.Count, DataPoints.Count,
@@ -129,11 +150,13 @@ namespace Aglomera.Tests
             foreach (var linkage in Linkages)
             {
                 Console.WriteLine("________________________");
-                var completeClusteringResult = new ClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
+                var completeClusteringResult =
+                    new AgglomerativeClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
                 for (var i = 0; i < completeClusteringResult.Count; i++)
                 {
                     var clusterSet = completeClusteringResult[i];
-                    var clusteringResult = new ClusteringAlgorithm<DataPoint>(linkage).GetClustering(clusterSet);
+                    var clusteringResult =
+                        new AgglomerativeClusteringAlgorithm<DataPoint>(linkage).GetClustering(clusterSet);
                     Assert.AreEqual(clusteringResult.Count, DataPoints.Count - i);
 
                     for (var j = 0; j < clusteringResult.Count; j++)
@@ -157,7 +180,8 @@ namespace Aglomera.Tests
             {
                 var linkage = Linkages[i];
                 Console.WriteLine("________________________");
-                var clusteringResult = new ClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
+                var clusteringResult =
+                    new AgglomerativeClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
                 var filePath = Path.GetFullPath($"linkage-{i}.csv");
                 Console.WriteLine(filePath);
                 clusteringResult.SaveToCsv(filePath);
@@ -176,7 +200,8 @@ namespace Aglomera.Tests
             foreach (var linkage in Linkages)
             {
                 Console.WriteLine("________________________");
-                var clusteringResult = new ClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
+                var clusteringResult =
+                    new AgglomerativeClusteringAlgorithm<DataPoint>(linkage).GetClustering(DataPoints);
                 var singleClusterSet = clusteringResult[DataPoints.Count - 1];
                 Console.WriteLine(singleClusterSet);
                 Assert.AreEqual(singleClusterSet.Count, 1, "Single cluster-set should only have a cluster.");

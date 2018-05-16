@@ -73,7 +73,7 @@ namespace NumericClustering
         {
             var perfMeasure = new PerformanceMeasure();
             perfMeasure.Start();
-            var clusteringAlg = new ClusteringAlgorithm<DataPoint>(linkage);
+            var clusteringAlg = new AgglomerativeClusteringAlgorithm<DataPoint>(linkage);
             var clustering = clusteringAlg.GetClustering(instances);
             perfMeasure.Stop();
 

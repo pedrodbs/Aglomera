@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="b6f2b623-5f2d-453d-b5ed-d3b9e713cb41" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <quote>
+        <para>A hierarchical agglomerative clustering (HAC) library written in C#</para>
+      </quote>
+      <para>
+        Aglomera is a .NET open-source library written entirely in C# that implements <legacyItalic>hierarchical clustering</legacyItalic> (HC) algorithms. A <legacyItalic>cluster</legacyItalic> refers to a <legacyItalic>set of instances</legacyItalic> or data-points. HC can either be <legacyItalic>agglomerative</legacyItalic> (bottom-up approach) or <legacyItalic>divisive</legacyItalic> (top-down approach). The distance between each instance is calculated using some <legacyItalic>dissimilarity function</legacyItalic>. The distance between clusters is calculated using some <legacyItalic>linkage criterion</legacyItalic>. Each step of HC produces a new <legacyItalic>cluster-set</legacyItalic>, <legacyItalic>i.e.</legacyItalic>, a <legacyItalic>set of clusters</legacyItalic>, from the cluster-set of the previous step.
+      </para>
+      <para>
+        <legacyItalic>Agglomerative HC</legacyItalic> starts with a cluster-set in which each instance belongs to its own cluster. At each step, it merges the two closest clusters, until all clusters have been merged into a single cluster containing all instances, <legacyItalic>i.e.</legacyItalic>, it ends with a cluster-set containing a single cluster with all instances. <legacyItalic>Divisive HC</legacyItalic> works in reverse - it starts by having a cluster-set with one cluster containing all instances. At each step, it splits clusters recursively, using some <legacyItalic>splitting method</legacyItalic>, until reaching one cluster-set containing only singletons, <legacyItalic>i.e.</legacyItalic>, where each instance is placed in its own cluster.
+      </para>
+      <para>
+        The <legacyItalic>clustering result</legacyItalic> is a list containing the cluster-set and the corresponding dissimilarity / distance at which it was created at each step of the algorithm. The result is organized in a hierarchical form, <legacyItalic>i.e.</legacyItalic>, where each cluster references either the <legacyItalic>two parents</legacyItalic> that were merged for its creation (in the agglomerative approach), or the <legacyItalic>two children</legacyItalic> resulting from splitting the cluster (in the divisive approach). Due to their hierarchical nature, clustering results can be visualized via a <legacyItalic>
+          <externalLink>
+            <linkText>dendrogram</linkText>
+            <linkUri>https://en.wikipedia.org/wiki/Dendrogram</linkUri>
+          </externalLink>
+        </legacyItalic>.
+      </para>
+      <para>
+        Currently, Aglomera.NET implements <legacyItalic>program AGNES</legacyItalic> (AGglomerative NESting) of [Kaufman &amp; Rousseeuw, 1990], <legacyItalic>i.e.</legacyItalic>, the bottom-up approach, the  It supports different linkage criteria and also provides several metrics to perform internal and external evaluation of clustering results. The results of clustering can be exported to a Json file to be visualized as a dendrogram in <legacyItalic>DendrogramViewer</legacyItalic>, an interactive web-application using D3.js.
+      </para>
+    </introduction>
+
+<section><!--h2-->
+  <title>About</title>
+  <content>
+<para>Aglomera.NET is open-source under the <externalLink>
+  <linkText>MIT license</linkText>
+  <linkUri>https://github.com/pedrodbs/Aglomera/blob/master/LICENSE.md</linkUri>
+</externalLink> and is free for commercial use.</para>
+<list class="bullet">
+<listItem>Source repository: <externalLink>
+  <linkText>https://github.com/pedrodbs/Aglomera</linkText>
+  <linkUri>https://github.com/pedrodbs/Aglomera</linkUri>
+  <linkTarget>_blank</linkTarget>
+</externalLink></listItem>
+<listItem>Issue tracker: <externalLink>
+  <linkText>https://github.com/pedrodbs/Aglomera/issues</linkText>
+  <linkUri>https://github.com/pedrodbs/Aglomera/issues</linkUri>
+  <linkTarget>_blank</linkTarget>
+</externalLink></listItem>
+
+</list>
+<para>Supported platforms:</para>
+<list class="bullet">
+<listItem>All runtimes supporting <legacyItalic>.NET Standard 1.3+</legacyItalic> (<legacyItalic>.NET Core 1.0+</legacyItalic>, <legacyItalic>.NET Framework 4.6+</legacyItalic>) on Windows, Linux and Mac</listItem>
+
+</list>
+  </content>
+</section>
+
+<section><!--h2-->
+  <title>API Documentation</title>
+  <content>
+<list class="bullet">
+<listItem><externalLink>
+  <linkText>HTML</linkText>
+  <linkUri>https://pedrodbs.github.io/Aglomera/</linkUri>
+</externalLink></listItem>
+<listItem><externalLink>
+  <linkText>Windows Help file (CHM)</linkText>
+  <linkUri>https://github.com/pedrodbs/Aglomera/raw/master/docs/Aglomera.NET.chm</linkUri>
+</externalLink></listItem>
+<listItem><externalLink>
+  <linkText>PDF document</linkText>
+  <linkUri>https://github.com/pedrodbs/Aglomera/raw/master/docs/Aglomera.NET.pdf</linkUri>
+</externalLink></listItem>
+
+</list>
+  </content>
+</section>
+
+<section><!--h2-->
+  <title>Packages and Dependencies</title>
+  <content>
+<para>The following packages with the corresponding dependencies are provided:</para>
+<list class="bullet">
+<listItem><para><legacyBold>Aglomera:</legacyBold> core package, including clustering algorithm, linkage criteria and evaluation metrics. </para>
+</listItem>
+<listItem><para><legacyBold>Aglomera.D3:</legacyBold> package to export clustering results to Json files to be visualized with D3.js. </para>
+<list class="bullet">
+<listItem><externalLink>
+  <linkText>Json.NET</linkText>
+  <linkUri>https://www.nuget.org/packages/Newtonsoft.Json/</linkUri>
+</externalLink> v11.0.2</listItem>
+
+</list>
+</listItem>
+
+</list>
+  </content>
+</section>
+
+<section><!--h2-->
+  <title>Installation</title>
+  <content>
+<para>You can <codeInline>git clone</codeInline> the Aglomera.NET <externalLink>
+  <linkText>source code</linkText>
+  <linkUri>https://github.com/pedrodbs/Aglomera</linkUri>
+</externalLink> and use an IDE like VisualStudio to build the corresponding binaries.</para>
+  </content>
+</section>
+
+<section><!--h2-->
+  <title>Getting started</title>
+  <content>
+<para>Consider the following <legacyItalic>data-set</legacyItalic> example taken from [Kaufman &amp; Rousseeuw, 1990]:</para>
+<para><mediaLink><image xlink:href="example" /></mediaLink></para>
+<para>where colors indicate the &quot;real&quot; instance class, <legacyItalic>i.e.</legacyItalic>, either &#39;A=red&#39; or &#39;B=blue&#39;.</para>
+<para>Start by defining a <legacyItalic>data-point</legacyItalic> class, for example one to represent points in a 2D Euclidean space, such as:</para>
+<code class='language-c#' lang='c#'>class DataPoint : IComparable&lt;DataPoint&gt;
+{
+    public DataPoint(string id, double x, double y) { ... }
+    public int CompareTo(DataPoint other) { ... }
+    ...
+}
+</code>
+<para>and then define a <legacyItalic>dissimilarity metric</legacyItalic> for this type:</para>
+<code class='language-c#' lang='c#'>class DssimilarityMetric : IDissimilarityMetric&lt;DataPoint&gt;
+{
+    public double Calculate(DataPoint instance1, DataPoint instance2) { ... }
+}
+</code>
+<para>We can then define the <legacyItalic>data-set</legacyItalic> by using:</para>
+<code class='language-c#' lang='c#'>var dataPoints = new HashSet&lt;DataPoint&gt;(
+    new[]
+    {
+        new DataPoint(&quot;1&quot;, 2.00, 2.00),
+        new DataPoint(&quot;2&quot;, 5.50, 4.00),
+        new DataPoint(&quot;3&quot;, 5.00, 5.00),
+        new DataPoint(&quot;4&quot;, 1.50, 2.50),
+        new DataPoint(&quot;5&quot;, 1.00, 1.00),
+        new DataPoint(&quot;6&quot;, 7.00, 5.00),
+        new DataPoint(&quot;7&quot;, 5.75, 6.50)
+    });
+</code>
+<para>We now select a <legacyItalic>linkage criterion</legacyItalic> and create the <legacyItalic>clustering algorithm</legacyItalic>:</para>
+<code class='language-c#' lang='c#'>var metric = new DissimilarityMetric();
+var linkage = new AverageLinkage&lt;DataPoint&gt;(metric);
+var algorithm = new AgglomerativeClusteringAlgorithm&lt;DataPoint&gt;(linkage);
+</code>
+<para>The <legacyItalic>clustering result</legacyItalic> is then obtained by simply executing:</para>
+<code class='language-c#' lang='c#'>var clusteringResult = algorithm.GetClustering(dataPoints);
+</code>
+<para>Enumerating the result (a <codeInline>ClusteringResult&lt;DataPoint&gt;</codeInline> object) yields the following:</para>
+<code class='language-json' lang='json'>
+  [0]	{0.000	{(1), (2), (3), (4), (5), (6), (7)}}
+  [1]	{0.707	{(2), (3), (5), (6), (7), (1;4)}}
+  [2]	{1.118	{(5), (6), (7), (1;4), (2;3)}}
+  [3]	{1.498	{(6), (7), (2;3), (1;4;5)}}
+  [4]	{1.901	{(7), (1;4;5), (2;3;6)}}
+  [5]	{2.047	{(1;4;5), (2;3;6;7)}}
+  [6]	{5.496	{(1;4;5;2;3;6;7)}}
+</code>
+<para>from which we can select the appropriate data-set, <legacyItalic>e.g.</legacyItalic>, according to the number of clusters, the distance, external criteria, etc.</para>
+  </content>
+</section>
+
+<section><!--h2-->
+  <title>Features</title>
+  <content>
+<list class="bullet">
+<listItem><para>Supports the following <legacyBold>linkage criteria</legacyBold>, used to consider the dissimilarity between clusters:</para>
+<list class="bullet">
+<listItem><legacyItalic>Complete</legacyItalic> (farthest neighbor), <legacyItalic>average</legacyItalic> (UPGMA), <legacyItalic>centroid</legacyItalic>, <legacyItalic>minimum energy</legacyItalic>, <legacyItalic>single</legacyItalic> (nearest neighbor), <legacyItalic>Wardâ€™s minimum variance</legacyItalic> method.</listItem>
+
+</list>
+</listItem>
+<listItem><para>Provides the following <legacyBold>external clustering evaluation criteria</legacyBold>, used to evaluate the quality of a given cluster-set when each data-point has associated a certain label / class:</para>
+<list class="bullet">
+<listItem><para><legacyItalic>Purity</legacyItalic>, normalized <legacyItalic>mutual information</legacyItalic>, <legacyItalic>accuracy</legacyItalic>, <legacyItalic>precision</legacyItalic>, <legacyItalic>recall</legacyItalic>, <legacyItalic>F-measure</legacyItalic>.</para>
+</listItem>
+<listItem><para>To externally-evaluate the clustering result, start by indicating the <legacyItalic>class</legacyItalic> of each data-point, <legacyItalic>e.g.</legacyItalic>, a <codeInline>char</codeInline>, and an evaluation criterion:</para>
+<code class='language-c#' lang='c#'>var pointClasses = new Dictionary&lt;DataPoint, char&gt;{...};
+var criterion = new NormalizedMutualInformation&lt;DataPoint, char&gt;();
+</code>
+<para>The evaluation score of the 5th cluster-set is given by executing:</para>
+<code class='language-c#' lang='c#'>var score = criterion.Evaluate(clusteringResult[5], pointClasses);
+</code>
+</listItem>
+
+</list>
+</listItem>
+<listItem><para>Provides the following <legacyBold>internal clustering evaluation criteria</legacyBold>, used to select the optimal number of clusters when <legacyItalic>no ground truth is available</legacyItalic>:</para>
+<list class="bullet">
+<listItem><para><legacyItalic>Silhouette</legacyItalic> coefficient, <legacyItalic>Dunn</legacyItalic> index, <legacyItalic>Davies-Bouldin</legacyItalic> index, <legacyItalic>Calinski-Harabasz</legacyItalic> index, <legacyItalic>Modified Gamma</legacyItalic> statistic, <legacyItalic>Xie-Beni</legacyItalic> index, <legacyItalic>within-between</legacyItalic> ratio, <legacyItalic>I-index</legacyItalic>, <legacyItalic>Xu</legacyItalic> index, <legacyItalic>RMSSD</legacyItalic>, <legacyItalic>R-squared</legacyItalic>.</para>
+</listItem>
+<listItem><para>To internally-evaluate the clustering result, we simply choose an evaluation criterion and calculate the score:</para>
+<code class='language-c#' lang='c#'>var criterion = new SilhouetteCoefficient&lt;DataPoint&gt;(metric);
+var score = criterion.Evaluate(clusteringResult[5]);
+</code>
+</listItem>
+
+</list>
+</listItem>
+
+</list>
+<list class="bullet">
+<listItem><para><legacyBold>CSV export</legacyBold></para>
+<list class="bullet">
+<listItem><para>To export the result of clustering to a comma-separated values (CSV) file, we simply do:</para>
+<code class='language-c#' lang='c#'>clusteringResult.SaveToCsv(FILE_PATH);
+</code>
+<para>which would produce a CSV file with the contents of each cluster in the cluster-set of each step of the algorithm, one instance per line.</para>
+</listItem>
+
+</list>
+</listItem>
+
+</list>
+<list class="bullet">
+<listItem><para><legacyBold>D3.js export</legacyBold></para>
+<list class="bullet">
+<listItem><para>Export the <legacyItalic>result of clustering</legacyItalic> to a Json file that contains the hierarchical structure of the clustering procedure that can be loaded into <legacyItalic>DendrogramViewer</legacyItalic> to produce a <legacyItalic>dendrogram</legacyItalic>, <legacyItalic>e.g.</legacyItalic>:</para>
+<code class='language-c#' lang='c#'>using Aglomera.D3;
+...
+clusteringResult.SaveD3DendrogramFile(fullPath, formatting: Formatting.Indented);
+</code>
+<para>would produce Json text like the following:</para>
+<code class='language-json' lang='json'>{
+  &quot;n&quot;: &quot;(1;4;5;2;3;6;7)&quot;, &quot;d&quot;: 5.5,
+  &quot;c&quot;: [
+    { &quot;n&quot;: &quot;(2;3;6;7)&quot;, &quot;d&quot;: 2.05,
+      &quot;c&quot;: [
+        {
+          &quot;n&quot;: &quot;(2;3;6)&quot;, &quot;d&quot;: 1.9,
+          &quot;c&quot;: [
+            {
+              &quot;n&quot;: &quot;(2;3)&quot;, &quot;d&quot;: 1.12,
+              &quot;c&quot;: [
+                { &quot;n&quot;: &quot;(3)&quot;, &quot;d&quot;: 0.0, &quot;c&quot;: [] },
+                { &quot;n&quot;: &quot;(2)&quot;, &quot;d&quot;: 0.0, &quot;c&quot;: [] } ] },
+            { &quot;n&quot;: &quot;(6)&quot;, &quot;d&quot;: 0.0, &quot;c&quot;: [] } ] },
+        { &quot;n&quot;: &quot;(7)&quot;, &quot;d&quot;: 0.0, &quot;c&quot;: [] } ]
+    },
+    { &quot;n&quot;: &quot;(1;4;5)&quot;, &quot;d&quot;: 1.5,
+      &quot;c&quot;: [
+        { &quot;n&quot;: &quot;(1;4)&quot;, &quot;d&quot;: 0.71,
+          &quot;c&quot;: [
+            { &quot;n&quot;: &quot;(4)&quot;, &quot;d&quot;: 0.0, &quot;c&quot;: [] },
+            { &quot;n&quot;: &quot;(1)&quot;, &quot;d&quot;: 0.0, &quot;c&quot;: [] } ] },
+        { &quot;n&quot;: &quot;(5)&quot;, &quot;d&quot;: 0.0, &quot;c&quot;: [] } ]
+    } ]
+}
+</code>
+<para>where <codeInline>n</codeInline> holds the name or id of the cluster, <codeInline>d</codeInline> is the dissimilarity / distance at which it was found and created, and <codeInline>c</codeInline> contains the list containing the pair of parents or children of the cluster.</para>
+</listItem>
+<listItem><para>When loaded in <legacyItalic>DendrogramViewer</legacyItalic>, this would produce the following dendrogram:</para>
+<para><mediaLink><image xlink:href="dendrogram" /></mediaLink></para>
+</listItem>
+
+</list>
+</listItem>
+
+</list>
+<para>&#160;</para>
+  </content>
+</section>
+
+<section><!--h2-->
+  <title>Examples</title>
+  <content>
+<para>Example code can be found in the <externalLink>
+  <linkText>src/Examples</linkText>
+  <linkUri>https://github.com/pedrodbs/Aglomera/tree/master/src/Examples</linkUri>
+</externalLink> folder in the <externalLink>
+  <linkText>repository</linkText>
+  <linkUri>https://github.com/pedrodbs/Aglomera</linkUri>
+</externalLink>. Several open-source data-sets adapted to work with the example applications can be found in <externalLink>
+  <linkText>src/Examples/datasets</linkText>
+  <linkUri>https://github.com/pedrodbs/Aglomera/tree/master/src/Examples/datasets</linkUri>
+</externalLink>.</para>
+<list class="bullet">
+<listItem><legacyBold>NumericClustering:</legacyBold> a simple example of using agglomerative HC to cluster a data-set loaded from an external CSV file. Several linkage criteria are used and clustering results are saved to CSV and D3 Json files.</listItem>
+<listItem><legacyBold>InternalClusteringEvaluation:</legacyBold> shows how to perform evaluation of clustering results using internal criteria. A data-set is loaded from an external CSV file and clustered using agglomerative HC. For each internal criterion, the optimal cluster-set in the clustering result is selected by maximizing the score.</listItem>
+<listItem><legacyBold>ExternalClusteringEvaluation:</legacyBold> shows how to perform evaluation of clustering results using external criteria. A labeled data-set is loaded from an external CSV file and clustered using agglomerative HC. The class of each instance is given by the first character of its id. The score of several external criteria for each cluster-set in the clustering result is then printed to the Console.</listItem>
+
+</list>
+  </content>
+</section>
+
+<section><!--h2-->
+  <title>See Also</title>
+  <content>
+<para><legacyBold>References</legacyBold></para>
+<list class="ordered">
+<listItem>Kaufman, L., &amp; Rousseeuw, P. J. (1990). <legacyItalic><externalLink>
+  <linkText>Finding groups in data: an introduction to cluster analysis</linkText>
+  <linkUri>https://books.google.com/books?hl=en&amp;lr=&amp;id=YeFQHiikNo0C&amp;oi=fnd&amp;pg=PR11&amp;ots=5ApcG5OEwC&amp;sig=Sx5Bhqfaymzg1U9aRQVIFxmqiHY</linkUri>
+</externalLink></legacyItalic>. John Wiley &amp; Sons.</listItem>
+<listItem>Szekely, G. J., &amp; Rizzo, M. L. (2005). <externalLink>
+  <linkText>Hierarchical clustering via joint between-within distances: Extending Ward&#39;s minimum variance method</linkText>
+  <linkUri>https://link.springer.com/article/10.1007/s00357-005-0012-9</linkUri>
+</externalLink>.Â <legacyItalic>Journal of classification</legacyItalic>,Â <legacyItalic>22</legacyItalic>(2), 151-183. </listItem>
+<listItem>Rousseeuw, P. J. (1987). <externalLink>
+  <linkText>Silhouettes: a graphical aid to the interpretation and validation of cluster analysis</linkText>
+  <linkUri>https://doi.org/10.1016/0377-0427(87)90125-7</linkUri>
+</externalLink>. <legacyItalic>Journal of computational and applied mathematics</legacyItalic>,Â <legacyItalic>20</legacyItalic>, 53-65. </listItem>
+<listItem>Dunn, J. C. (1973). <externalLink>
+  <linkText>A fuzzy relative of the ISODATA process and its use in detecting compact well-separated clusters</linkText>
+  <linkUri>https://doi.org/10.1080/01969727308546046</linkUri>
+</externalLink>. <legacyItalic>Journal of Cybernetics</legacyItalic>,Â <legacyItalic>3(3)</legacyItalic>, 32-57. </listItem>
+<listItem>Davies, D. L., &amp; Bouldin, D. W. (1979). <externalLink>
+  <linkText>A cluster separation measure</linkText>
+  <linkUri>https://doi.org/10.1109/TPAMI.1979.4766909</linkUri>
+</externalLink>.Â <legacyItalic>IEEE transactions on pattern analysis and machine intelligence</legacyItalic>, (2), 224-227. </listItem>
+<listItem>CaliÅ„ski, T., &amp; Harabasz, J. (1974). <externalLink>
+  <linkText>A dendrite method for cluster analysis</linkText>
+  <linkUri>https://doi.org/10.1080/03610927408827101</linkUri>
+</externalLink>.Â <legacyItalic>Communications in Statistics-theory and Methods</legacyItalic>,Â <legacyItalic>3</legacyItalic>(1), 1-27. </listItem>
+<listItem>Hubert, L., &amp; Arabie, P. (1985). <externalLink>
+  <linkText>Comparing partitions</linkText>
+  <linkUri>https://doi.org/10.1007/BF01908075</linkUri>
+</externalLink>.Â <legacyItalic>Journal of classification</legacyItalic>,Â <legacyItalic>2</legacyItalic>(1), 193-218. </listItem>
+<listItem>Zhao, H., Liang, J., &amp; Hu, H. (2006). <externalLink>
+  <linkText>Clustering Validity Based on the Improved Hubert\Gamma Statistic and the Separation of Clusters</linkText>
+  <linkUri>https://doi.org/10.1109/ICICIC.2006.250</linkUri>
+</externalLink>. InÂ <legacyItalic>First International Conference on Innovative Computing, Information and Control, 2006. ICICIC&#39;06.</legacyItalic>Â (Vol. 2, pp. 539-543). IEEE. </listItem>
+<listItem>Xie, X. L., &amp; Beni, G. (1991). <externalLink>
+  <linkText>A validity measure for fuzzy clustering</linkText>
+  <linkUri>https://doi.org/10.1109/34.85677</linkUri>
+</externalLink>.Â <legacyItalic>IEEE Transactions on pattern analysis and machine intelligence</legacyItalic>,Â <legacyItalic>13</legacyItalic>(8), 841-847. </listItem>
+<listItem>Zhao, Q., Xu, M., &amp; FrÃ¤nti, P. (2009). <externalLink>
+  <linkText>Sum-of-squares based cluster validity index and significance analysis</linkText>
+  <linkUri>https://doi.org/10.1007/978-3-642-04921-7_32</linkUri>
+</externalLink>. InÂ <legacyItalic>International Conference on Adaptive and Natural Computing Algorithms</legacyItalic>Â (pp. 313-322). Springer, Berlin, Heidelberg. </listItem>
+<listItem>Maulik, U., &amp; Bandyopadhyay, S. (2002). <externalLink>
+  <linkText>Performance evaluation of some clustering algorithms and validity indices</linkText>
+  <linkUri>https://doi.org/10.1109/TPAMI.2002.1114856</linkUri>
+</externalLink>.Â <legacyItalic>IEEE Transactions on Pattern Analysis and Machine Intelligence</legacyItalic>,Â <legacyItalic>24</legacyItalic>(12), 1650-1654. </listItem>
+<listItem>Xu, L. (1997). <externalLink>
+  <linkText>Bayesian Yingâ€“Yang machine, clustering and number of clusters</linkText>
+  <linkUri>https://doi.org/10.1016/S0167-8655(97)00121-9</linkUri>
+</externalLink>.Â <legacyItalic>Pattern Recognition Letters</legacyItalic>,Â <legacyItalic>18</legacyItalic>(11-13), 1167-1178. </listItem>
+
+</list>
+<para><legacyBold>Other links</legacyBold></para>
+<list class="bullet">
+<listItem><externalLink>
+  <linkText>Hierarchical agglomerative clustering - Stanford NLP Group</linkText>
+  <linkUri>https://nlp.stanford.edu/IR-book/html/htmledition/hierarchical-agglomerative-clustering-1.html</linkUri>
+</externalLink></listItem>
+<listItem><externalLink>
+  <linkText>Hierarchical clustering (Wikipedia)</linkText>
+  <linkUri>https://en.wikipedia.org/wiki/Hierarchical_clustering</linkUri>
+</externalLink></listItem>
+<listItem><externalLink>
+  <linkText>Complete linkage criterion (Wikipedia)</linkText>
+  <linkUri>https://en.wikipedia.org/wiki/Complete-linkage_clustering</linkUri>
+</externalLink></listItem>
+<listItem><externalLink>
+  <linkText>Single linkage criterion (Wikipedia)</linkText>
+  <linkUri>https://en.wikipedia.org/wiki/Single-linkage_clustering</linkUri>
+</externalLink></listItem>
+<listItem><externalLink>
+  <linkText>Silhouette clustering (Wikipedia)</linkText>
+  <linkUri>https://en.wikipedia.org/wiki/Silhouette_(clustering)</linkUri>
+</externalLink></listItem>
+<listItem><externalLink>
+  <linkText>Dunn index (Wikipedia)</linkText>
+  <linkUri>https://en.wikipedia.org/wiki/Dunn_index</linkUri>
+</externalLink></listItem>
+<listItem><externalLink>
+  <linkText>Davies-Bouldin index (Wikipedia)</linkText>
+  <linkUri>https://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index</linkUri>
+</externalLink></listItem>
+<listItem><externalLink>
+  <linkText>D3.js</linkText>
+  <linkUri>https://d3js.org/</linkUri>
+</externalLink></listItem>
+
+</list>
+<para>&#160;</para>
+<para>Copyright &#169; 2018, <externalLink>
+  <linkText>Pedro Sequeira</linkText>
+  <linkUri>https://github.com/pedrodbs</linkUri>
+</externalLink></para>
+
+  </content>
+</section>
+
+    <relatedTopics>
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Aglomera
-//    Last updated: 04/27/2018
+//    Last updated: 05/15/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -34,7 +34,7 @@ using System.Text;
 namespace Aglomera
 {
     /// <summary>
-    ///     Represents a set of <see cref="TInstance" /> elements arranged in a hierarchical form.
+    ///     Represents a set of <typeparamref name="TInstance" /> elements arranged in a hierarchical form.
     /// </summary>
     /// <typeparam name="TInstance">The type of instance considered.</typeparam>
     public class Cluster<TInstance> :
@@ -103,7 +103,7 @@ namespace Aglomera
         }
 
         /// <summary>
-        ///     Creates a new <see cref="Cluster{TInstance}" /> with a single <see cref="TInstance" /> element.
+        ///     Creates a new <see cref="Cluster{TInstance}" /> with a single <typeparamref name="TInstance" /> element.
         /// </summary>
         /// <param name="instance">The single element in the new cluster.</param>
         /// <param name="dissimilarity">The dissimilarity/distance at which the new cluster was found.</param>
@@ -112,7 +112,7 @@ namespace Aglomera
         }
 
         /// <summary>
-        ///     Creates a new <see cref="Cluster{TInstance}" /> with the given <see cref="TInstance" /> elements.
+        ///     Creates a new <see cref="Cluster{TInstance}" /> with the given <typeparamref name="TInstance" /> elements.
         /// </summary>
         /// <param name="instances">The elements in the new cluster.</param>
         /// <param name="dissimilarity">The dissimilarity/distance at which the new cluster was found.</param>
@@ -169,11 +169,11 @@ namespace Aglomera
         #region Public Methods
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
+        public override bool Equals(object other)
         {
-            return !(obj is null) &&
-                   (ReferenceEquals(this, obj) ||
-                    obj.GetType() == this.GetType() && this.Equals((Cluster<TInstance>) obj));
+            return !(other is null) &&
+                   (ReferenceEquals(this, other) ||
+                    other.GetType() == this.GetType() && this.Equals((Cluster<TInstance>) other));
         }
 
         /// <inheritdoc />

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: ExamplesUtil
-//    Last updated: 04/27/2018
+//    Last updated: 05/15/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -32,7 +32,7 @@ using Aglomera;
 
 namespace ExamplesUtil
 {
-    public struct DataPoint : IEquatable<DataPoint>, IDissimilarityMetric<DataPoint>, IComparable<DataPoint>
+    public class DataPoint : IEquatable<DataPoint>, IDissimilarityMetric<DataPoint>, IComparable<DataPoint>
     {
         #region Constructors
 
@@ -40,6 +40,10 @@ namespace ExamplesUtil
         {
             this.ID = id;
             this.Value = value;
+        }
+
+        public DataPoint()
+        {
         }
 
         #endregion

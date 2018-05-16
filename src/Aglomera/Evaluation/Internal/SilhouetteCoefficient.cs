@@ -1,11 +1,25 @@
 ﻿// ------------------------------------------
 // <copyright file="SilhouetteCoefficient.cs" company="Pedro Sequeira">
-//     Some copyright
+// 
+//     Copyright (c) 2018 Pedro Sequeira
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+// documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//  
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+// Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+// WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+// OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+// 
 // </copyright>
 // <summary>
-//    Project: Grupo
-//    Last updated: 2018/01/19
-// 
+//    Project: Aglomera
+//    Last updated: 05/14/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -41,7 +55,8 @@ namespace Aglomera.Evaluation.Internal
     ///     </see>
     /// </remarks>
     /// <typeparam name="TInstance">The type of instance considered.</typeparam>
-    public class SilhouetteCoefficient<TInstance> : IInternalEvaluationCriterion<TInstance> where TInstance : IComparable<TInstance>
+    public class SilhouetteCoefficient<TInstance> : IInternalEvaluationCriterion<TInstance>
+        where TInstance : IComparable<TInstance>
 
     {
         #region Constructors
@@ -59,9 +74,7 @@ namespace Aglomera.Evaluation.Internal
 
         #region Properties & Indexers
 
-        /// <summary>
-        ///     Gets the metric used by this criterion to measure the dissimilarity / distance between cluster elements.
-        /// </summary>
+        /// <inheritdoc />
         public IDissimilarityMetric<TInstance> DissimilarityMetric { get; }
 
         #endregion
@@ -93,7 +106,8 @@ namespace Aglomera.Evaluation.Internal
                     // gets the average distance with all other data within the same cluster
                     var avgWithinDist = 0d;
                     for (var k = 0; k < cluster.Count; k++)
-                        if (k != j) avgWithinDist += this.DissimilarityMetric.Calculate(instance, cluster[k]);
+                        if (k != j)
+                            avgWithinDist += this.DissimilarityMetric.Calculate(instance, cluster[k]);
                     avgWithinDist /= cluster.Count - 1;
 
                     // gets minimal dissimilarity to other clusters
@@ -113,14 +127,11 @@ namespace Aglomera.Evaluation.Internal
                     coefs.Add(instance, coef);
                 }
             }
+
             return coefs;
         }
 
-        /// <summary>
-        ///     Evaluates the given <see cref="ClusterSet{TInstance}" /> partition according to this evaluation criterion.
-        /// </summary>
-        /// <param name="clusterSet">The clustering partition.</param>
-        /// <returns>The evaluation of the given partition according to this criterion.</returns>
+        /// <inheritdoc />
         public double Evaluate(ClusterSet<TInstance> clusterSet)
         {
             // gets average silhouette coefficient of all instances in all clusters

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Aglomera
-//    Last updated: 04/27/2018
+//    Last updated: 05/15/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -49,7 +49,7 @@ namespace Aglomera
         #region Public Methods
 
         /// <summary>
-        ///     Clusters the set of <see cref="TInstance" /> given to the algorithm.
+        ///     Clusters the set of <typeparamref name="TInstance" /> given to the algorithm.
         /// </summary>
         /// <param name="instances">The instances to be clustered by the algorithm.</param>
         /// <returns>

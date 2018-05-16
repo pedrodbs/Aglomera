@@ -1,11 +1,25 @@
 ﻿// ------------------------------------------
 // <copyright file="ModifiedGammaStatistic.cs" company="Pedro Sequeira">
-//     Some copyright
+// 
+//     Copyright (c) 2018 Pedro Sequeira
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+// documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//  
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+// Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+// WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+// OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+// 
 // </copyright>
 // <summary>
-//    Project: Grupo
-//    Last updated: 2018/01/18
-// 
+//    Project: Aglomera
+//    Last updated: 05/15/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -32,17 +46,18 @@ namespace Aglomera.Evaluation.Internal
     ///     References:
     ///     [1] -
     ///     <see href="https://doi.org/10.1007/BF01908075">
-    ///         Hubert, L., & Arabie, P. (1985). Comparing partitions. Journal of classification, 2(1), 193-218.
+    ///         Hubert, L., &amp; Arabie, P. (1985). Comparing partitions. Journal of classification, 2(1), 193-218.
     ///     </see>
     ///     [2] -
     ///     <see href="https://doi.org/10.1109/ICICIC.2006.250">
-    ///         Zhao, H., Liang, J., & Hu, H. (2006, August). Clustering Validity Based on the Improved Hubert\Gamma Statistic
-    ///         and the Separation of Clusters. In First International Conference on Innovative Computing, Information and
-    ///         Control, 2006. ICICIC'06.  (Vol. 2, pp. 539-543). IEEE.
+    ///         Zhao, H., Liang, J., &amp; Hu, H. (2006, August). Clustering Validity Based on the Improved Hubert\Gamma
+    ///         Statistic and the Separation of Clusters. In First International Conference on Innovative Computing,
+    ///         Information and Control, 2006. ICICIC'06.  (Vol. 2, pp. 539-543). IEEE.
     ///     </see>
     /// </remarks>
     /// <typeparam name="TInstance">The type of instance considered.</typeparam>
-    public class ModifiedGammaStatistic<TInstance> : IInternalEvaluationCriterion<TInstance> where TInstance : IComparable<TInstance>
+    public class ModifiedGammaStatistic<TInstance> : IInternalEvaluationCriterion<TInstance>
+        where TInstance : IComparable<TInstance>
 
     {
         #region Fields
@@ -71,20 +86,14 @@ namespace Aglomera.Evaluation.Internal
 
         #region Properties & Indexers
 
-        /// <summary>
-        ///     Gets the metric used by this criterion to measure the dissimilarity / distance between cluster elements.
-        /// </summary>
+        /// <inheritdoc />
         public IDissimilarityMetric<TInstance> DissimilarityMetric { get; }
 
         #endregion
 
         #region Public Methods
 
-        /// <summary>
-        ///     Evaluates the given <see cref="ClusterSet{TInstance}" /> partition according to this evaluation criterion.
-        /// </summary>
-        /// <param name="clusterSet">The clustering partition.</param>
-        /// <returns>The evaluation of the given partition according to this criterion.</returns>
+        /// <inheritdoc />
         public double Evaluate(ClusterSet<TInstance> clusterSet)
         {
             // undefined if only one cluster

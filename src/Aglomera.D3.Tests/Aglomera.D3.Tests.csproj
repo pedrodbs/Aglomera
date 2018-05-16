@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <PackageId>Aglomera.D3.Tests</PackageId>
+    <Copyright>Copyright © Pedro Sequeira 2018</Copyright>
+    <Product>Aglomera.NET</Product>
+    <Authors>Pedro Sequeira</Authors>
+    <PackageLicenseUrl>https://raw.github.com/pedrodbs/Aglomera/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/pedrodbs/Aglomera</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pedrodbs/Aglomera</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <Description>Tests for the Aglomera.NET library, a hierarchical agglomerative clustering (HAC) library written in C#</Description>
+    <PackageTags>hierarchical agglomerative clustering</PackageTags>
+    <Version>1.1.0</Version>
+    <PackageIconUrl>https://raw.github.com/pedrodbs/Aglomera/master/img/aglomera.ico</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aglomera.D3\Aglomera.D3.csproj" />
+    <ProjectReference Include="..\Aglomera\Aglomera.csproj" />
+    <ProjectReference Include="..\Examples\ExamplesUtil\ExamplesUtil.csproj" />
+  </ItemGroup>
+
+</Project>

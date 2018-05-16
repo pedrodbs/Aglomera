@@ -1,11 +1,17 @@
+
+
 ![Logo of the project](img/aglomera-128.png)
 
 # Aglomera.NET
-> A genetic programming library written in C#
+> A hierarchical agglomerative clustering (HAC) library written in C#
 
-Aglomera is a .NET open-source library written entirely in C# that implements *hierarchical agglomerative clustering* algorithms. Something about AGNES and DIANA...
+Aglomera is a .NET open-source library written entirely in C# that implements *hierarchical clustering* (HC) algorithms. A *cluster* refers to a *set of instances* or data-points. HC can either be *agglomerative* (bottom-up approach) or *divisive* (top-down approach). The distance between each instance is calculated using some *dissimilarity function*. The distance between clusters is calculated using some *linkage criterion*. Each step of HC produces a new *cluster-set*, *i.e.*, a *set of clusters*, from the cluster-set of the previous step. 
 
-Currently, Aglomera.NET supports ...
+*Agglomerative HC* starts with a cluster-set in which each instance belongs to its own cluster. At each step, it merges the two closest clusters, until all clusters have been merged into a single cluster containing all instances, *i.e.*, it ends with a cluster-set containing a single cluster with all instances. *Divisive HC* works in reverse &mdash; it starts by having a cluster-set with one cluster containing all instances. At each step, it splits clusters recursively, using some *splitting method*, until reaching one cluster-set containing only singletons, *i.e.*, where each instance is placed in its own cluster.
+
+The *clustering result* is a list containing the cluster-set and the corresponding dissimilarity / distance at which it was created at each step of the algorithm. The result is organized in a hierarchical form, *i.e.*, where each cluster references either the *two parents* that were merged for its creation (in the agglomerative approach), or the *two children* resulting from splitting the cluster (in the divisive approach). Due to their hierarchical nature, clustering results can be visualized via a *[dendrogram](https://en.wikipedia.org/wiki/Dendrogram)*.
+
+Currently, Aglomera.NET implements *program AGNES* (AGglomerative NESting) of [Kaufman & Rousseeuw, 1990], *i.e.*, the bottom-up approach, the  It supports different linkage criteria and also provides several metrics to perform internal and external evaluation of clustering results. The results of clustering can be exported to a Json file to be visualized as a dendrogram in *DendrogramViewer*, an interactive web-application using D3.js.
 
 **Table of contents**
 
@@ -21,168 +27,226 @@ Currently, Aglomera.NET supports ...
 
 ## About
 
-Genetica.NET is open-source under the [MIT license](https://github.com/pedrodbs/Aglomera/blob/master/LICENSE.md) and is free for commercial use.
+Aglomera.NET is open-source under the [MIT license](https://github.com/pedrodbs/Aglomera/blob/master/LICENSE.md) and is free for commercial use.
 
 - Source repository: https://github.com/pedrodbs/Aglomera
 - Issue tracker: https://github.com/pedrodbs/Aglomera/issues
 
 Supported platforms:
 
-- All runtimes supporting *.NET Standard 1.3+* on Windows, Linux and Mac, *e.g.*, *.NET Core 1.0+*, *.NET Framework 4.6+*
+- All runtimes supporting *.NET Standard 1.3+* (*.NET Core 1.0+*, *.NET Framework 4.6+*) on Windows, Linux and Mac
 
 ## API Documentation
 
-- [HTML](https://pedrodbs.github.io/Genetica/)
-- [Windows Help file (CHM)](https://github.com/pedrodbs/Genetica/raw/master/docs/Genetica.NET.chm)
-- [PDF document](https://github.com/pedrodbs/Genetica/raw/master/docs/Genetica.NET.pdf)
+- [HTML](https://pedrodbs.github.io/Aglomera/)
+- [Windows Help file (CHM)](https://github.com/pedrodbs/Aglomera/raw/master/docs/Aglomera.NET.chm)
+- [PDF document](https://github.com/pedrodbs/Aglomera/raw/master/docs/Aglomera.NET.pdf)
 
 ## Packages and Dependencies
 
 The following packages with the corresponding dependencies are provided:
 
-- **Genetica:** core package, including mathematical programs support and all GP operators. 
-  - [Math.NET Numerics](https://nuget.org/profiles/mathnet/)
-- **Genetica.D3:** package to export tree-based programs to json files to be visualized with d3.js. 
-  - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/)
-- **Genetica.Graphviz:** package to create tree (DAG) representations for tree-based programs and export them to image files via [Graphviz](https://www.graphviz.org/).
-  - [QuickGraph](https://github.com/pedrodbs/quickgraph) (forked to allow colored edges and vertexes when exporting to Graphviz dot format)
+- **Aglomera:** core package, including clustering algorithm, linkage criteria and evaluation metrics. 
+- **Aglomera.D3:** package to export clustering results to Json files to be visualized with D3.js. 
+  - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) v11.0.2
 
 ## Installation
 
-Currently, you can `git clone` the Genetica.NET [source code](https://github.com/pedrodbs/Genetica) and use an IDE like VisualStudio to build the corresponding binaries. NuGet deployment is planned in the future.
+You can `git clone` the Aglomera.NET [source code](https://github.com/pedrodbs/Aglomera) and use an IDE like VisualStudio to build the corresponding binaries.
 
 ##Getting started
 
-Start by creating the *fitness function* to evaluate and compare your programs:
+Consider the following *data-set* example taken from [Kaufman & Rousseeuw, 1990]:
+
+![Example dataset](img/example.png)
+
+where colors indicate the "real" instance class, *i.e.*, either 'A=red' or 'B=blue'.
+
+Start by defining a *data-point* class, for example one to represent points in a 2D Euclidean space, such as:
 
 ```c#
-class FitnessFunction : IFitnessFunction<MathProgram>{...}
-var fitnessFunction = new FitnessFunction();
+class DataPoint : IComparable<DataPoint>
+{
+    public DataPoint(string id, double x, double y) { ... }
+    public int CompareTo(DataPoint other) { ... }
+    ...
+}
 ```
-
-Define the *primitive set*:
+and then define a *dissimilarity metric* for this type:
 
 ```c#
-var variable = new Variable("x");
-var primitives = new PrimitiveSet<MathProgram>(
-    new List<MathProgram> {variable, new Constant(0), ...},
-    MathPrimitiveSets.Default.Functions);
+class DssimilarityMetric : IDissimilarityMetric<DataPoint>
+{
+    public double Calculate(DataPoint instance1, DataPoint instance2) { ... }
+}
 ```
-
-Create and initiate a *population* of candidate programs:
+We can then define the *data-set* by using:
 
 ```c#
-var population = new Population<MathProgram, double>(
-    100, 
-    primitives,
-    new GrowProgramGenerator<MathProgram, double>(), 
-    fitnessFunction,
-    new TournamentSelection<MathProgram>(fitnessFunction, 10),
-    new SubtreeCrossover<MathProgram, double>(),
-    new PointMutation<MathProgram, double>(primitives), 
-    ...);
-population.Init(new HashSet<MathProgram> {...});
+var dataPoints = new HashSet<DataPoint>(
+    new[]
+    {
+        new DataPoint("1", 2.00, 2.00),
+        new DataPoint("2", 5.50, 4.00),
+        new DataPoint("3", 5.00, 5.00),
+        new DataPoint("4", 1.50, 2.50),
+        new DataPoint("5", 1.00, 1.00),
+        new DataPoint("6", 7.00, 5.00),
+        new DataPoint("7", 5.75, 6.50)
+    });
 ```
 
-*Step* the population for some number of generations:
+We now select a *linkage criterion* and create the *clustering algorithm*:
 
 ```c#
-for (var i = 0; i < 500; i++)
-    population.Step();
+var metric = new DissimilarityMetric();
+var linkage = new AverageLinkage<DataPoint>(metric);
+var algorithm = new AgglomerativeClusteringAlgorithm<DataPoint>(linkage);
 ```
 
-Get the *solution* program, *i.e.*, the one attaining the highest fitness:
+The *clustering result* is then obtained by simply executing:
 
 ```c#
-var solution = population.BestProgram;
+var clusteringResult = algorithm.GetClustering(dataPoints);
 ```
+
+Enumerating the result (a `ClusteringResult<DataPoint>` object) yields the following:
+
+```
+[0]	{0.000	{(1), (2), (3), (4), (5), (6), (7)}}
+[1]	{0.707	{(2), (3), (5), (6), (7), (1;4)}}
+[2]	{1.118	{(5), (6), (7), (1;4), (2;3)}}
+[3]	{1.498	{(6), (7), (2;3), (1;4;5)}}
+[4]	{1.901	{(7), (1;4;5), (2;3;6)}}
+[5]	{2.047	{(1;4;5), (2;3;6;7)}}
+[6]	{5.496	{(1;4;5;2;3;6;7)}}
+```
+
+from which we can select the appropriate data-set, *e.g.*, according to the number of clusters, the distance, external criteria, etc.
 
 ## Features
 
-- Creation of programs as *mathematical expressions*
+- Supports the following **linkage criteria**, used to consider the dissimilarity between clusters:
+  - *Complete* (farthest neighbor), *average* (UPGMA), *centroid*, *minimum energy*, *single* (nearest neighbor), *Ward’s minimum variance* method.
+- Provides the following **external clustering evaluation criteria**, used to evaluate the quality of a given cluster-set when each data-point has associated a certain label / class:
+  - *Purity*, normalized *mutual information*, *accuracy*, *precision*, *recall*, *F-measure*.
 
-  - **Terminals:** constant and variables
-  - **Functions:** arithmetic functions, sine, cosine, min, max, log, exponentiation and 'if' conditional operator
+  - To externally-evaluate the clustering result, start by indicating the *class* of each data-point, *e.g.*, a `char`, and an evaluation criterion:
 
-- *Genetic operators*
-
-  - **Selection:** tournament, roulette wheel (even and uneven selectors), stochastic
-  - **Crossover:** uniform, one-point, sub-tree, context-preserving, stochastic
-  - **Mutation:** point, sub-tree, hoist, shrink, swap, simplify, fitness simplify, stochastic
-  - **Generation:** full-depth, grow, stochastic
-
-- Population class implementing a standard steady-state *GP evolutionary procedure*
-
-- Rank (linear and non-linear) *fitness functions*
-
-- Measure the *similarity* between two programs
-
-  - **Similarity measures:** value (according to the range of variables), primitive, leaf, sub-program, sub-combination, prefix and normal notation expression edit, tree edit, common region, average
-
-- *Conversion* of programs to/from strings
-
-  - *Normal* notation, *e.g.*: 
     ```c#
-    var converter = new MathExpressionConverter(MathPrimitiveSets.Default);
-    var program = converter.FromNormalNotation("min(3,(2-1))");
+    var pointClasses = new Dictionary<DataPoint, char>{...};
+    var criterion = new NormalizedMutualInformation<DataPoint, char>();
     ```
 
-  - *Prefix* notation, *e.g.*:
+    The evaluation score of the 5th cluster-set is given by executing:
+
     ```c#
-    var program = converter.FromPrefixNotation("(min 3 (- 2 1))");
+    var score = criterion.Evaluate(clusteringResult[5], pointClasses);
+    ```
+- Provides the following **internal clustering evaluation criteria**, used to select the optimal number of clusters when *no ground truth is available*:
+  - *Silhouette* coefficient, *Dunn* index, *Davies-Bouldin* index, *Calinski-Harabasz* index, *Modified Gamma* statistic, *Xie-Beni* index, *within-between* ratio, *I-index*, *Xu* index, *RMSSD*, *R-squared*.
+
+  - To internally-evaluate the clustering result, we simply choose an evaluation criterion and calculate the score:
+
+    ```c#
+    var criterion = new SilhouetteCoefficient<DataPoint>(metric);
+    var score = criterion.Evaluate(clusteringResult[5]);
     ```
 
-- Program *simplification* to remove redundancies and evolutionary noise, *e.g.*:
+
+- **CSV export**
+
+
+  - To export the result of clustering to a comma-separated values (CSV) file, we simply do:
+
     ```c#
-    converter.FromNormalNotation("min((x*0),(3-2))").Simplify(); // -> 1
-    converter.FromNormalNotation("(x+(x+(x+x)))").Simplify(); // -> (x*4)
-    converter.FromNormalNotation("(2+((x*x)*x))").Simplify(); // -> ((x^3)+2)
-    converter.FromNormalNotation("(0?1:log(3,(1+0)):max(3,(cos(0)-(3/1))))").Simplify(); // -> 1
-    converter.FromNormalNotation("((x*0)?(x-0):log(3,0):max(3,1))").Simplify(); // -> x
+    clusteringResult.SaveToCsv(FILE_PATH);
     ```
 
-- *Visual instruments* (trees) to analyze the structure of sets of programs (*e.g.*, a population):
+    which would produce a CSV file with the contents of each cluster in the cluster-set of each step of the algorithm, one instance per line.
 
-  - Information, symbol, ordered symbol, sub-program
+- **D3.js export**
 
-
-- **Graphviz export**
-
-  - Export a program's tree representation to image file with [Graphviz](https://www.graphviz.org/) (requires Graphviz installed and *dot* binary accessible from the system's path), *e.g.*:
+  - Export the *result of clustering* to a Json file that contains the hierarchical structure of the clustering procedure that can be loaded into *DendrogramViewer* to produce a *dendrogram*, *e.g.*:
 
     ```c#
-    using Genetica.Graphviz;
-    using QuickGraph.Graphviz.Dot;
+    using Aglomera.D3;
     ...
-    var program = converter.FromNormalNotation("(log((1/x),cos((x-1)))+(2?1:max(x,1):3))");
-    program.ToGraphvizFile(".", "file", GraphvizImageType.Png);
+    clusteringResult.SaveD3DendrogramFile(fullPath, formatting: Formatting.Indented);
     ```
 
-    would produce the following image:
+    would produce Json text like the following:
 
-    ![Example program](img/program.png)
+    ```json
+    {
+      "n": "(1;4;5;2;3;6;7)", "d": 5.5,
+      "c": [
+        { "n": "(2;3;6;7)", "d": 2.05,
+          "c": [
+            {
+              "n": "(2;3;6)", "d": 1.9,
+              "c": [
+                {
+                  "n": "(2;3)", "d": 1.12,
+                  "c": [
+                    { "n": "(3)", "d": 0.0, "c": [] },
+                    { "n": "(2)", "d": 0.0, "c": [] } ] },
+                { "n": "(6)", "d": 0.0, "c": [] } ] },
+            { "n": "(7)", "d": 0.0, "c": [] } ]
+        },
+        { "n": "(1;4;5)", "d": 1.5,
+          "c": [
+            { "n": "(1;4)", "d": 0.71,
+              "c": [
+                { "n": "(4)", "d": 0.0, "c": [] },
+                { "n": "(1)", "d": 0.0, "c": [] } ] },
+            { "n": "(5)", "d": 0.0, "c": [] } ]
+        } ]
+    }
+    ```
+
+    where `n` holds the name or id of the cluster, `d` is the dissimilarity / distance at which it was found and created, and `c` contains the list containing the pair of parents or children of the cluster.
+
+  - When loaded in *DendrogramViewer*, this would produce the following dendrogram:
+
+    ![Example dendrogram](img/dendrogram.png)
 
 
 
 ## Examples
 
-Example code can be found in the [src/Examples](https://github.com/pedrodbs/Genetica/tree/master/src/Examples) folder in the [repository](https://github.com/pedrodbs/Genetica).
+Example code can be found in the [src/Examples](https://github.com/pedrodbs/Aglomera/tree/master/src/Examples) folder in the [repository](https://github.com/pedrodbs/Aglomera). Several open-source data-sets adapted to work with the example applications can be found in [src/Examples/datasets](https://github.com/pedrodbs/Aglomera/tree/master/src/Examples/datasets).
 
-- **FunctionRegression:** an example of performing symbolic regression to search the space of mathematical expressions and find the program that best fits a given set of points generated by some function (unknown to the algorithm). Programs are evaluated both in terms of accuracy (lower RMSE between actual and predicted output) and simplicity (shorter expressions are better).
-- **ProgramVisualizer:** a Windows.Forms application that allows visualizing programs converted from a user-input expression written in normal or prefix notation. It also shows characteristics of the program such as its length, depth, or sub-programs. Allows exporting the current program to an image file via Graphviz.
+- **NumericClustering:** a simple example of using agglomerative HC to cluster a data-set loaded from an external CSV file. Several linkage criteria are used and clustering results are saved to CSV and D3 Json files.
+- **InternalClusteringEvaluation:** shows how to perform evaluation of clustering results using internal criteria. A data-set is loaded from an external CSV file and clustered using agglomerative HC. For each internal criterion, the optimal cluster-set in the clustering result is selected by maximizing the score.
+- **ExternalClusteringEvaluation:** shows how to perform evaluation of clustering results using external criteria. A labeled data-set is loaded from an external CSV file and clustered using agglomerative HC. The class of each instance is given by the first character of its id. The score of several external criteria for each cluster-set in the clustering result is then printed to the Console.
 
 ## See Also
 
 **References**
 
-1. Kaufman, L., & Rousseeuw, P. J. (2009). *[Finding groups in data: an introduction to cluster analysis](https://books.google.com/books?hl=en&lr=&id=YeFQHiikNo0C&oi=fnd&pg=PR11&ots=5ApcG5OEwC&sig=Sx5Bhqfaymzg1U9aRQVIFxmqiHY)*. John Wiley & Sons.
-2. ​
+1. Kaufman, L., & Rousseeuw, P. J. (1990). *[Finding groups in data: an introduction to cluster analysis](https://books.google.com/books?hl=en&lr=&id=YeFQHiikNo0C&oi=fnd&pg=PR11&ots=5ApcG5OEwC&sig=Sx5Bhqfaymzg1U9aRQVIFxmqiHY)*. John Wiley & Sons.
+2. Szekely, G. J., & Rizzo, M. L. (2005). [Hierarchical clustering via joint between-within distances: Extending Ward's minimum variance method](https://link.springer.com/article/10.1007/s00357-005-0012-9). *Journal of classification*, *22*(2), 151-183. 
+3. Rousseeuw, P. J. (1987). [Silhouettes: a graphical aid to the interpretation and validation of cluster analysis](https://doi.org/10.1016/0377-0427(87)90125-7). *Journal of computational and applied mathematics*, *20*, 53-65. 
+4. Dunn, J. C. (1973). [A fuzzy relative of the ISODATA process and its use in detecting compact well-separated clusters](https://doi.org/10.1080/01969727308546046). *Journal of Cybernetics*, *3(3)*, 32-57. 
+5. Davies, D. L., & Bouldin, D. W. (1979). [A cluster separation measure](https://doi.org/10.1109/TPAMI.1979.4766909). *IEEE transactions on pattern analysis and machine intelligence*, (2), 224-227. 
+6. Caliński, T., & Harabasz, J. (1974). [A dendrite method for cluster analysis](https://doi.org/10.1080/03610927408827101). *Communications in Statistics-theory and Methods*, *3*(1), 1-27. 
+7. Hubert, L., & Arabie, P. (1985). [Comparing partitions](https://doi.org/10.1007/BF01908075). *Journal of classification*, *2*(1), 193-218. 
+8. Zhao, H., Liang, J., & Hu, H. (2006). [Clustering Validity Based on the Improved Hubert\Gamma Statistic and the Separation of Clusters](https://doi.org/10.1109/ICICIC.2006.250). In *First International Conference on Innovative Computing, Information and Control, 2006. ICICIC'06.* (Vol. 2, pp. 539-543). IEEE. 
+9. Xie, X. L., & Beni, G. (1991). [A validity measure for fuzzy clustering](https://doi.org/10.1109/34.85677). *IEEE Transactions on pattern analysis and machine intelligence*, *13*(8), 841-847. 
+10. Zhao, Q., Xu, M., & Fränti, P. (2009). [Sum-of-squares based cluster validity index and significance analysis](https://doi.org/10.1007/978-3-642-04921-7_32). In *International Conference on Adaptive and Natural Computing Algorithms* (pp. 313-322). Springer, Berlin, Heidelberg. 
+11. Maulik, U., & Bandyopadhyay, S. (2002). [Performance evaluation of some clustering algorithms and validity indices](https://doi.org/10.1109/TPAMI.2002.1114856). *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *24*(12), 1650-1654. 
+12. Xu, L. (1997). [Bayesian Ying–Yang machine, clustering and number of clusters](https://doi.org/10.1016/S0167-8655(97)00121-9). *Pattern Recognition Letters*, *18*(11-13), 1167-1178. 
 
 **Other links**
 
 - [Hierarchical agglomerative clustering - Stanford NLP Group](https://nlp.stanford.edu/IR-book/html/htmledition/hierarchical-agglomerative-clustering-1.html)
 - [Hierarchical clustering (Wikipedia)](https://en.wikipedia.org/wiki/Hierarchical_clustering)
-- [Graphviz](https://www.graphviz.org/)
+- [Complete linkage criterion (Wikipedia)](https://en.wikipedia.org/wiki/Complete-linkage_clustering)
+- [Single linkage criterion (Wikipedia)](https://en.wikipedia.org/wiki/Single-linkage_clustering)
+- [Silhouette clustering (Wikipedia)](https://en.wikipedia.org/wiki/Silhouette_(clustering))
+- [Dunn index (Wikipedia)](https://en.wikipedia.org/wiki/Dunn_index)
+- [Davies-Bouldin index (Wikipedia)](https://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index)
 - [D3.js](https://d3js.org/)
 
 

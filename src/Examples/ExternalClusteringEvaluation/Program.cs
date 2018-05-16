@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: ExternalClusteringEvaluation
-//    Last updated: 04/27/2018
+//    Last updated: 05/15/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -29,10 +29,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using ExamplesUtil;
 using Aglomera;
 using Aglomera.Evaluation.External;
 using Aglomera.Linkage;
+using ExamplesUtil;
 
 namespace ExternalClusteringEvaluation
 {
@@ -50,7 +50,7 @@ namespace ExternalClusteringEvaluation
         private static void EvaluateClustering(
             ISet<DataPoint> dataPoints, ILinkageCriterion<DataPoint> linkage, string linkageName, uint numClusters)
         {
-            var clusteringAlg = new ClusteringAlgorithm<DataPoint>(linkage);
+            var clusteringAlg = new AgglomerativeClusteringAlgorithm<DataPoint>(linkage);
             var clustering = clusteringAlg.GetClustering(dataPoints);
 
             // gets cluster set according to predefined number of clusters

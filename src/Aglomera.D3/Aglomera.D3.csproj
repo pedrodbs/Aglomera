@@ -3,6 +3,22 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
     <Platforms>AnyCPU;x64;x86</Platforms>
+    <PackageId>Aglomera.D3</PackageId>
+    <Copyright>Copyright © Pedro Sequeira 2018</Copyright>
+    <Product>Aglomera.NET</Product>
+    <Authors>Pedro Sequeira</Authors>
+    <PackageLicenseUrl>https://raw.github.com/pedrodbs/Aglomera/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/pedrodbs/Aglomera</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pedrodbs/Aglomera</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <Description>D3.js extensions for the Aglomera.NET library, a hierarchical agglomerative clustering (HAC) library written in C#</Description>
+    <PackageTags>hierarchical agglomerative clustering</PackageTags>
+    <Version>1.1.0</Version>
+    <PackageIconUrl>https://raw.github.com/pedrodbs/Aglomera/master/img/aglomera.ico</PackageIconUrl>
+    <ApplicationIcon>aglomera.ico</ApplicationIcon>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

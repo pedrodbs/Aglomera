@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Aglomera
-//    Last updated: 04/27/2018
+//    Last updated: 05/15/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -80,7 +80,8 @@ namespace Aglomera
         }
 
         /// <summary>
-        ///     Gets the <see cref="Cluster{TInstance}" /> corresponding to the agglomeration of all the <see cref="TInstance" />
+        ///     Gets the <see cref="Cluster{TInstance}" /> corresponding to the agglomeration of all the
+        ///     <typeparamref name="TInstance" />
         ///     elements considered by the algorithm.
         /// </summary>
         public Cluster<TInstance> SingleCluster => this._clusterSets[this._clusterSets.Length - 1][0];
