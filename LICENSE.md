@@ -1,4 +1,4 @@
-Grupo.Net License (MIT)
+Aglomera.Net License (MIT)
 ===================================
 
 Copyright (c) 2018 Pedro Sequeira
