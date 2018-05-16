@@ -54,13 +54,13 @@ The following packages with the corresponding dependencies are provided:
 
 You can `git clone` the Aglomera.NET [source code](https://github.com/pedrodbs/Aglomera) and use an IDE like VisualStudio to build the corresponding binaries.
 
-##Getting started
+## Getting started
 
 Consider the following *data-set* example taken from [Kaufman & Rousseeuw, 1990]:
 
 ![Example dataset](img/example.png)
 
-where colors indicate the "real" instance class, *i.e.*, either 'A=red' or 'B=blue'.
+where colors indicate the "real" instance class, *i.e.*, either 'red' or 'blue'.
 
 Start by defining a *data-point* class, for example one to represent points in a 2D Euclidean space, such as:
 
