@@ -11,7 +11,7 @@ Aglomera is a .NET open-source library written entirely in C# that implements *h
 
 The *clustering result* is a list containing the cluster-set and the corresponding dissimilarity / distance at which it was created at each step of the algorithm. The result is organized in a hierarchical form, *i.e.*, where each cluster references either the *two parents* that were merged for its creation (in the agglomerative approach), or the *two children* resulting from splitting the cluster (in the divisive approach). Due to their hierarchical nature, clustering results can be visualized via a *[dendrogram](https://en.wikipedia.org/wiki/Dendrogram)*.
 
-Currently, Aglomera.NET implements *program AGNES* (AGglomerative NESting) of [Kaufman & Rousseeuw, 1990], *i.e.*, the bottom-up approach, the  It supports different linkage criteria and also provides several metrics to perform internal and external evaluation of clustering results. The results of clustering can be exported to a Json file to be visualized as a dendrogram in *DendrogramViewer*, an interactive web-application using D3.js.
+Currently, Aglomera.NET implements *program AGNES* (AGglomerative NESting) of [Kaufman & Rousseeuw, 1990], *i.e.*, the bottom-up approach, the  It supports different linkage criteria and also provides several metrics to perform internal and external evaluation of clustering results. The results of clustering can be exported to a Json file to be visualized as a dendrogram in *[Dendrogram Viewer](https://github.com/pedrodbs/DendrogramViewer)*, an interactive web-application using D3.js.
 
 **Table of contents**
 
@@ -157,17 +157,17 @@ from which we can select the appropriate data-set, *e.g.*, according to the numb
 - **CSV export**
 
 
-  - To export the result of clustering to a comma-separated values (CSV) file, we simply do:
-
-    ```c#
-    clusteringResult.SaveToCsv(FILE_PATH);
-    ```
-
-    which would produce a CSV file with the contents of each cluster in the cluster-set of each step of the algorithm, one instance per line.
+    - To export the result of clustering to a comma-separated values (CSV) file, we simply do:
+    
+      ```
+      clusteringResult.SaveToCsv(FILE_PATH);
+      ```
+    
+      which would produce a CSV file with the contents of each cluster in the cluster-set of each step of the algorithm, one instance per line.
 
 - **D3.js export**
 
-  - Export the *result of clustering* to a Json file that contains the hierarchical structure of the clustering procedure that can be loaded into *DendrogramViewer* to produce a *dendrogram*, *e.g.*:
+  - Export the *result of clustering* to a Json file that contains the hierarchical structure of the clustering procedure that can be loaded into *[Dendrogram Viewer](https://github.com/pedrodbs/DendrogramViewer)* to produce a *dendrogram*, *e.g.*:
 
     ```c#
     using Aglomera.D3;
@@ -207,7 +207,7 @@ from which we can select the appropriate data-set, *e.g.*, according to the numb
 
     where `n` holds the name or id of the cluster, `d` is the dissimilarity / distance at which it was found and created, and `c` contains the list containing the pair of parents or children of the cluster.
 
-  - When loaded in *DendrogramViewer*, this would produce the following dendrogram:
+  - When loaded in *[Dendrogram Viewer](https://github.com/pedrodbs/DendrogramViewer)*, this would produce the following dendrogram:
 
     ![Example dendrogram](img/dendrogram.png)
 
@@ -247,6 +247,7 @@ Example code can be found in the [src/Examples](https://github.com/pedrodbs/Aglo
 - [Silhouette clustering (Wikipedia)](https://en.wikipedia.org/wiki/Silhouette_(clustering))
 - [Dunn index (Wikipedia)](https://en.wikipedia.org/wiki/Dunn_index)
 - [Davies-Bouldin index (Wikipedia)](https://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index)
+- [Dendrogram Viewer](https://github.com/pedrodbs/DendrogramViewer)
 - [D3.js](https://d3js.org/)
 
 
