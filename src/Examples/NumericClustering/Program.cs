@@ -40,7 +40,7 @@ namespace NumericClustering
     {
         #region Static Fields & Constants
 
-        private const string DATASET_FILE = "../../../../../datasets/iris.csv";
+        private const string DATASET_FILE = "../../../../../datasets/mouse-2d.csv";
 
         #endregion
 

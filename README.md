@@ -218,8 +218,14 @@ from which we can select the appropriate data-set, *e.g.*, according to the numb
 Example code can be found in the [src/Examples](https://github.com/pedrodbs/Aglomera/tree/master/src/Examples) folder in the [repository](https://github.com/pedrodbs/Aglomera). Several open-source data-sets adapted to work with the example applications can be found in [src/Examples/datasets](https://github.com/pedrodbs/Aglomera/tree/master/src/Examples/datasets).
 
 - **NumericClustering:** a simple example of using agglomerative HC to cluster a data-set loaded from an external CSV file. Several linkage criteria are used and clustering results are saved to CSV and D3 Json files.
+
 - **InternalClusteringEvaluation:** shows how to perform evaluation of clustering results using internal criteria. A data-set is loaded from an external CSV file and clustered using agglomerative HC. For each internal criterion, the optimal cluster-set in the clustering result is selected by maximizing the score.
+
 - **ExternalClusteringEvaluation:** shows how to perform evaluation of clustering results using external criteria. A labeled data-set is loaded from an external CSV file and clustered using agglomerative HC. The class of each instance is given by the first character of its id. The score of several external criteria for each cluster-set in the clustering result is then printed to the Console.
+
+- **ClusteringVisualizer:** a *Windows.Forms* application that allows the visualization of clustering of 2D data. It allows the visual comparison between different linkage criteria and the selection of different number of clusters. Each cluster is attributed a different color according to the selected palette. A screenshot of the application is show below:
+
+  ![Clustering visualizer](img/visualizer.png)
 
 ## See Also
 

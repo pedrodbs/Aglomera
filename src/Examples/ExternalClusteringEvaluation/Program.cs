@@ -56,7 +56,7 @@ namespace ExternalClusteringEvaluation
             // gets cluster set according to predefined number of clusters
             var clusterSet = clustering.First(cs => cs.Count == numClusters);
 
-            // gets classes for each data-point (first character of the ID in the seeds dataset)
+            // gets classes for each data-point (first character of the ID in the dataset)
             var pointClasses = dataPoints.ToDictionary(dataPoint => dataPoint, dataPoint => dataPoint.ID[0]);
 
             Console.WriteLine("=============================================");
