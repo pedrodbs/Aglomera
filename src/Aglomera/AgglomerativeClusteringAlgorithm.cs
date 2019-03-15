@@ -97,6 +97,12 @@ namespace Aglomera
         {
             // initializes elements
             var currentClusters = clusters.ToArray();
+
+            if (currentClusters.Length == 0)
+            {
+                return new ClusteringResult<TInstance>(0);
+            }
+
             this._clusters = new Cluster<TInstance>[currentClusters.Length * 2 - 1];
             this._dissimilarities = new double[currentClusters.Length * 2 - 1][];
             this._curClusterCount = 0;
