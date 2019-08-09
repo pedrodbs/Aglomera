@@ -75,7 +75,7 @@ class DataPoint : IComparable<DataPoint>
 and then define a *dissimilarity metric* for this type:
 
 ```c#
-class DssimilarityMetric : IDissimilarityMetric<DataPoint>
+class DissimilarityMetric : IDissimilarityMetric<DataPoint>
 {
     public double Calculate(DataPoint instance1, DataPoint instance2) { ... }
 }
