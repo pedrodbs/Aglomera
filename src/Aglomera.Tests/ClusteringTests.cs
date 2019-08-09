@@ -102,6 +102,19 @@ namespace Aglomera.Tests
         }
 
         [TestMethod]
+        public void EmptyClusteringTest()
+        {
+            foreach (var linkage in Linkages)
+            {
+                Console.WriteLine("________________________");
+                var clusteringResult =
+                    new AgglomerativeClusteringAlgorithm<DataPoint>(linkage).GetClustering(new HashSet<DataPoint>());
+                Console.WriteLine(clusteringResult.Count);
+                Assert.AreEqual(0, clusteringResult.Count, "Empty set should produce an empty clustering result.");
+            }
+        }
+
+        [TestMethod]
         public void ClusterSetsSizeTest()
         {
             foreach (var linkage in Linkages)
