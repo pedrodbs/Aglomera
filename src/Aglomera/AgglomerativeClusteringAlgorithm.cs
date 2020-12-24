@@ -173,7 +173,7 @@ namespace Aglomera
 
                     // check dissimilarity and register indexes if minimal
                     var dissimilarity = this._dissimilarities[i][j];
-                    if (minDissimilarity <= dissimilarity) continue;
+                    if (minDissimilarity < dissimilarity) continue;
                     minDissimilarity = dissimilarity;
                     clusterIdx1 = i;
                     clusterIdx2 = j;

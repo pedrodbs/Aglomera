@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFrameworks>netstandard1.3;netstandard2.0;netstandard2.1</TargetFrameworks>
     <Platforms>AnyCPU;x64;x86</Platforms>
     <PackageId>Aglomera</PackageId>
     <Copyright>Copyright © Pedro Sequeira 2018</Copyright>
@@ -11,11 +11,11 @@
     <PackageProjectUrl>https://github.com/pedrodbs/Aglomera</PackageProjectUrl>
     <RepositoryUrl>https://github.com/pedrodbs/Aglomera</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <FileVersion>1.1.0.0</FileVersion>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <Description>A hierarchical agglomerative clustering (HAC) library written in C#</Description>
     <PackageTags>hierarchical agglomerative clustering</PackageTags>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <PackageIconUrl>https://raw.github.com/pedrodbs/Aglomera/master/img/aglomera.ico</PackageIconUrl>
     <ApplicationIcon>aglomera.ico</ApplicationIcon>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
